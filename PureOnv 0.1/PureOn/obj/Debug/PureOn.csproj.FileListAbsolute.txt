@@ -1,0 +1,9 @@
+c:\users\abhi\documents\visual studio 2013\Projects\PureOn\PureOn\bin\Debug\PureOn.exe.config
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.csprojResolveAssemblyReference.cache
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.Login.resources
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.Properties.Resources.resources
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\bin\Debug\PureOn.exe
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\bin\Debug\PureOn.pdb
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.exe
+C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.pdb
