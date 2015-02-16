@@ -7,3 +7,13 @@ C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\bin\Debug\Pure
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\bin\Debug\PureOn.pdb
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.exe
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Debug\PureOn.pdb
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\bin\Debug\PureOn.exe.config
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.exe
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.pdb
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\bin\Debug\PureOn.exe
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\bin\Debug\PureOn.pdb
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\bin\Debug\MySql.Data.dll
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.csprojResolveAssemblyReference.cache
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.Login.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.Properties.Resources.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOnv 0.1\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
