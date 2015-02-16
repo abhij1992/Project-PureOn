@@ -62,7 +62,6 @@
             this.userText.Name = "userText";
             this.userText.Size = new System.Drawing.Size(100, 20);
             this.userText.TabIndex = 2;
-            this.userText.TextChanged += new System.EventHandler(this.userText_TextChanged);
             // 
             // passText
             // 
@@ -95,7 +94,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
