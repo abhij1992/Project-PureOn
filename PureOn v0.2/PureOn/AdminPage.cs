@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace PureOn
 {
-    public partial class ManageUsers : Form
+    public partial class AdminPage : Form
     {
-        public ManageUsers()
+        public AdminPage()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            ManageUsers muf = new ManageUsers();
+            muf.ShowDialog();
+        }
 
+        private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

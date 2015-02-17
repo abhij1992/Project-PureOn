@@ -49,6 +49,7 @@
             this.Controls.Add(this.button1);
             this.Name = "AdminPage";
             this.Text = "Administrator";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.ResumeLayout(false);
 
         }
