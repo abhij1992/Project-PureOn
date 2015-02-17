@@ -7,6 +7,23 @@ using MySql.Data.MySqlClient;
 
 namespace PureOn
 {
+   public class Customer
+   {
+       public int cust_id { get; set; }
+       public string customer_id { get; set; }
+       public string  cust_name { get; set; }
+       public int phone_primary { get; set; }
+       public int phone_alt { get; set; }
+       public string  door_no { get; set; }
+       public string street_name { get; set; }
+       public int pin_code { get; set; }
+       public string  filter_model { get; set; }
+       public string  date_of_installation { get; set; }
+       public string unit_slno { get; set; }
+       public int used_at { get; set; }
+       public string warranty_date { get; set; }
+       public int cont_details { get; set; }
+   }
    public class Credentials
     {
         private string username, password;
@@ -112,6 +129,20 @@ namespace PureOn
            finally
            {
                //conn.Close();
+           }
+       }
+       public bool insertCustomer(Customer c)
+       {
+           try
+           {
+               string Query = "INSERT into customer_info VALUES (DEFAULT,'" + c.customer_id + "','" + c.cust_name + "','" + c.phone_primary + "','" + c.phone_alt + "','" + c.door_no + "','" + c.street_name + "','" + c.pin_code + "','" + c.filter_model+"','"+c.date_of_installation+"','"+c.unit_slno+"','"+c.used_at+"','"+c.warranty_date+"','"+c.cont_details+"');";
+               Console.WriteLine(Query);
+               if (ExecuteQuery(Query)) return true;
+               else return false;
+           }
+           catch(MyDBError e)
+           {
+               throw e;
            }
        }
    }

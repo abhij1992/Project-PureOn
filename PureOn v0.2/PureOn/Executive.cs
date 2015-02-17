@@ -15,6 +15,18 @@ namespace PureOn
         public Executive()
         {
             InitializeComponent();
+            Customer c = new Customer();
+            
+        }
+        private void addCustomerBtn_Click(object sender, EventArgs e)
+        {
+            AddCustomer a = new AddCustomer();
+            a.ShowDialog();
+        }
+
+        private void Executive_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
