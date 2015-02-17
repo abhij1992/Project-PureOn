@@ -29,13 +29,13 @@ namespace PureOn
        public string user,pass;
        public string u, p;
        public int login_id, emp_privlage;
-       public LoginClass(Credentials c,string server,string database,string username,string password)
+       public LoginClass(Credentials c)
        {
            this.u = c.getUserName(); this.p = c.getPassWord();
            string strSQL = "SELECT * FROM login_info WHERE emp_uname='"+c.getUserName()+"';";
            try
            {
-               DBConnection db = new DBConnection(server, database, username, password);
+               DBConnection db = new DBConnection();
                MySqlDataReader resultSet = db.ExecuteReader(strSQL);
                if (!resultSet.HasRows) throw new MyDBError("User does not exist");
                while (resultSet.Read())
@@ -66,9 +66,9 @@ namespace PureOn
    {
        string connectionString;
        MySqlConnection conn;
-       public DBConnection(string server,string database,string username,string password)
+       public DBConnection()
        {
-          connectionString = "Server=" + server + ";Database=" + database + ";Uid=" + username + ";Pwd=" + password + ";";
+           connectionString = "Server=127.0.0.1;Database=pureontech;Uid=root;Pwd=;";
        }
        public MySqlDataReader ExecuteReader(string Query)
        {

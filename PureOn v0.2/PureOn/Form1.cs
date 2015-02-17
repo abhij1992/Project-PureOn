@@ -24,7 +24,7 @@ namespace PureOn
             Credentials usr = new Credentials(userText.Text,passText.Text);
             try
             {
-                LoginClass log = new LoginClass(usr, "127.0.0.1", "pureontech", "root", "");
+                LoginClass log = new LoginClass(usr);
                 if (log.validate())
                 {
                     int priv = log.getPrivlage();
