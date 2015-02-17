@@ -26,9 +26,26 @@ namespace PureOn
             {
                 LoginClass log = new LoginClass(usr, "127.0.0.1", "pureontech", "root", "");
                 if (log.validate())
-                    MessageBox.Show("Login Successful", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                {
+                    int priv = log.getPrivlage();
+                    if (priv == 1)                      //Assuming Admin is privlage is 1
+                    {
+                        this.Hide();
+                        AdminPage af = new AdminPage();
+                        af.ShowDialog();
+                    }
+                    else
+                    {
+                        this.Hide();
+                        Executive ef = new Executive();
+                        ef.ShowDialog();
+                        //MessageBox.Show("Login Successful", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
                 else
+                {
                     MessageBox.Show("Login Failure", "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
             }
             catch (MyDBError x)
             {

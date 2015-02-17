@@ -56,5 +56,9 @@ namespace PureOn
            if((this.pass==this.p) && (this.user==this.u)) return true;
            else return false;
        }
+       public int getPrivlage()
+       {
+           return emp_privlage;
+       }
    }
 }
