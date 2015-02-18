@@ -145,5 +145,9 @@ namespace PureOn
                throw e;
            }
        }
+       public string getconnstring()
+       {
+           return connectionString.ToString();
+       }
    }
 }

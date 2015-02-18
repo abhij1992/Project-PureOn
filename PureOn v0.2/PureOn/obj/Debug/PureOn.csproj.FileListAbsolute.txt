@@ -58,3 +58,5 @@ C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn v0.3\PureOn\obj\Debug
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn v0.3\PureOn\obj\Debug\PureOn.ManageUsers.resources
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn v0.3\PureOn\obj\Debug\PureOn.Properties.Resources.resources
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn v0.3\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddCustomer.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.History.resources
