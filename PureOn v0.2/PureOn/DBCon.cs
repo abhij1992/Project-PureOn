@@ -24,6 +24,20 @@ namespace PureOn
        public string warranty_date { get; set; }
        public int cont_details { get; set; }
    }
+   public class HistoryCard
+    {
+        public long hist_id { get; set; }
+        public string customer_id { get; set; }
+        public string visitDate { get; set; }
+        public int work_details { get; set; }
+        public string part_replaced { get; set; }
+        public string icr_bill_no { get; set; }
+        public string iccr_no { get; set; }
+        public string iccr_date { get; set; }
+        public int  amount { get; set; }
+        public int exec_attend { get; set; }
+
+    }
    public class Credentials
     {
         private string username, password;
@@ -128,7 +142,7 @@ namespace PureOn
            }
            finally
            {
-               //conn.Close();
+               conn.Close();
            }
        }
        public bool insertCustomer(Customer c)

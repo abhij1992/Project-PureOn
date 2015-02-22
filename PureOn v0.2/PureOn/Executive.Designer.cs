@@ -42,9 +42,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.custID = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.customerData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // addCustomerBtn
@@ -53,7 +53,7 @@
             this.addCustomerBtn.Name = "addCustomerBtn";
             this.addCustomerBtn.Size = new System.Drawing.Size(176, 23);
             this.addCustomerBtn.TabIndex = 0;
-            this.addCustomerBtn.Text = "Add New User";
+            this.addCustomerBtn.Text = "Add New Customer";
             this.addCustomerBtn.UseVisualStyleBackColor = true;
             this.addCustomerBtn.Click += new System.EventHandler(this.addCustomerBtn_Click);
             // 
@@ -180,28 +180,27 @@
             this.custID.TabIndex = 0;
             this.custID.TextChanged += new System.EventHandler(this.custID_TextChanged);
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(308, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(606, 252);
-            this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(308, 12);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersVisible = false;
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.ShowCellErrors = false;
+            this.dataGridView.ShowCellToolTips = false;
+            this.dataGridView.ShowEditingIcon = false;
+            this.dataGridView.ShowRowErrors = false;
+            this.dataGridView.Size = new System.Drawing.Size(606, 252);
+            this.dataGridView.TabIndex = 33;
+            this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
             // Executive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(926, 310);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.customerData);
             this.Controls.Add(this.addCustomerBtn);
             this.Name = "Executive";
@@ -210,7 +209,7 @@
             this.Load += new System.EventHandler(this.Executive_Load);
             this.customerData.ResumeLayout(false);
             this.customerData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -231,6 +230,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox custID;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
     }
 }

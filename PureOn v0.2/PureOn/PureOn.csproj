@@ -54,6 +54,12 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddHistoryCard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddHistoryCard.Designer.cs">
+      <DependentUpon>AddHistoryCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddHistoryCard.resx">
+      <DependentUpon>AddHistoryCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>

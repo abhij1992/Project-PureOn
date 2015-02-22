@@ -14,17 +14,22 @@ namespace PureOn
 {
     public partial class Executive : Form
     {
+        DataTable dbdataset;
+
         public Executive()
         {
             InitializeComponent();
             Customer c = new Customer();
 
         }
-        DataTable dbdataset;
+        
         private void addCustomerBtn_Click(object sender, EventArgs e)
         {
             AddCustomer a = new AddCustomer();
             a.ShowDialog();
+            if (a.newRecord) loadTable();//MessageBox.Show("New record added");
+            else MessageBox.Show("No record was added");
+          
         }
 
         private void Executive_FormClosing(object sender, FormClosingEventArgs e)
@@ -32,7 +37,7 @@ namespace PureOn
             Application.Exit();
         }
 
-        private void Executive_Load(object sender, EventArgs e)
+        private void loadTable()
         {
             DBConnection db = new DBConnection();
             MySqlConnection conDataBase = new MySqlConnection(db.getconnstring());
@@ -48,24 +53,30 @@ namespace PureOn
                 BindingSource bSource = new BindingSource();
 
                 bSource.DataSource = dbdataset;
-                dataGridView1.DataSource = bSource;
+                dataGridView.DataSource = bSource;
                 sda.Update(dbdataset);
 
             }
-            catch (Exception e2)
+            catch (Exception e)
             {
-                MessageBox.Show(e2.Message);
+                MessageBox.Show(e.Message);
             }
-
         }
+
+        private void Executive_Load(object sender, EventArgs e)
+        {
+            loadTable();
+        }
+
         private void textChanged()
         {
          
             DataView dv = new DataView(dbdataset);
             dv.RowFilter = string.Format("customer_id LIKE '%{0}%' AND cust_name LIKE '%{1}%' AND CONVERT({2}, System.String) like '%{3}%' AND door_no LIKE '%{4}%' AND street_name LIKE '%{5}%' AND CONVERT({6}, System.String) like '%{7}%' ", custID.Text, custName.Text,"phone_primary",phonePrime.Text,doorNo.Text,street.Text,"pin_code",pinCode.Text);
             //dv.RowFilter = string.Format("CONVERT({0}, System.String) like '%{1}%'","phone_primary",custID.Text);
-            dataGridView1.DataSource = dv;
+            dataGridView.DataSource = dv;
         }
+
         private void custID_TextChanged(object sender, EventArgs e)
         {
             textChanged();
@@ -95,21 +106,15 @@ namespace PureOn
         {
             textChanged();
         }
-     
-        
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+   
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-          
-        }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-           
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
                 History frmHistory = new History();
                 //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                frmHistory.custID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frmHistory.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frmHistory.ShowDialog();
             }
         }

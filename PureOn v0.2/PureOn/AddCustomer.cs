@@ -12,9 +12,11 @@ namespace PureOn
 {
     public partial class AddCustomer : Form
     {
+        public bool newRecord { get; set; }
         public AddCustomer()
         {
             InitializeComponent();
+            this.newRecord = false;
         }
         private Customer loadCustomerObject()
         {
@@ -31,15 +33,15 @@ namespace PureOn
             cr.date_of_installation = d.Date.ToString("yyyy-MM-dd");
             cr.unit_slno = unitSlNo.Text;
 
-            if (office.Enabled) cr.used_at = 1;
-            else if (residence.Enabled) cr.used_at = 2;
-            else if (both.Enabled) cr.used_at = 3;
+            if (office.Checked) cr.used_at = 1;
+            else if (residence.Checked) cr.used_at = 2;
+            else if (both.Checked) cr.used_at = 3;
 
             d = warrantyDate.Value.Date;
             cr.warranty_date = d.Date.ToString("yyyy-MM-dd");
 
-            if (amc.Enabled) cr.cont_details = 1;
-            else if (acmc.Enabled) cr.cont_details = 2;
+            if (amc.Checked) cr.cont_details = 1;
+            else if (acmc.Checked) cr.cont_details = 2;
 
             return cr;
         }
@@ -50,9 +52,11 @@ namespace PureOn
             try
             {
                 DBConnection db = new DBConnection();
-                if(db.insertCustomer(cr))
-                MessageBox.Show("Added new customer succesfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
-                else MessageBox.Show("Error in adding new customer to Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if(db.insertCustomer(cr)){
+                MessageBox.Show("Added new customer succesfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information); 
+                this.newRecord = true;
+                }else 
+                   MessageBox.Show("Error in adding new customer to Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch(MyDBError ex)
             {

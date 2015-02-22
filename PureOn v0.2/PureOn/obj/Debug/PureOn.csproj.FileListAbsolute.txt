@@ -66,3 +66,15 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Debug\PureO
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.exe
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.pdb
 >>>>>>> origin/master
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Debug\PureOn.exe
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Debug\PureOn.pdb
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.csprojResolveAssemblyReference.cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddCustomer.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AdminPage.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Executive.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Login.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.History.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.ManageUsers.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Properties.Resources.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddHistoryCard.resources

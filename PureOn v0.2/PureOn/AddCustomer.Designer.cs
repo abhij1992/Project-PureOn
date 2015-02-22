@@ -246,6 +246,7 @@
             // office
             // 
             this.office.AutoSize = true;
+            this.office.Checked = true;
             this.office.Location = new System.Drawing.Point(43, 18);
             this.office.Name = "office";
             this.office.Size = new System.Drawing.Size(53, 17);
@@ -261,7 +262,6 @@
             this.residence.Name = "residence";
             this.residence.Size = new System.Drawing.Size(76, 17);
             this.residence.TabIndex = 25;
-            this.residence.TabStop = true;
             this.residence.Text = "Residence";
             this.residence.UseVisualStyleBackColor = true;
             // 
@@ -272,13 +272,13 @@
             this.both.Name = "both";
             this.both.Size = new System.Drawing.Size(47, 17);
             this.both.TabIndex = 26;
-            this.both.TabStop = true;
             this.both.Text = "Both";
             this.both.UseVisualStyleBackColor = true;
             // 
             // amc
             // 
             this.amc.AutoSize = true;
+            this.amc.Checked = true;
             this.amc.Location = new System.Drawing.Point(65, 23);
             this.amc.Name = "amc";
             this.amc.Size = new System.Drawing.Size(48, 17);
@@ -294,7 +294,6 @@
             this.acmc.Name = "acmc";
             this.acmc.Size = new System.Drawing.Size(55, 17);
             this.acmc.TabIndex = 28;
-            this.acmc.TabStop = true;
             this.acmc.Text = "ACMC";
             this.acmc.UseVisualStyleBackColor = true;
             // 

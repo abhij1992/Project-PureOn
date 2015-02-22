@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.FilterDetails = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.unitSlNo = new System.Windows.Forms.TextBox();
             this.filterModel = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -41,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.custID = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.addHistory = new System.Windows.Forms.Button();
             this.FilterDetails.SuspendLayout();
             this.customerData.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +61,14 @@
             this.FilterDetails.TabIndex = 34;
             this.FilterDetails.TabStop = false;
             this.FilterDetails.Text = "Filter Details";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(143, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 23;
             // 
             // unitSlNo
             // 
@@ -170,19 +179,22 @@
             this.custID.Size = new System.Drawing.Size(100, 20);
             this.custID.TabIndex = 0;
             // 
-            // textBox1
+            // addHistory
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 23;
+            this.addHistory.Location = new System.Drawing.Point(26, 278);
+            this.addHistory.Name = "addHistory";
+            this.addHistory.Size = new System.Drawing.Size(102, 23);
+            this.addHistory.TabIndex = 35;
+            this.addHistory.Text = "Add History Card";
+            this.addHistory.UseVisualStyleBackColor = true;
+            this.addHistory.Click += new System.EventHandler(this.addHistory_Click);
             // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(771, 460);
+            this.Controls.Add(this.addHistory);
             this.Controls.Add(this.FilterDetails);
             this.Controls.Add(this.customerData);
             this.Name = "History";
@@ -212,5 +224,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox custID;
+        private System.Windows.Forms.Button addHistory;
     }
 }
