@@ -78,3 +78,4 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureO
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Properties.Resources.resources
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddHistoryCard.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddHistoryCard.resources

@@ -82,6 +82,7 @@ namespace PureOn
             if (insertHistoryCard())
             { MessageBox.Show("Succesfully Inserted new History Card"); this.Close(); }
             else MessageBox.Show("Error occured while inserting New History Card"); 
+            
         }
         private bool loadServiceEngineers()
         {
