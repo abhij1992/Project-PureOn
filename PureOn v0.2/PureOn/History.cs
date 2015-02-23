@@ -21,6 +21,7 @@ namespace PureOn
 
         private void History_Load(object sender, EventArgs e)
         {
+            DataTable dbdataset;
             string strSQL = "SELECT * FROM customer_info WHERE customer_id='"+custID.Text+"';";
             try
             {
@@ -41,6 +42,28 @@ namespace PureOn
             {
                 throw e3;
             }
+            DBConnection db2 = new DBConnection();
+            MySqlConnection conDataBase = new MySqlConnection(db2.getconnstring());
+            MySqlCommand cmdDataBase = new MySqlCommand("SELECT `vist_date`,`work_details`,`parts_replaced`,`icr_bill_no`,`iccr_no`,`iccr_date`,`amount`,`exec_attend` FROM `history_card` WHERE 1;", conDataBase);
+            
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDataBase;
+                dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                BindingSource bSource = new BindingSource();
+
+                bSource.DataSource = dbdataset;
+                dataGridView1.DataSource = bSource;
+                sda.Update(dbdataset);
+
+            }
+            catch (Exception e4)
+            {
+                MessageBox.Show(e4.Message);
+            }
+
         }
 
         private void addHistory_Click(object sender, EventArgs e)

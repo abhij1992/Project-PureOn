@@ -43,8 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.custID = new System.Windows.Forms.TextBox();
             this.addHistory = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.FilterDetails.SuspendLayout();
             this.customerData.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // FilterDetails
@@ -189,11 +191,21 @@
             this.addHistory.UseVisualStyleBackColor = true;
             this.addHistory.Click += new System.EventHandler(this.addHistory_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(305, 28);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(616, 420);
+            this.dataGridView1.TabIndex = 36;
+            // 
             // History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 460);
+            this.ClientSize = new System.Drawing.Size(974, 460);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.addHistory);
             this.Controls.Add(this.FilterDetails);
             this.Controls.Add(this.customerData);
@@ -204,6 +216,7 @@
             this.FilterDetails.PerformLayout();
             this.customerData.ResumeLayout(false);
             this.customerData.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +238,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox custID;
         private System.Windows.Forms.Button addHistory;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
