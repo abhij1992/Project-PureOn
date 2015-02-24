@@ -116,30 +116,36 @@ namespace PureOn
         }
         private Customer loadCustomerObject()
         {
-            Customer cr = new Customer();
-            cr.customer_id = custID.Text;
-            cr.cust_name = custName.Text;
-            cr.phone_primary = Int32.Parse(phonePrime.Text);
-            cr.phone_alt = Int32.Parse(phoneAlt.Text);
-            cr.door_no = doorNo.Text;
-            cr.street_name = street.Text;
-            cr.pin_code = Int32.Parse(pinCode.Text);
-            cr.filter_model = filterModel.Text;
-            DateTime d = dateOfInstallation.Value.Date;
-            cr.date_of_installation = d.Date.ToString("yyyy-MM-dd");
-            cr.unit_slno = unitSlNo.Text;
+            if (!AddCustomervalid())
+            {
+                MessageBox.Show("please enter valid information");
+            }
+            
+                Customer cr = new Customer();
+                cr.customer_id = custID.Text.Trim();
+                cr.cust_name = custName.Text.Trim();
+                cr.phone_primary = Int32.Parse(phonePrime.Text.Trim());
+                cr.phone_alt = Int32.Parse(phoneAlt.Text.Trim());
+                cr.door_no = doorNo.Text.Trim();
+                cr.street_name = street.Text.Trim();
+                cr.pin_code = Int32.Parse(pinCode.Text.Trim());
+                cr.filter_model = filterModel.Text.Trim();
+                DateTime d = dateOfInstallation.Value.Date;
+                cr.date_of_installation = d.Date.ToString("yyyy-MM-dd");
+                cr.unit_slno = unitSlNo.Text.Trim();
 
-            if (office.Enabled) cr.used_at = 1;
-            else if (residence.Enabled) cr.used_at = 2;
-            else if (both.Enabled) cr.used_at = 3;
+                if (office.Enabled) cr.used_at = 1;
+                else if (residence.Enabled) cr.used_at = 2;
+                else if (both.Enabled) cr.used_at = 3;
 
-            d = warrantyDate.Value.Date;
-            cr.warranty_date = d.Date.ToString("yyyy-MM-dd");
+                d = warrantyDate.Value.Date;
+                cr.warranty_date = d.Date.ToString("yyyy-MM-dd");
 
-            if (amc.Enabled) cr.cont_details = 1;
-            else if (acmc.Enabled) cr.cont_details = 2;
+                if (amc.Enabled) cr.cont_details = 1;
+                else if (acmc.Enabled) cr.cont_details = 2;
 
-            return cr;
+                return cr;
+           
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
