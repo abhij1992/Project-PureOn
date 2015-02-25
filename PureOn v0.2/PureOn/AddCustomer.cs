@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace PureOn
 {
@@ -17,6 +18,102 @@ namespace PureOn
         {
             InitializeComponent();
             this.newRecord = false;
+        }
+        private bool AddCustomervalid()
+        {
+            Regex a = new Regex("^[a-zA-Z]*$");
+            Regex n = new Regex("^[0-9]+$");
+            Regex ns = new Regex("^[789]/d{9}");
+            Regex an = new Regex("^[a-zA-Z0-9_]+");
+            Regex p = new Regex("/d{6}");
+            DateTime today = Convert.ToDateTime(DateTime.Now);
+            DateTime warrant = Convert.ToDateTime(warrantyDate.Value);
+            if (custID.Text == "")
+            {
+                MessageBox.Show("please enter the customer ID");
+                return false;
+            }
+            else if (custName.Text == "")
+            {
+                MessageBox.Show("please enter the customer name");
+                return false;
+            }
+            else if (!(a.IsMatch(custName.Text)))
+            {
+                MessageBox.Show("please enter the customer name in correct format");
+                return false;
+            }
+            else if (phonePrime.Text == "")
+            {
+                MessageBox.Show("please enter the primary phone number");
+                return false;
+            }
+            else if ((!(n.IsMatch(phonePrime.Text))) && (!(ns.IsMatch(phonePrime.Text))))
+            {
+                MessageBox.Show("please enter the primary phone number in correct format");
+                return false;
+            }
+            else if ((!(n.IsMatch(phoneAlt.Text))) && (!(ns.IsMatch(phoneAlt.Text))))
+            {
+                MessageBox.Show("please enter the alternate phone number in correct format");
+                return false;
+            }
+            else if (doorNo.Text == "")
+            {
+                MessageBox.Show("please enter the door no");
+                return false;
+            }
+            else if (!(an.IsMatch(doorNo.Text)))
+            {
+                MessageBox.Show("please enter the door no in correct format");
+                return false;
+            }
+            else if (street.Text == "")
+            {
+                MessageBox.Show("please enter the street address");
+                return false;
+            }
+            else if (!(an.IsMatch(street.Text)))
+            {
+                MessageBox.Show("please enter the street address in correct format");
+                return false;
+            }
+            else if (pinCode.Text == "")
+            {
+                MessageBox.Show("please enter the pincode");
+                return false;
+            }
+            else if (!(n.IsMatch(pinCode.Text)))
+            {
+                MessageBox.Show("please enter the pincode in correct format");
+                return false;
+            }
+            else if (filterModel.Text == "")
+            {
+                MessageBox.Show("please enter the filter model");
+                return false;
+            }
+            else if (unitSlNo.Text == "")
+            {
+                MessageBox.Show("please enter the unit serial nnumber");
+                return false;
+            }
+            else if (!office.Checked && !residence.Checked && !both.Checked)
+            {
+                MessageBox.Show("please select any option from used at");
+                return false;
+            }
+            else if (!amc.Checked && !acmc.Checked)
+            {
+                MessageBox.Show("please select any option from contracts details");
+                return false;
+            }
+            else if (warrant <= today)
+            {
+                MessageBox.Show("please enter the valid Warranty Date");
+                return false;
+            }
+            return true;
         }
         private Customer loadCustomerObject()
         {
@@ -47,6 +144,11 @@ namespace PureOn
         }
         private void addBtn_Click(object sender, EventArgs e)
         {
+            if (!AddCustomervalid())
+            {
+                return;
+            }
+
             Customer cr = loadCustomerObject();
 
             try
@@ -55,6 +157,7 @@ namespace PureOn
                 if(db.insertCustomer(cr)){
                 MessageBox.Show("Added new customer succesfully","Success",MessageBoxButtons.OK,MessageBoxIcon.Information); 
                 this.newRecord = true;
+                this.Close();
                 }else 
                    MessageBox.Show("Error in adding new customer to Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -27,5 +27,11 @@ namespace PureOn
         {
             Application.Exit();
         }
+
+        private void mngExe_Click(object sender, EventArgs e)
+        {
+            AddExecutive a = new AddExecutive();
+            a.ShowDialog();
+        }
     }
 }

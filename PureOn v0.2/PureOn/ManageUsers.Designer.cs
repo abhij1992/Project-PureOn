@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
             this.addBtn = new System.Windows.Forms.Button();
             this.repass = new System.Windows.Forms.TextBox();
             this.pass = new System.Windows.Forms.TextBox();
@@ -40,9 +43,6 @@
             this.btDelete = new System.Windows.Forms.Button();
             this.cbDelete = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,37 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new user";
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
+            this.radioButton2.Location = new System.Drawing.Point(210, 184);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(62, 17);
+            this.radioButton2.TabIndex = 9;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Regular";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(119, 184);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(54, 17);
+            this.radioButton1.TabIndex = 8;
+            this.radioButton1.Text = "Admin";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 184);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Access Type";
+            // 
             // addBtn
             // 
             this.addBtn.Location = new System.Drawing.Point(106, 223);
@@ -79,6 +110,7 @@
             // repass
             // 
             this.repass.Location = new System.Drawing.Point(106, 137);
+            this.repass.MaxLength = 15;
             this.repass.Name = "repass";
             this.repass.PasswordChar = '*';
             this.repass.Size = new System.Drawing.Size(183, 20);
@@ -87,6 +119,7 @@
             // pass
             // 
             this.pass.Location = new System.Drawing.Point(106, 88);
+            this.pass.MaxLength = 15;
             this.pass.Name = "pass";
             this.pass.PasswordChar = '*';
             this.pass.Size = new System.Drawing.Size(183, 20);
@@ -113,6 +146,7 @@
             // uname
             // 
             this.uname.Location = new System.Drawing.Point(106, 39);
+            this.uname.MaxLength = 15;
             this.uname.Name = "uname";
             this.uname.Size = new System.Drawing.Size(183, 20);
             this.uname.TabIndex = 1;
@@ -164,37 +198,6 @@
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 6;
             this.label4.Text = "User name";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 184);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Access Type";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(119, 184);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 8;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Admin";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(210, 184);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(62, 17);
-            this.radioButton2.TabIndex = 9;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Regular";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // ManageUsers
             // 

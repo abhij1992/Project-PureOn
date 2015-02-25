@@ -39,7 +39,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(69, 38);
+            this.label1.Location = new System.Drawing.Point(64, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 0;
@@ -66,11 +66,12 @@
             // passText
             // 
             this.passText.Location = new System.Drawing.Point(167, 75);
-            this.passText.MaxLength = 10;
+            this.passText.MaxLength = 15;
             this.passText.Name = "passText";
             this.passText.PasswordChar = '*';
             this.passText.Size = new System.Drawing.Size(100, 20);
             this.passText.TabIndex = 3;
+            this.passText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passText_KeyPress);
             // 
             // loginBtn
             // 

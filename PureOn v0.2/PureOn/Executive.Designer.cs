@@ -49,7 +49,7 @@
             // 
             // addCustomerBtn
             // 
-            this.addCustomerBtn.Location = new System.Drawing.Point(738, 275);
+            this.addCustomerBtn.Location = new System.Drawing.Point(53, 275);
             this.addCustomerBtn.Name = "addCustomerBtn";
             this.addCustomerBtn.Size = new System.Drawing.Size(176, 23);
             this.addCustomerBtn.TabIndex = 0;

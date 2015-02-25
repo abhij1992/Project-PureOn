@@ -54,6 +54,12 @@
     <Compile Include="AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddExecutive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExecutive.Designer.cs">
+      <DependentUpon>AddExecutive.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddHistoryCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,11 +79,11 @@
     <Compile Include="Executive.Designer.cs">
       <DependentUpon>Executive.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="History.cs">
       <SubType>Form</SubType>
@@ -96,6 +102,9 @@
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddExecutive.resx">
+      <DependentUpon>AddExecutive.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddHistoryCard.resx">
       <DependentUpon>AddHistoryCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,8 +114,8 @@
     <EmbeddedResource Include="Executive.resx">
       <DependentUpon>Executive.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="History.resx">
       <DependentUpon>History.cs</DependentUpon>

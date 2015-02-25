@@ -74,7 +74,7 @@
             // 
             // unitSlNo
             // 
-            this.unitSlNo.Location = new System.Drawing.Point(143, 89);
+            this.unitSlNo.Location = new System.Drawing.Point(143, 82);
             this.unitSlNo.Name = "unitSlNo";
             this.unitSlNo.ReadOnly = true;
             this.unitSlNo.Size = new System.Drawing.Size(100, 20);
@@ -91,7 +91,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(17, 92);
+            this.label10.Location = new System.Drawing.Point(9, 89);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 10;
@@ -149,7 +149,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 81);
+            this.label3.Location = new System.Drawing.Point(6, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 3;
@@ -158,7 +158,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 51);
+            this.label2.Location = new System.Drawing.Point(9, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 2;
@@ -167,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 19);
+            this.label1.Location = new System.Drawing.Point(11, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
@@ -183,7 +183,7 @@
             // 
             // addHistory
             // 
-            this.addHistory.Location = new System.Drawing.Point(26, 278);
+            this.addHistory.Location = new System.Drawing.Point(21, 275);
             this.addHistory.Name = "addHistory";
             this.addHistory.Size = new System.Drawing.Size(102, 23);
             this.addHistory.TabIndex = 35;
@@ -211,7 +211,7 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(623, 435);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 435);
             this.dataGridView1.TabIndex = 36;
             // 
             // History

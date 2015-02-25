@@ -60,6 +60,14 @@ namespace PureOn
             else { MessageBox.Show("Enter a valid Username and Password please","Error",MessageBoxButtons.OK,MessageBoxIcon.Exclamation); }
         }
 
+        private void passText_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==(char)Keys.Enter)
+            {
+                loginBtn_Click(this,null);
+            }
+        }
+
     }
    
 }

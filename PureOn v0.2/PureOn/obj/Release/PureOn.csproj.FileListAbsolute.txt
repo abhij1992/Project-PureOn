@@ -7,3 +7,19 @@ C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Release\Pu
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Release\PureOn.exe
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Release\PureOn.pdb
 C:\Users\Abhi\Documents\Visual Studio 2013\Projects\PureOn\PureOn\obj\Release\PureOn.csprojResolveAssemblyReference.cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Release\PureOn.exe.config
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.exe
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.pdb
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Release\PureOn.exe
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\bin\Release\PureOn.pdb
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.csprojResolveAssemblyReference.cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.AddCustomer.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.AddExecutive.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.AddHistoryCard.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.AdminPage.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Executive.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Login.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.History.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.ManageUsers.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Properties.Resources.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.csproj.GenerateResource.Cache
