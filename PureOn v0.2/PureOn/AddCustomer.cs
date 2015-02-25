@@ -23,7 +23,7 @@ namespace PureOn
         {
             Regex a = new Regex("^[a-zA-Z]*$");
             Regex n = new Regex("^[0-9]+$");
-            Regex ns = new Regex("^[789]/d{9}");
+            Regex ns = new Regex("^d{9}");
             Regex an = new Regex("^[a-zA-Z0-9_]+");
             Regex p = new Regex("/d{6}");
             DateTime today = Convert.ToDateTime(DateTime.Now);
