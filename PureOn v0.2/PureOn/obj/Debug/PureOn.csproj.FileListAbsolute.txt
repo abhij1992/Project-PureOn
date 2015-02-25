@@ -81,3 +81,5 @@ D:\adarsh\git\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.History.resourc
 D:\adarsh\git\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.ManageUsers.resources
 D:\adarsh\git\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Properties.Resources.resources
 D:\adarsh\git\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.csproj.GenerateResource.Cache
+D:\adarsh\git\Project-PureOn\Project-PureOn\PureOn v0.2\PureOn\bin\Debug\PureOn.exe.config
+D:\adarsh\git\Project-PureOn\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.exe
