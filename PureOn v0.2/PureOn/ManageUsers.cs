@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace PureOn
 {
     public partial class ManageUsers : Form
@@ -17,7 +18,7 @@ namespace PureOn
         {
             InitializeComponent();
         }
-
+       
         private void addBtn_Click(object sender, EventArgs e)
         {
             DBConnection db = new DBConnection();

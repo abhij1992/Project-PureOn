@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace PureOn
 {
@@ -38,6 +39,51 @@ namespace PureOn
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private bool addExecutivevalidate()
+        {
+            Regex a = new Regex("^[a-zA-Z]*$");
+            Regex n = new Regex("^[0-9]+$");
+            Regex ns = new Regex("^[789]/d{9}");
+            Regex an = new Regex("^[a-zA-Z0-9_]+");
+
+            if (exeName.Text == "")
+            {
+                MessageBox.Show("please enter the customer name");
+                return false;
+            }
+            else if (!(a.IsMatch(exeName.Text)))
+            {
+                MessageBox.Show("please enter the customer name in correct format");
+                return false;
+            }
+            else if (exeID.Text == "")
+            {
+                MessageBox.Show("please enter the customer ID");
+                return false;
+            }
+            else if (exePhone.Text == "")
+            {
+                MessageBox.Show("please enter the primary phone number");
+                return false;
+            }
+            else if ((!(n.IsMatch(exePhone.Text))) && (!(ns.IsMatch(exePhone.Text))))
+            {
+                MessageBox.Show("please enter the primary phone number in correct format");
+                return false;
+            }
+            else if (exeAdd.Text == "")
+            {
+                MessageBox.Show("please enter the street address");
+                return false;
+            }
+            else if (!(an.IsMatch(exeAdd.Text)))
+            {
+                MessageBox.Show("please enter the street address in correct format");
+                return false;
+            }
+            return true;
         }
         private Executive loadExecutiveObject()
         {

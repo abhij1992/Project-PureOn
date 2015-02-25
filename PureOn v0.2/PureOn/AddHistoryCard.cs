@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
+
 namespace PureOn
 {
     public partial class AddHistoryCard : Form
@@ -25,6 +27,60 @@ namespace PureOn
             tempL.Text = "Part:";
             partsFlow.Controls.Add(tempL);
             partsFlow.Controls.Add(temp);
+        }
+        private bool historyCardValid()
+        {
+            Regex a = new Regex("^[a-zA-Z]*$");
+            Regex n = new Regex("^[0-9]+$");
+            Regex ns = new Regex("^[789]/d{9}");
+            Regex an = new Regex("^[a-zA-Z0-9_]+");
+
+            if (custID.Text == "")
+            {
+                MessageBox.Show("please enter the customer ID");
+                return false;
+            }
+            else if (!installRdBtn.Checked && !serviceRdBtn.Checked)
+            {
+                MessageBox.Show("please select any option from Work details");
+                return false;
+            }
+            else if (icr.Text == "")
+            {
+                MessageBox.Show("please enter the icr number");
+                return false;
+            }
+            else if ((!(n.IsMatch(icr.Text))))
+            {
+                MessageBox.Show("please enter the icr number in correct format");
+                return false;
+            }
+            else if (iccr.Text == "")
+            {
+                MessageBox.Show("please enter the iccr number");
+                return false;
+            }
+            else if ((!(n.IsMatch(iccr.Text))))
+            {
+                MessageBox.Show("please enter the iccr number in correct format");
+                return false;
+            }
+            else if (amount.Text == "")
+            {
+                MessageBox.Show("please enter the amount charged");
+                return false;
+            }
+            else if ((!(n.IsMatch(amount.Text))))
+            {
+                MessageBox.Show("please enter the  in correct format");
+                return false;
+            }
+            else if (serviceEng.SelectedValue == null)
+            {
+                MessageBox.Show("please select the service enginner");
+                return false;
+            }
+            return true;
         }
         private HistoryCard loadHistoryObject()
         {
