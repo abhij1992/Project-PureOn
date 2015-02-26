@@ -113,5 +113,10 @@ namespace PureOn
         {
             load_history_table();
         }
+
+        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

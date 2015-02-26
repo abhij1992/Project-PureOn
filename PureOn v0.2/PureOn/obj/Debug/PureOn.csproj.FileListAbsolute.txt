@@ -83,3 +83,7 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureO
 D:\adarsh\git\Project-PureOn\Project-PureOn\PureOn v0.2\PureOn\bin\Debug\PureOn.exe.config
 D:\adarsh\git\Project-PureOn\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.exe
 D:\adarsh\git\Project-PureOn\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.pdb
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.AddExecutive.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Admin_Manage_Users.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Update_customer.resources
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\Debug\PureOn.Update_History.resources

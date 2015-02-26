@@ -33,5 +33,11 @@ namespace PureOn
             AddExecutive a = new AddExecutive();
             a.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Admin_Manage_Users amu = new Admin_Manage_Users();
+            amu.ShowDialog();
+        }
     }
 }
