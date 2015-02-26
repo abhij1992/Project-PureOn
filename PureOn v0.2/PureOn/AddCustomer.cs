@@ -21,7 +21,7 @@ namespace PureOn
         }
         private bool AddCustomervalid()
         {
-            Regex a = new Regex("^[a-zA-Z]*$");
+            Regex a = new Regex("^[a-zA-Z\\s]*$");
             Regex n = new Regex("^[0-9]+$");
             Regex ns = new Regex("^d{9}");
             Regex an = new Regex("^[a-zA-Z0-9_]+");

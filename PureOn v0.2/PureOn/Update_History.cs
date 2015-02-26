@@ -24,6 +24,60 @@ namespace PureOn
             c_id = cusids;
             id_to_update = up_hist_id;
         }
+        private bool HistoryValid()
+        {
+            Regex a = new Regex("^[a-zA-Z\\s]*$");
+            Regex n = new Regex("^[0-9]+$");
+            Regex ns = new Regex("^d{9}");
+            Regex an = new Regex("^[a-zA-Z0-9_]+");
+
+            if (custID.Text == "")
+            {
+                MessageBox.Show("please enter the customer ID");
+                return false;
+            }
+            else if (!serviceRdBtn.Checked && !installRdBtn.Checked)
+            {
+                MessageBox.Show("please select any option from work details");
+                return false;
+            }
+            else if (iccr.Text == "")
+            {
+                MessageBox.Show("please enter the iccr number");
+                return false;
+            }
+            else if ((!(n.IsMatch(iccr.Text))) && (!(ns.IsMatch(iccr.Text))))
+            {
+                MessageBox.Show("please enter the iccr number in correct format");
+                return false;
+            }
+            else if (icr.Text == "")
+            {
+                MessageBox.Show("please enter the icr number");
+                return false;
+            }
+            else if ((!(n.IsMatch(icr.Text))) && (!(ns.IsMatch(icr.Text))))
+            {
+                MessageBox.Show("please enter the iccr number in correct format");
+                return false;
+            }
+            else if (amount.Text == "")
+            {
+                MessageBox.Show("please enter the amount");
+                return false;
+            }
+            else if ((!(n.IsMatch(amount.Text))) && (!(ns.IsMatch(amount.Text))))
+            {
+                MessageBox.Show("please enter the amount correct format");
+                return false;
+            }
+            else if (serviceEng.Text == "")
+            {
+                MessageBox.Show("please select the service engineer");
+                return false;
+            }
+            return true;
+        }
         private HistoryCard loadHistoryObject()
         {
             HistoryCard hc = new HistoryCard();
@@ -174,6 +228,7 @@ namespace PureOn
 
         private void addHCard_Click(object sender, EventArgs e)
         {
+            if (!(HistoryValid())) return;
             if (MessageBox.Show("Are you sure you want to update ", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
             {
                 if (insertHistoryCard())

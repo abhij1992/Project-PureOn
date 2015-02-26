@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace PureOn
 {
@@ -48,9 +49,36 @@ namespace PureOn
             e.exe_address = exeAdd.Text;
             return e;
         }
+        private bool validateAdd()
+        {
+            Regex a = new Regex("^[a-zA-Z\\s]*$");
+            Regex n = new Regex("^[0-9]+$");
+            Regex an = new Regex("^[a-zA-Z0-9_]+");
 
+            if (exeName.Text == "")
+            {MessageBox.Show("Enter Executive Name"); return false;}
+            else if (exeID.Text == "")
+            { MessageBox.Show("Enter Executive ID"); return false; }
+            else if (exePhone.Text == "")
+            { MessageBox.Show("Enter Executive Phone number"); return false; }
+            else if (exeAdd.Text == "")
+            { MessageBox.Show("Enter Executive Address"); return false; }
+
+            if (!(a.IsMatch(exeName.Text)))
+            { MessageBox.Show("Enter valid Executive Name"); return false; }
+            else if (!(an.IsMatch(exeID.Text)))
+            { MessageBox.Show("Enter valid Executive ID"); return false; }
+            else if (!(n.IsMatch(exePhone.Text)))
+            { MessageBox.Show("Enter valid Executive Phone Number"); return false; }
+            else if (!(an.IsMatch(exeAdd.Text)))
+            { MessageBox.Show("Enter valid Executive Phone Number"); return false; }
+
+            return true;
+        }
         private void addExeBtn_Click(object sender, EventArgs e)
         {
+            if (!validateAdd()) return;
+
             Executive ex = loadExecutiveObject();
             if(addExecutive(ex))
             {
@@ -85,6 +113,15 @@ namespace PureOn
             public string exe_number { get; set; }
             public string exe_address { get; set; }
         }
+        private bool validateDel()
+        {
+            if (delExeCombo.Text == "")
+            {
+                MessageBox.Show("Select a Executive to delete");
+                return false;
+            }
+            return true;
+        }
         private bool deleteExe(string name)
         {
             try
@@ -111,6 +148,8 @@ namespace PureOn
         }
         private void delExeBtn_Click(object sender, EventArgs e)
         {
+            if (!validateDel()) return;
+
             if(deleteExe(delExeCombo.Text))
             {
                 this.Close();

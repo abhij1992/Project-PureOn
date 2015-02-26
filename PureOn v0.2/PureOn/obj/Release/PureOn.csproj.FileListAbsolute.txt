@@ -23,3 +23,6 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\Pur
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.ManageUsers.resources
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Properties.Resources.resources
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.csproj.GenerateResource.Cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Admin_Manage_Users.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Update_customer.resources
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\Release\PureOn.Update_History.resources
