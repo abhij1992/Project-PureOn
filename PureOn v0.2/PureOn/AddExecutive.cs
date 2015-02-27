@@ -24,7 +24,7 @@ namespace PureOn
             try
             {
                 DBConnection db = new DBConnection();
-                string cmd = "SELECT exe_name FROM executive;";
+                string cmd = "SELECT exe_name FROM executive where isworking=1;";
                 MySqlDataReader rd = db.ExecuteReader(cmd);
                 if (!rd.HasRows) { MessageBox.Show("No executives found in Database.."); return; }
                 while(rd.Read())
@@ -95,7 +95,7 @@ namespace PureOn
             try
             {
                 DBConnection db = new DBConnection();
-                string cmd = "INSERT INTO executive VALUES (DEFAULT,'" + e.exe_name + "','" + e.exe_emp_id + "','" + e.exe_number + "','" + e.exe_address + "');";
+                string cmd = "INSERT INTO executive VALUES (DEFAULT,'" + e.exe_name + "','" + e.exe_emp_id + "','" + e.exe_number + "','" + e.exe_address + "',1);";
                 if (db.ExecuteQuery(cmd))
                     return true;
                 else return false;
@@ -127,7 +127,7 @@ namespace PureOn
             try
             {
                 DBConnection db = new DBConnection();
-                string cmd = "DELETE FROM executive WHERE exe_name='" + name + "';";
+                string cmd = "UPDATE executive SET isworking=0 WHERE exe_name='" + name + "';";
                 //MessageBox.Show(cmd);
                 if (db.ExecuteQuery(cmd))
                 {

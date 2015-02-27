@@ -33,6 +33,7 @@
             this.userText = new System.Windows.Forms.TextBox();
             this.passText = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
+            this.lConnected = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,11 +84,21 @@
             this.loginBtn.UseVisualStyleBackColor = true;
             this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
             // 
+            // lConnected
+            // 
+            this.lConnected.AutoSize = true;
+            this.lConnected.Location = new System.Drawing.Point(272, 221);
+            this.lConnected.Name = "lConnected";
+            this.lConnected.Size = new System.Drawing.Size(35, 13);
+            this.lConnected.TabIndex = 5;
+            this.lConnected.Text = "label3";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(391, 171);
+            this.ClientSize = new System.Drawing.Size(417, 243);
+            this.Controls.Add(this.lConnected);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passText);
             this.Controls.Add(this.userText);
@@ -95,6 +106,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,6 +119,7 @@
         private System.Windows.Forms.TextBox userText;
         private System.Windows.Forms.TextBox passText;
         private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Label lConnected;
     }
 }
 
