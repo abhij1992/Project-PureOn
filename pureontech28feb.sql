@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2015 at 04:44 PM
+-- Generation Time: Feb 27, 2015 at 08:02 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `customer_info` (
   `cust_id` int(10) NOT NULL AUTO_INCREMENT,
-  `customer_id` varchar(7) NOT NULL,
+  `customer_id` varchar(15) NOT NULL,
   `cust_name` varchar(55) NOT NULL,
   `phone_primary` varchar(15) NOT NULL,
   `phone_alt` varchar(15) NOT NULL,
@@ -42,18 +42,18 @@ CREATE TABLE IF NOT EXISTS `customer_info` (
   `warrenty_date` date NOT NULL,
   `cont_details` int(2) NOT NULL,
   PRIMARY KEY (`cust_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `customer_info`
 --
 
 INSERT INTO `customer_info` (`cust_id`, `customer_id`, `cust_name`, `phone_primary`, `phone_alt`, `door_no`, `street_name`, `pin_code`, `filter_model`, `date_of_installation`, `unit_slno`, `used_at`, `warrenty_date`, `cont_details`) VALUES
-(1, '1PI13MC', 'Abhi', '9738', '9945', '1118', '14th cross', '560072', 'CRZ12', '2015-02-18', '234', 1, '2015-02-18', 1),
 (2, '1PI12MC', 'Josh', '2323', '2322', '3232', '14th cs', '48930', 'dlsm9', '2015-02-18', '8009', 1, '2015-02-18', 1),
 (3, '4324', 'Manju', '432', '432', '42', '342', '4322', 'fw2', '2015-02-18', '5432', 1, '2015-02-18', 1),
-(4, '3412', 'fcd', '321', '4324', '4213', '432', '44412', '32f', '2015-02-18', '4321', 1, '2015-02-18', 1),
-(5, '1PI', 'Abhi', '3212', '321321', 'c321', '12a', '560072', 'dsa', '2015-02-02', '32dsa', 2, '2015-02-27', 1);
+(5, '1PI', 'Abhi', '3212', '321321', 'c321', '12a', '560072', 'dsa', '2015-02-02', '32dsa', 2, '2015-02-27', 1),
+(6, '1PI1390', 'Ashok Murthy', '9738252811', '9986286970', '1118', '14th Cross,1st stage,1st Phase', '560072', 'CRXZ01', '2015-02-03', '1290', 2, '2015-03-11', 2),
+(7, '1PI13MC', 'Abhi', '9738', '9945', '1118', '14th cross', '560072', 'CRZ12', '2015-02-18', '234', 1, '2015-03-04', 1);
 
 -- --------------------------------------------------------
 
@@ -67,18 +67,19 @@ CREATE TABLE IF NOT EXISTS `executive` (
   `exe_emp_id` varchar(20) NOT NULL,
   `exe_number` varchar(15) NOT NULL,
   `exe_address` varchar(300) NOT NULL,
+  `isworking` int(3) NOT NULL,
   PRIMARY KEY (`exe_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `executive`
 --
 
-INSERT INTO `executive` (`exe_id`, `exe_name`, `exe_emp_id`, `exe_number`, `exe_address`) VALUES
-(2, 'Manju', 'PI123', '2147483647', '#14cross,1st stage,1st phase'),
-(3, 'Josh', 'PI190', '2147483647', 'Main Road'),
-(4, 'Alex', 'PI90', '98202139', 'dfqw23'),
-(5, 'Madhu', 'PI123', '9738252811', '#1118,14th cross,1st stage,1st phase,chandralayout,bangalore-72');
+INSERT INTO `executive` (`exe_id`, `exe_name`, `exe_emp_id`, `exe_number`, `exe_address`, `isworking`) VALUES
+(2, 'Manju', 'PI123', '2147483647', '#14cross,1st stage,1st phase', 1),
+(3, 'Josh', 'PI190', '2147483647', 'Main Road', 1),
+(4, 'Alex', 'PI90', '98202139', 'dfqw23', 1),
+(5, 'Madhu', 'PI123', '9738252811', '#1118,14th cross,1st stage,1st phase,chandralayout,bangalore-72', 1);
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,7 @@ INSERT INTO `executive` (`exe_id`, `exe_name`, `exe_emp_id`, `exe_number`, `exe_
 
 CREATE TABLE IF NOT EXISTS `history_card` (
   `hist_id` int(15) NOT NULL AUTO_INCREMENT,
-  `customer_id` varchar(7) NOT NULL,
+  `customer_id` varchar(15) NOT NULL,
   `vist_date` date NOT NULL,
   `work_details` int(2) NOT NULL,
   `parts_replaced` varchar(300) NOT NULL,
@@ -120,29 +121,16 @@ CREATE TABLE IF NOT EXISTS `login_info` (
   `emp_pword` varchar(20) NOT NULL,
   `emp_privlage` int(2) NOT NULL,
   PRIMARY KEY (`login_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `login_info`
 --
 
 INSERT INTO `login_info` (`login_id`, `emp_uname`, `emp_pword`, `emp_privlage`) VALUES
-(1, 'Abhi', 'test', 1),
-(4, 'Josh', '123', 0);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `revenue_details`
---
-
-CREATE TABLE IF NOT EXISTS `revenue_details` (
-  `revenue_id` int(15) NOT NULL AUTO_INCREMENT,
-  `exec_id` int(15) NOT NULL,
-  `rev_date` date NOT NULL,
-  `rev_amount` varchar(15) NOT NULL,
-  PRIMARY KEY (`revenue_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+(1, 'Abhi', '123', 1),
+(4, 'Josh', 'josh', 0),
+(5, 'admin', 'admin', 1);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

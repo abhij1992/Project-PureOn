@@ -100,7 +100,7 @@ namespace PureOn
             hc.iccr_no = iccr.Text;
             d=icrdate.Value.Date;
             hc.iccr_date = d.Date.ToString("yyyy-MM-dd");
-            hc.amount = Int32.Parse(amount.Text);
+            hc.amount = amount.Text;
             hc.exec_attend = getExeId(serviceEng.Text);
 
             return hc;

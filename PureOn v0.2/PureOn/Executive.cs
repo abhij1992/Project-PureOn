@@ -34,7 +34,12 @@ namespace PureOn
 
         private void Executive_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+           DialogResult dr= MessageBox.Show("Do you want to Log out and Exit?", "Exit?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+           if (dr == DialogResult.OK)
+           {
+               Application.Exit();
+           }
+           else e.Cancel = true;
         }
 
         private void loadTable()

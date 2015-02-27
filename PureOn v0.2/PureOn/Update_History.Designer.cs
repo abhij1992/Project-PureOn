@@ -291,6 +291,7 @@
             // amount
             // 
             this.amount.Location = new System.Drawing.Point(106, 273);
+            this.amount.MaxLength = 15;
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(100, 20);
             this.amount.TabIndex = 15;
@@ -298,6 +299,7 @@
             // icr
             // 
             this.icr.Location = new System.Drawing.Point(106, 194);
+            this.icr.MaxLength = 15;
             this.icr.Name = "icr";
             this.icr.Size = new System.Drawing.Size(100, 20);
             this.icr.TabIndex = 13;
@@ -305,6 +307,7 @@
             // iccr
             // 
             this.iccr.Location = new System.Drawing.Point(106, 154);
+            this.iccr.MaxLength = 15;
             this.iccr.Name = "iccr";
             this.iccr.Size = new System.Drawing.Size(100, 20);
             this.iccr.TabIndex = 12;
@@ -408,7 +411,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 517);
+            this.ClientSize = new System.Drawing.Size(932, 406);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.addHCard);
             this.Controls.Add(this.partsRepalcedGroup);

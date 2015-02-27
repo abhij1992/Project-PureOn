@@ -9,14 +9,14 @@ namespace PureOn
 {
    public class Customer
    {
-       public int cust_id { get; set; }
+       public string cust_id { get; set; }
        public string customer_id { get; set; }
        public string  cust_name { get; set; }
-       public int phone_primary { get; set; }
-       public int phone_alt { get; set; }
+       public string phone_primary { get; set; }
+       public string phone_alt { get; set; }
        public string  door_no { get; set; }
        public string street_name { get; set; }
-       public int pin_code { get; set; }
+       public string pin_code { get; set; }
        public string  filter_model { get; set; }
        public string  date_of_installation { get; set; }
        public string unit_slno { get; set; }
@@ -34,7 +34,7 @@ namespace PureOn
         public string icr_bill_no { get; set; }
         public string iccr_no { get; set; }
         public string iccr_date { get; set; }
-        public int  amount { get; set; }
+        public string  amount { get; set; }
         public int exec_attend { get; set; }
 
     }

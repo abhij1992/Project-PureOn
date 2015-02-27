@@ -37,6 +37,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.HistoryGroup = new System.Windows.Forms.GroupBox();
+            this.serviceEng = new System.Windows.Forms.ComboBox();
             this.icrdate = new System.Windows.Forms.DateTimePicker();
             this.amount = new System.Windows.Forms.TextBox();
             this.icr = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.partsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.addHCard = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
-            this.serviceEng = new System.Windows.Forms.ComboBox();
             this.HistoryGroup.SuspendLayout();
             this.wrkDetails.SuspendLayout();
             this.partsRepalcedGroup.SuspendLayout();
@@ -87,9 +87,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(14, 218);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 5;
-            this.label5.Text = "ICR No:";
+            this.label5.Text = "ICR Bill No:";
             // 
             // label6
             // 
@@ -105,9 +105,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(14, 258);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 13);
+            this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 7;
-            this.label7.Text = "ICR Date:";
+            this.label7.Text = "ICCR Date:";
             // 
             // label8
             // 
@@ -151,6 +151,15 @@
             this.HistoryGroup.TabStop = false;
             this.HistoryGroup.Text = "History Card Details";
             // 
+            // serviceEng
+            // 
+            this.serviceEng.FormattingEnabled = true;
+            this.serviceEng.Location = new System.Drawing.Point(111, 331);
+            this.serviceEng.Name = "serviceEng";
+            this.serviceEng.Size = new System.Drawing.Size(121, 21);
+            this.serviceEng.Sorted = true;
+            this.serviceEng.TabIndex = 18;
+            // 
             // icrdate
             // 
             this.icrdate.Location = new System.Drawing.Point(73, 258);
@@ -161,6 +170,7 @@
             // amount
             // 
             this.amount.Location = new System.Drawing.Point(114, 294);
+            this.amount.MaxLength = 15;
             this.amount.Name = "amount";
             this.amount.Size = new System.Drawing.Size(100, 20);
             this.amount.TabIndex = 15;
@@ -168,6 +178,7 @@
             // icr
             // 
             this.icr.Location = new System.Drawing.Point(114, 215);
+            this.icr.MaxLength = 15;
             this.icr.Name = "icr";
             this.icr.Size = new System.Drawing.Size(100, 20);
             this.icr.TabIndex = 13;
@@ -175,6 +186,7 @@
             // iccr
             // 
             this.iccr.Location = new System.Drawing.Point(114, 175);
+            this.iccr.MaxLength = 15;
             this.iccr.Name = "iccr";
             this.iccr.Size = new System.Drawing.Size(100, 20);
             this.iccr.TabIndex = 12;
@@ -267,15 +279,6 @@
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
-            // 
-            // serviceEng
-            // 
-            this.serviceEng.FormattingEnabled = true;
-            this.serviceEng.Location = new System.Drawing.Point(111, 331);
-            this.serviceEng.Name = "serviceEng";
-            this.serviceEng.Size = new System.Drawing.Size(121, 21);
-            this.serviceEng.Sorted = true;
-            this.serviceEng.TabIndex = 18;
             // 
             // AddHistoryCard
             // 

@@ -30,7 +30,7 @@ namespace PureOn
             Regex a = new Regex("^[a-zA-Z]*$");
             Regex n = new Regex("^[0-9]+$");
             Regex ns = new Regex("^d{9}");
-            Regex an = new Regex("^[a-zA-Z0-9_]+");
+            Regex an = new Regex("^[a-zA-Z0-9_#]+");
             Regex p = new Regex("/d{6}");
             DateTime today = Convert.ToDateTime(DateTime.Now);
             DateTime warrant = Convert.ToDateTime(warrantyDate.Value);
@@ -126,11 +126,11 @@ namespace PureOn
             Customer cr = new Customer();
             cr.customer_id = custID.Text;
             cr.cust_name = custName.Text;
-            cr.phone_primary = Int32.Parse(phonePrime.Text);
-            cr.phone_alt = Int32.Parse(phoneAlt.Text);
+            cr.phone_primary = phonePrime.Text;
+            cr.phone_alt = phoneAlt.Text;
             cr.door_no = doorNo.Text;
             cr.street_name = street.Text;
-            cr.pin_code = Int32.Parse(pinCode.Text);
+            cr.pin_code = pinCode.Text;
             cr.filter_model = filterModel.Text;
             DateTime d = dateOfInstallation.Value.Date;
             cr.date_of_installation = d.Date.ToString("yyyy-MM-dd");

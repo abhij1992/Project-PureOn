@@ -40,7 +40,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 38);
+            this.label1.Location = new System.Drawing.Point(48, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(69, 75);
+            this.label2.Location = new System.Drawing.Point(53, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(86, 20);
             this.label2.TabIndex = 1;
@@ -76,7 +76,7 @@
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(176, 118);
+            this.loginBtn.Location = new System.Drawing.Point(176, 111);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(75, 23);
             this.loginBtn.TabIndex = 4;
@@ -87,7 +87,7 @@
             // lConnected
             // 
             this.lConnected.AutoSize = true;
-            this.lConnected.Location = new System.Drawing.Point(272, 221);
+            this.lConnected.Location = new System.Drawing.Point(3, 161);
             this.lConnected.Name = "lConnected";
             this.lConnected.Size = new System.Drawing.Size(35, 13);
             this.lConnected.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(417, 243);
+            this.ClientSize = new System.Drawing.Size(338, 183);
             this.Controls.Add(this.lConnected);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passText);

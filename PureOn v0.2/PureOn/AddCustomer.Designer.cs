@@ -70,6 +70,7 @@
             // custID
             // 
             this.custID.Location = new System.Drawing.Point(143, 16);
+            this.custID.MaxLength = 15;
             this.custID.Name = "custID";
             this.custID.Size = new System.Drawing.Size(100, 20);
             this.custID.TabIndex = 0;
@@ -176,6 +177,7 @@
             // custName
             // 
             this.custName.Location = new System.Drawing.Point(143, 46);
+            this.custName.MaxLength = 50;
             this.custName.Name = "custName";
             this.custName.Size = new System.Drawing.Size(100, 20);
             this.custName.TabIndex = 14;
@@ -183,6 +185,7 @@
             // phonePrime
             // 
             this.phonePrime.Location = new System.Drawing.Point(143, 78);
+            this.phonePrime.MaxLength = 12;
             this.phonePrime.Name = "phonePrime";
             this.phonePrime.Size = new System.Drawing.Size(100, 20);
             this.phonePrime.TabIndex = 15;
@@ -190,6 +193,7 @@
             // phoneAlt
             // 
             this.phoneAlt.Location = new System.Drawing.Point(143, 112);
+            this.phoneAlt.MaxLength = 12;
             this.phoneAlt.Name = "phoneAlt";
             this.phoneAlt.Size = new System.Drawing.Size(100, 20);
             this.phoneAlt.TabIndex = 16;
@@ -197,6 +201,7 @@
             // doorNo
             // 
             this.doorNo.Location = new System.Drawing.Point(143, 149);
+            this.doorNo.MaxLength = 10;
             this.doorNo.Name = "doorNo";
             this.doorNo.Size = new System.Drawing.Size(100, 20);
             this.doorNo.TabIndex = 17;
@@ -204,6 +209,7 @@
             // street
             // 
             this.street.Location = new System.Drawing.Point(143, 184);
+            this.street.MaxLength = 140;
             this.street.Name = "street";
             this.street.Size = new System.Drawing.Size(100, 20);
             this.street.TabIndex = 18;
@@ -211,6 +217,7 @@
             // pinCode
             // 
             this.pinCode.Location = new System.Drawing.Point(143, 218);
+            this.pinCode.MaxLength = 15;
             this.pinCode.Name = "pinCode";
             this.pinCode.Size = new System.Drawing.Size(100, 20);
             this.pinCode.TabIndex = 19;
@@ -218,6 +225,7 @@
             // filterModel
             // 
             this.filterModel.Location = new System.Drawing.Point(139, 13);
+            this.filterModel.MaxLength = 50;
             this.filterModel.Name = "filterModel";
             this.filterModel.Size = new System.Drawing.Size(100, 20);
             this.filterModel.TabIndex = 20;
@@ -232,6 +240,7 @@
             // unitSlNo
             // 
             this.unitSlNo.Location = new System.Drawing.Point(139, 89);
+            this.unitSlNo.MaxLength = 20;
             this.unitSlNo.Name = "unitSlNo";
             this.unitSlNo.Size = new System.Drawing.Size(109, 20);
             this.unitSlNo.TabIndex = 22;

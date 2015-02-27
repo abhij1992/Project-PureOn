@@ -66,11 +66,11 @@
     <Compile Include="AddHistoryCard.Designer.cs">
       <DependentUpon>AddHistoryCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin Manage Customers.cs">
+    <Compile Include="AdminManageCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin Manage Customers.Designer.cs">
-      <DependentUpon>Admin Manage Customers.cs</DependentUpon>
+    <Compile Include="AdminManageCustomers.Designer.cs">
+      <DependentUpon>AdminManageCustomers.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminPage.cs">
       <SubType>Form</SubType>
@@ -105,6 +105,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revenue.Designer.cs">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update_customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,8 +132,8 @@
     <EmbeddedResource Include="AddHistoryCard.resx">
       <DependentUpon>AddHistoryCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin Manage Customers.resx">
-      <DependentUpon>Admin Manage Customers.cs</DependentUpon>
+    <EmbeddedResource Include="AdminManageCustomers.resx">
+      <DependentUpon>AdminManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPage.resx">
       <DependentUpon>AdminPage.cs</DependentUpon>
@@ -153,6 +159,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Revenue.resx">
+      <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Update_customer.resx">
       <DependentUpon>Update_customer.cs</DependentUpon>
     </EmbeddedResource>

@@ -112,6 +112,7 @@
             // unitSlNo
             // 
             this.unitSlNo.Location = new System.Drawing.Point(113, 63);
+            this.unitSlNo.MaxLength = 20;
             this.unitSlNo.Name = "unitSlNo";
             this.unitSlNo.Size = new System.Drawing.Size(109, 20);
             this.unitSlNo.TabIndex = 22;
@@ -126,6 +127,7 @@
             // filterModel
             // 
             this.filterModel.Location = new System.Drawing.Point(113, 13);
+            this.filterModel.MaxLength = 50;
             this.filterModel.Name = "filterModel";
             this.filterModel.Size = new System.Drawing.Size(100, 20);
             this.filterModel.TabIndex = 20;
@@ -183,6 +185,7 @@
             // pinCode
             // 
             this.pinCode.Location = new System.Drawing.Point(117, 172);
+            this.pinCode.MaxLength = 15;
             this.pinCode.Name = "pinCode";
             this.pinCode.Size = new System.Drawing.Size(100, 20);
             this.pinCode.TabIndex = 19;
@@ -190,6 +193,7 @@
             // street
             // 
             this.street.Location = new System.Drawing.Point(117, 146);
+            this.street.MaxLength = 140;
             this.street.Name = "street";
             this.street.Size = new System.Drawing.Size(100, 20);
             this.street.TabIndex = 18;
@@ -197,6 +201,7 @@
             // doorNo
             // 
             this.doorNo.Location = new System.Drawing.Point(117, 120);
+            this.doorNo.MaxLength = 10;
             this.doorNo.Name = "doorNo";
             this.doorNo.Size = new System.Drawing.Size(100, 20);
             this.doorNo.TabIndex = 17;
@@ -204,6 +209,7 @@
             // phoneAlt
             // 
             this.phoneAlt.Location = new System.Drawing.Point(117, 94);
+            this.phoneAlt.MaxLength = 12;
             this.phoneAlt.Name = "phoneAlt";
             this.phoneAlt.Size = new System.Drawing.Size(100, 20);
             this.phoneAlt.TabIndex = 16;
@@ -211,6 +217,7 @@
             // phonePrime
             // 
             this.phonePrime.Location = new System.Drawing.Point(117, 68);
+            this.phonePrime.MaxLength = 12;
             this.phonePrime.Name = "phonePrime";
             this.phonePrime.Size = new System.Drawing.Size(100, 20);
             this.phonePrime.TabIndex = 15;
@@ -218,6 +225,7 @@
             // custName
             // 
             this.custName.Location = new System.Drawing.Point(117, 42);
+            this.custName.MaxLength = 50;
             this.custName.Name = "custName";
             this.custName.Size = new System.Drawing.Size(100, 20);
             this.custName.TabIndex = 14;
@@ -390,7 +398,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;

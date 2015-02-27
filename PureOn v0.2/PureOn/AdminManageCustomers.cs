@@ -126,6 +126,7 @@ namespace PureOn
                     if (db.ExecuteQuery(qdelete))
                     {
                         MessageBox.Show(" Customer with ID " + customer_id_to_delete + " has been deleted.");
+                        loadTable();
                     }
                     else
                         MessageBox.Show("Error in deleteing customer from the Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

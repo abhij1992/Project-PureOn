@@ -14,9 +14,16 @@ namespace PureOn
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Login());
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("There was some fatal error encountered in the Application..\nError: "+ex.Message+"\nApplication Shutting down..","Fatal App Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
         }
     }
 }

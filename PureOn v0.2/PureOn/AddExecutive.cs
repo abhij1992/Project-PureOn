@@ -19,6 +19,13 @@ namespace PureOn
             InitializeComponent();
             loadExecutives();
         }
+        public class Executive
+        {
+            public string exe_name { get; set; }
+            public string exe_emp_id { get; set; }
+            public string exe_number { get; set; }
+            public string exe_address { get; set; }
+        }
         private void loadExecutives()
         {
             try
@@ -105,13 +112,6 @@ namespace PureOn
                 MessageBox.Show(ex.Message);
                 return false;
             }
-        }
-        public class Executive
-        {
-            public string exe_name { get; set; }
-            public string exe_emp_id { get; set; }
-            public string exe_number { get; set; }
-            public string exe_address { get; set; }
         }
         private bool validateDel()
         {
