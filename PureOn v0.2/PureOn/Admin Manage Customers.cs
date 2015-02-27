@@ -14,8 +14,10 @@ namespace PureOn
     public partial class Admin_Manage_Users : Form
     {
         DataTable dbdataset;
+        string customer_id_to_delete;
         private void loadTable()
         {
+            
             DBConnection db = new DBConnection();
             MySqlConnection conDataBase = new MySqlConnection(db.getconnstring());
             MySqlCommand cmdDataBase = new MySqlCommand("SELECT `customer_id`,`cust_name`,`phone_primary`,`door_no`,`street_name`,`pin_code` FROM `customer_info`;", conDataBase);
@@ -111,6 +113,56 @@ namespace PureOn
                 frmUCustomer.ShowDialog();
 
                  }
+        }
+
+        private void deleteUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Are you sure you want to delete User id " + customer_id_to_delete, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    DBConnection db = new DBConnection();
+                    string qdelete = "DELETE a.*, b.* FROM customer_info a LEFT JOIN history_card b ON b.`customer_id` = a.`customer_id` WHERE a.`customer_id` = '"+customer_id_to_delete+"'; ";
+                    if (db.ExecuteQuery(qdelete))
+                    {
+                        MessageBox.Show(" Customer with ID " + customer_id_to_delete + " has been deleted.");
+                    }
+                    else
+                        MessageBox.Show("Error in deleteing customer from the Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                //MessageBox.Show("to delete" + hist_id_to_delete);
+            }
+            catch (Exception e4)
+            {
+                MessageBox.Show(e4.Message);
+            }
+        }
+
+        private void dataGridView_MouseUp(object sender, MouseEventArgs e)
+        {
+            DataGridView.HitTestInfo hitTestInfo;
+
+            try
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    hitTestInfo = dataGridView.HitTest(e.X, e.Y);
+                    if (hitTestInfo.Type == DataGridViewHitTestType.Cell)
+                    {
+
+                        contextMenuStrip1.Show(dataGridView, e.Location);
+                        dataGridView.Rows[hitTestInfo.RowIndex].Selected = true;
+                        //MessageBox.Show(dataGridView1.Rows[hitTestInfo.RowIndex].Cells[8].Value.ToString());
+                        customer_id_to_delete = dataGridView.Rows[hitTestInfo.RowIndex].Cells[0].Value.ToString();
+                    }
+
+
+                }
+            }catch(Exception e12)
+            {
+                MessageBox.Show(e12.Message + " " + e12.Source);
+            }
         }
     }
      

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.NetworkInformation;
+using MySql.Data.MySqlClient;
 
 namespace PureOn
 {
@@ -65,6 +68,31 @@ namespace PureOn
             if(e.KeyChar==(char)Keys.Enter)
             {
                 loginBtn_Click(this,null);
+            }
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                DBConnection db = new DBConnection();
+                MySqlDataReader resultSet = db.ExecuteReader("SELECT * FROM `login_info` WHERE `emp_uname`='admin';");
+                if (!resultSet.HasRows)
+                {
+                    lConnected.ForeColor = System.Drawing.Color.Red;
+                    lConnected.Text = "Database not connected";
+                }
+                else
+                {
+                    lConnected.ForeColor = System.Drawing.Color.Green;
+                    lConnected.Text = "Database connected";
+                }
+               
+            }catch(MyDBError e3){
+                //MessageBox.Show(e3.Message);
+                lConnected.ForeColor = System.Drawing.Color.Red;
+                lConnected.Text = "Database not connected";
+
             }
         }
 

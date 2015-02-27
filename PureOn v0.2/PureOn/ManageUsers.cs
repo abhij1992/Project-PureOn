@@ -71,17 +71,25 @@ namespace PureOn
         }
         private void reload()
         {
-            DBConnection db = new DBConnection();
-            string strSQL = "SELECT emp_uname,login_id,emp_privlage FROM login_info where emp_uname <> 'admin';";
-            MySqlDataReader resultSet = db.ExecuteReader(strSQL);
-            DataTable dtusers = new DataTable();
-            dtusers.Columns.Add("emp_uname", typeof(String));
-            dtusers.Columns.Add("login_id", typeof(String));
-            dtusers.Load(resultSet);
-            cbDelete.ValueMember = "login_id";
-            cbDelete.DisplayMember = "emp_uname";
-            cbDelete.DataSource = dtusers;
-            db.Close();
+            try { 
+                DBConnection db = new DBConnection();
+                string strSQL = "SELECT emp_uname,login_id,emp_privlage FROM login_info where emp_uname <> 'admin';";
+                MySqlDataReader resultSet = db.ExecuteReader(strSQL);
+                DataTable dtusers = new DataTable();
+                dtusers.Columns.Add("emp_uname", typeof(String));
+                dtusers.Columns.Add("login_id", typeof(String));
+                dtusers.Load(resultSet);
+                cbDelete.ValueMember = "login_id";
+                cbDelete.DisplayMember = "emp_uname";
+                cbDelete.DataSource = dtusers;
+                cbupdate.ValueMember = "login_id";
+                cbupdate.DisplayMember = "emp_uname";
+                cbupdate.DataSource = dtusers;
+                db.Close();
+            }catch(Exception e4){
+                MessageBox.Show(e4.Message);
+            }
+
         }
 
         private void btDelete_Click(object sender, EventArgs e)
@@ -96,6 +104,37 @@ namespace PureOn
                 MessageBox.Show(delusername+" was successfully deleted.");
                 reload();
                 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textBox2.Text == "" )
+                    MessageBox.Show("Enter a password");
+                else if (textBox1.Text != textBox2.Text)
+                    MessageBox.Show("The passwords do not match");
+                else
+                {
+                    DBConnection db = new DBConnection();
+                    string deluser = cbupdate.SelectedValue.ToString();
+                    string delusername = cbupdate.Text;
+                    string strSQL = "UPDATE login_info SET emp_pword='"+textBox2.Text+"' where login_id=" + deluser + ";";
+                    db.ExecuteQuery(strSQL);
+                    MessageBox.Show(delusername + " was successfully Updated.");
+                    reload();
+                }
+
             }
             catch (Exception ex)
             {

@@ -144,7 +144,7 @@ namespace PureOn
         private bool loadServiceEngineers()
         {
             DBConnection db = new DBConnection();
-            string cmd = "SELECT exe_name FROM executive;";
+            string cmd = "SELECT exe_name FROM executive where isworking=1;";
             MySqlDataReader r = db.ExecuteReader(cmd);
             if (!r.HasRows) { MessageBox.Show("No Executives found in Executive table"); return false; }
             while(r.Read())
@@ -170,7 +170,7 @@ namespace PureOn
         private int getExeId(string name)
         {
             DBConnection db = new DBConnection();
-            string cmd = "SELECT exe_id from executive WHERE exe_name='" + name + "';";
+            string cmd = "SELECT exe_id from executive WHERE exe_name='" + name + "' and isworking=1;";
             MySqlDataReader res = db.ExecuteReader(cmd);
             if(!res.HasRows){MessageBox.Show("Could not find selected executive in Database"); return -1;}
             res.Read();

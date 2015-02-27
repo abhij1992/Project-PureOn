@@ -12,13 +12,17 @@ using System.Text.RegularExpressions;
 
 namespace PureOn
 {
+    
     public partial class Update_customer : Form
     {
+        string hist_id_to_delete;
         String CustomerAutoGenID;
         public bool newRecord { get; set; }
         public Update_customer()
         {
             InitializeComponent();
+
+
             this.newRecord = false;
         }
         private bool AddCustomervalid()
@@ -297,6 +301,58 @@ namespace PureOn
             //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             frmHistory.custID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             frmHistory.ShowDialog();
+        }
+
+        private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void DeleteRow_Click(object sender, EventArgs e)
+        {
+            try { 
+                if (MessageBox.Show("Are you sure you want to delete History id "+hist_id_to_delete, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    DBConnection db = new DBConnection();
+                    string qdelete = "DELETE FROM `pureontech`.`history_card` WHERE `history_card`.`hist_id` = "+hist_id_to_delete+"; ";
+                    if (db.ExecuteQuery(qdelete)) {
+                        MessageBox.Show(" History ID "+hist_id_to_delete+" has been deleted.");
+                    }
+                    else
+                        MessageBox.Show("Error in deleting history from the Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                //MessageBox.Show("to delete" + hist_id_to_delete);
+            }
+            catch(Exception e4)
+            {
+                MessageBox.Show(e4.Message);
+            }
+
+        }
+
+        private void dataGridView1_MouseUp(object sender, MouseEventArgs e)
+        {
+            DataGridView.HitTestInfo hitTestInfo;
+            try
+            {
+                if (e.Button == MouseButtons.Right)
+                {
+                    hitTestInfo = dataGridView1.HitTest(e.X, e.Y);
+                    if (hitTestInfo.Type == DataGridViewHitTestType.Cell)
+                    {
+
+                        contextMenuStrip1.Show(dataGridView1, e.Location);
+                        dataGridView1.Rows[hitTestInfo.RowIndex].Selected = true;
+                        //MessageBox.Show(dataGridView1.Rows[hitTestInfo.RowIndex].Cells[8].Value.ToString());
+                        hist_id_to_delete = dataGridView1.Rows[hitTestInfo.RowIndex].Cells[8].Value.ToString();
+                    }
+
+
+                }
+            }catch(Exception e11){
+                MessageBox.Show(e11.Message+" "+e11.Source);
+            }
         }
     }
 }
