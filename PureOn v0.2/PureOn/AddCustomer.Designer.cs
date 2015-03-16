@@ -61,6 +61,7 @@
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
+            this.none = new System.Windows.Forms.RadioButton();
             this.ContractDetails.SuspendLayout();
             this.UserAt.SuspendLayout();
             this.customerData.SuspendLayout();
@@ -288,7 +289,7 @@
             // 
             this.amc.AutoSize = true;
             this.amc.Checked = true;
-            this.amc.Location = new System.Drawing.Point(65, 23);
+            this.amc.Location = new System.Drawing.Point(43, 23);
             this.amc.Name = "amc";
             this.amc.Size = new System.Drawing.Size(48, 17);
             this.amc.TabIndex = 27;
@@ -299,7 +300,7 @@
             // acmc
             // 
             this.acmc.AutoSize = true;
-            this.acmc.Location = new System.Drawing.Point(162, 23);
+            this.acmc.Location = new System.Drawing.Point(121, 23);
             this.acmc.Name = "acmc";
             this.acmc.Size = new System.Drawing.Size(55, 17);
             this.acmc.TabIndex = 28;
@@ -308,6 +309,7 @@
             // 
             // ContractDetails
             // 
+            this.ContractDetails.Controls.Add(this.none);
             this.ContractDetails.Controls.Add(this.amc);
             this.ContractDetails.Controls.Add(this.acmc);
             this.ContractDetails.Location = new System.Drawing.Point(361, 167);
@@ -387,6 +389,17 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
+            // none
+            // 
+            this.none.AutoSize = true;
+            this.none.Location = new System.Drawing.Point(201, 23);
+            this.none.Name = "none";
+            this.none.Size = new System.Drawing.Size(51, 17);
+            this.none.TabIndex = 29;
+            this.none.TabStop = true;
+            this.none.Text = "None";
+            this.none.UseVisualStyleBackColor = true;
+            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -450,5 +463,6 @@
         private System.Windows.Forms.GroupBox FilterDetails;
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button cancelBtn;
+        private System.Windows.Forms.RadioButton none;
     }
 }

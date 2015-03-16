@@ -15,25 +15,36 @@ namespace PureOn
     
     public partial class Update_customer : Form
     {
+        bool executiveDisableFlag;
         string hist_id_to_delete;
         String CustomerAutoGenID;
         public bool newRecord { get; set; }
         public Update_customer()
         {
             InitializeComponent();
-
-
             this.newRecord = false;
+        }
+        public Update_customer(bool forExecutiveFlag)
+        {
+            if(forExecutiveFlag)
+            {
+                InitializeComponent();
+                this.newRecord = false;
+                this.FilterDetails.Enabled = false;
+                this.UserAt.Enabled = false;
+                this.warrantyDate.Enabled = false;
+                this.ContractDetails.Enabled = false;
+                this.executiveDisableFlag = true;
+            }
         }
         private bool AddCustomervalid()
         {
-            Regex a = new Regex("^[a-zA-Z]*$");
+            Regex a = new Regex("^[a-zA-Z\\s]*$");
             Regex n = new Regex("^[0-9]+$");
             Regex ns = new Regex("^d{9}");
             Regex an = new Regex("^[a-zA-Z0-9_#]+");
             Regex p = new Regex("/d{6}");
-            DateTime today = Convert.ToDateTime(DateTime.Now);
-            DateTime warrant = Convert.ToDateTime(warrantyDate.Value);
+           
             if (custID.Text == "")
             {
                 MessageBox.Show("please enter the customer ID");
@@ -112,11 +123,6 @@ namespace PureOn
             else if (!amc.Checked && !acmc.Checked)
             {
                 MessageBox.Show("please select any option from contracts details");
-                return false;
-            }
-            else if (warrant <= today)
-            {
-                MessageBox.Show("please enter the valid Warranty Date");
                 return false;
             }
             return true;
@@ -225,6 +231,7 @@ namespace PureOn
                 int cont_details = resultSet.GetInt32(13);
                 if (cont_details == 1) amc.Select();
                 else if (cont_details == 2) acmc.Select();
+                else if (cont_details == 0) none.Select();
                 db.Close();
 
                 //loading table
@@ -244,39 +251,6 @@ namespace PureOn
             ahc.ShowDialog();
         }
 
-        private void addBtn_Click(object sender, EventArgs e)
-        {
-            if (!AddCustomervalid())
-            {
-                return;
-            }
-
-            Customer cr = loadCustomerObject();
-
-            try
-            {
-                DBConnection db = new DBConnection();
-                if (MessageBox.Show("Are you sure you want to update ", "Confirmation",MessageBoxButtons.YesNo, MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
-                {
-                    string qdelete = "DELETE FROM customer_info WHERE customer_id='" + custID.Text + "'; ";
-                    if(db.ExecuteQuery(qdelete)){
-                        if (db.insertCustomer(cr))
-                        {
-                            MessageBox.Show("Updated customer succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.newRecord = true;
-                            this.Close();
-                        }
-                        else
-                            MessageBox.Show("Error in adding new customer to Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-            }
-            catch (MyDBError ex)
-            {
-                MessageBox.Show("Error encountered:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -287,29 +261,18 @@ namespace PureOn
             load_history_table();
         }
 
-        private void dataGridView1_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex > -1 && e.ColumnIndex > -1)
-            {
-               
-            }
-        }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (executiveDisableFlag) return;
             Update_History frmHistory = new Update_History(custID.Text, dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString());
             //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             frmHistory.custID.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
             frmHistory.ShowDialog();
         }
 
-        private void dataGridView1_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-        }
-
         private void DeleteRow_Click(object sender, EventArgs e)
         {
+            if (executiveDisableFlag) {MessageBox.Show("You cannot delete History cards","Not Permitted",MessageBoxButtons.OK); return;}
             try { 
                 if (MessageBox.Show("Are you sure you want to delete History id "+hist_id_to_delete, "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
                 {
@@ -354,5 +317,38 @@ namespace PureOn
                 MessageBox.Show(e11.Message+" "+e11.Source);
             }
         }
+
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            if (!AddCustomervalid())
+            {
+                return;
+            }
+            Customer cr = loadCustomerObject();
+            try
+            {
+                DBConnection db = new DBConnection();
+                if (MessageBox.Show("Are you sure you want to update?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    string qdelete = "DELETE FROM customer_info WHERE customer_id='" + custID.Text + "'; ";
+                    if (db.ExecuteQuery(qdelete))
+                    {
+                        if (db.insertCustomer(cr))
+                        {
+                            MessageBox.Show("Updated customer succesfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.newRecord = true;
+                            this.Close();
+                        }
+                        else
+                            MessageBox.Show("Error in adding new customer to Database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            catch (MyDBError ex)
+            {
+                MessageBox.Show("Error encountered:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

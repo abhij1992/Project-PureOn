@@ -37,9 +37,10 @@ namespace PureOn
            DialogResult dr= MessageBox.Show("Do you want to Log out and Exit?", "Exit?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
            if (dr == DialogResult.OK)
            {
-               Application.Exit();
+               //Application.Exit();
+               Environment.Exit(0);
            }
-           else e.Cancel = true;
+           else { e.Cancel = true; this.Activate(); }
         }
 
         private void loadTable()
@@ -117,10 +118,15 @@ namespace PureOn
 
             if (e.RowIndex > -1 && e.ColumnIndex > -1)
             {
-                History frmHistory = new History();
+               /* History frmHistory = new History();
                 //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frmHistory.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
-                frmHistory.ShowDialog();
+                frmHistory.ShowDialog();*/
+
+                Update_customer frmUCustomer = new Update_customer(true);
+                frmUCustomer.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frmUCustomer.ShowDialog();
+                if (frmUCustomer.newRecord) { loadTable(); }
             }
         }
     }

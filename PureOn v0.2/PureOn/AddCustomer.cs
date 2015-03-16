@@ -26,8 +26,6 @@ namespace PureOn
             Regex ns = new Regex("^d{9}");
             Regex an = new Regex("^[a-zA-Z0-9_#]+");
             Regex p = new Regex("/d{6}");
-            DateTime today = Convert.ToDateTime(DateTime.Now);
-            DateTime warrant = Convert.ToDateTime(warrantyDate.Value);
             if (custID.Text == "")
             {
                 MessageBox.Show("please enter the customer ID");
@@ -103,14 +101,9 @@ namespace PureOn
                 MessageBox.Show("please select any option from used at");
                 return false;
             }
-            else if (!amc.Checked && !acmc.Checked)
+            else if (!amc.Checked && !acmc.Checked &&!none.Checked)
             {
                 MessageBox.Show("please select any option from contracts details");
-                return false;
-            }
-            else if (warrant <= today)
-            {
-                MessageBox.Show("please enter the valid Warranty Date");
                 return false;
             }
             return true;
@@ -139,6 +132,7 @@ namespace PureOn
 
             if (amc.Checked) cr.cont_details = 1;
             else if (acmc.Checked) cr.cont_details = 2;
+            else if (none.Checked) cr.cont_details = 0;
 
             return cr;
         }

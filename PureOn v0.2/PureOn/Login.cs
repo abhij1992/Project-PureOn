@@ -76,7 +76,7 @@ namespace PureOn
             try
             {
                 DBConnection db = new DBConnection();
-                MySqlDataReader resultSet = db.ExecuteReader("SELECT * FROM `login_info` WHERE `emp_uname`='admin';");
+                MySqlDataReader resultSet = db.ExecuteReader("SELECT * FROM `login_info`;");
                 if (!resultSet.HasRows)
                 {
                     lConnected.ForeColor = System.Drawing.Color.Red;

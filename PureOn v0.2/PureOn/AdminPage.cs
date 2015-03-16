@@ -46,9 +46,16 @@ namespace PureOn
             DialogResult dr = MessageBox.Show("Do you want to Log out and Exit?", "Exit?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dr == DialogResult.OK)
             {
-                Application.Exit();
+                //Application.Exit();
+                Environment.Exit(0);
             }
-            else e.Cancel = true;
+            else {e.Cancel = true; this.Activate();}
+        }
+
+        private void reportBtn_Click(object sender, EventArgs e)
+        {
+            Report r = new Report();
+            r.ShowDialog();
         }
     }
 }

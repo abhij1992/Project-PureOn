@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.addBtn = new System.Windows.Forms.Button();
+            this.updateBtn = new System.Windows.Forms.Button();
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.unitSlNo = new System.Windows.Forms.TextBox();
             this.dateOfInstallation = new System.Windows.Forms.DateTimePicker();
@@ -58,12 +58,13 @@
             this.residence = new System.Windows.Forms.RadioButton();
             this.both = new System.Windows.Forms.RadioButton();
             this.ContractDetails = new System.Windows.Forms.GroupBox();
+            this.none = new System.Windows.Forms.RadioButton();
             this.amc = new System.Windows.Forms.RadioButton();
             this.acmc = new System.Windows.Forms.RadioButton();
             this.warrantyDate = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addHistBtn = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.DeleteRow = new System.Windows.Forms.ToolStripMenuItem();
             this.FilterDetails.SuspendLayout();
@@ -84,15 +85,15 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // addBtn
+            // updateBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(12, 469);
-            this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(125, 23);
-            this.addBtn.TabIndex = 41;
-            this.addBtn.Text = "Update Customer";
-            this.addBtn.UseVisualStyleBackColor = true;
-            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
+            this.updateBtn.Location = new System.Drawing.Point(12, 469);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(125, 23);
+            this.updateBtn.TabIndex = 41;
+            this.updateBtn.Text = "Update Customer";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // FilterDetails
             // 
@@ -347,6 +348,7 @@
             // 
             // ContractDetails
             // 
+            this.ContractDetails.Controls.Add(this.none);
             this.ContractDetails.Controls.Add(this.amc);
             this.ContractDetails.Controls.Add(this.acmc);
             this.ContractDetails.Location = new System.Drawing.Point(12, 412);
@@ -356,11 +358,22 @@
             this.ContractDetails.TabStop = false;
             this.ContractDetails.Text = "Contract Details";
             // 
+            // none
+            // 
+            this.none.AutoSize = true;
+            this.none.Location = new System.Drawing.Point(179, 19);
+            this.none.Name = "none";
+            this.none.Size = new System.Drawing.Size(51, 17);
+            this.none.TabIndex = 29;
+            this.none.TabStop = true;
+            this.none.Text = "None";
+            this.none.UseVisualStyleBackColor = true;
+            // 
             // amc
             // 
             this.amc.AutoSize = true;
             this.amc.Checked = true;
-            this.amc.Location = new System.Drawing.Point(65, 19);
+            this.amc.Location = new System.Drawing.Point(29, 19);
             this.amc.Name = "amc";
             this.amc.Size = new System.Drawing.Size(48, 17);
             this.amc.TabIndex = 27;
@@ -371,7 +384,7 @@
             // acmc
             // 
             this.acmc.AutoSize = true;
-            this.acmc.Location = new System.Drawing.Point(162, 17);
+            this.acmc.Location = new System.Drawing.Point(100, 19);
             this.acmc.Name = "acmc";
             this.acmc.Size = new System.Drawing.Size(55, 17);
             this.acmc.TabIndex = 28;
@@ -416,20 +429,18 @@
             this.dataGridView1.ShowRowErrors = false;
             this.dataGridView1.Size = new System.Drawing.Size(636, 514);
             this.dataGridView1.TabIndex = 43;
-            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentDoubleClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
-            this.dataGridView1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseDown);
             this.dataGridView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseUp);
             // 
-            // button1
+            // addHistBtn
             // 
-            this.button1.Location = new System.Drawing.Point(173, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 23);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Add History";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addHistBtn.Location = new System.Drawing.Point(173, 469);
+            this.addHistBtn.Name = "addHistBtn";
+            this.addHistBtn.Size = new System.Drawing.Size(132, 23);
+            this.addHistBtn.TabIndex = 44;
+            this.addHistBtn.Text = "Add History";
+            this.addHistBtn.UseVisualStyleBackColor = true;
+            this.addHistBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -450,10 +461,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(993, 546);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addHistBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancelBtn);
-            this.Controls.Add(this.addBtn);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.FilterDetails);
             this.Controls.Add(this.customerData);
             this.Controls.Add(this.UserAt);
@@ -482,7 +493,7 @@
         #endregion
 
         private System.Windows.Forms.Button cancelBtn;
-        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.GroupBox FilterDetails;
         private System.Windows.Forms.TextBox unitSlNo;
         private System.Windows.Forms.DateTimePicker dateOfInstallation;
@@ -515,8 +526,9 @@
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.TextBox custID;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addHistBtn;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem DeleteRow;
+        private System.Windows.Forms.RadioButton none;
     }
 }

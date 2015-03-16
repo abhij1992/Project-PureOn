@@ -32,6 +32,7 @@
             this.mngExe = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.revenueBtn = new System.Windows.Forms.Button();
+            this.reportBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -74,11 +75,22 @@
             this.revenueBtn.UseVisualStyleBackColor = true;
             this.revenueBtn.Click += new System.EventHandler(this.revenueBtn_Click);
             // 
+            // reportBtn
+            // 
+            this.reportBtn.Location = new System.Drawing.Point(132, 233);
+            this.reportBtn.Name = "reportBtn";
+            this.reportBtn.Size = new System.Drawing.Size(121, 35);
+            this.reportBtn.TabIndex = 4;
+            this.reportBtn.Text = "Report";
+            this.reportBtn.UseVisualStyleBackColor = true;
+            this.reportBtn.Click += new System.EventHandler(this.reportBtn_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 237);
+            this.ClientSize = new System.Drawing.Size(378, 280);
+            this.Controls.Add(this.reportBtn);
             this.Controls.Add(this.revenueBtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.mngExe);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button mngExe;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button revenueBtn;
+        private System.Windows.Forms.Button reportBtn;
     }
 }
