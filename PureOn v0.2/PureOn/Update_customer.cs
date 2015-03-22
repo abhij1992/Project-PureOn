@@ -151,6 +151,17 @@ namespace PureOn
 
             if (amc.Checked) cr.cont_details = 1;
             else if (acmc.Checked) cr.cont_details = 2;
+            else if (none.Checked) cr.cont_details = 0;
+
+            var parts = new List<string>();
+            foreach (Object c in acmcCheckList.CheckedItems)
+            {
+                //parts.Add(acmcCheckList.Items.IndexOf(c).ToString());//For index value
+                parts.Add(c.ToString());
+            }
+            if (parts.Count > 0) cr.acmc_covered_parts = string.Join(",", parts.ToArray());
+            else cr.acmc_covered_parts = "NULL";
+            //MessageBox.Show(cr.acmc_covered_parts);
 
             return cr;
         }
@@ -232,6 +243,15 @@ namespace PureOn
                 if (cont_details == 1) amc.Select();
                 else if (cont_details == 2) acmc.Select();
                 else if (cont_details == 0) none.Select();
+
+                string[] acmcParts = resultSet.GetString(14).Split(',');
+                foreach(string part in acmcParts)
+                {
+                    if(acmcCheckList.Items.Contains(part))
+                    {
+                        acmcCheckList.SetItemCheckState(acmcCheckList.Items.IndexOf(part),CheckState.Checked);
+                    }
+                }
                 db.Close();
 
                 //loading table
@@ -347,6 +367,19 @@ namespace PureOn
             catch (MyDBError ex)
             {
                 MessageBox.Show("Error encountered:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void acmc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.acmc.Checked == true) this.acmcGroupBox.Enabled = true;
+            else
+            {
+                foreach (int i in acmcCheckList.CheckedIndices)
+                {
+                    acmcCheckList.SetItemCheckState(i, CheckState.Unchecked);
+                }
+                this.acmcGroupBox.Enabled = false;
             }
         }
 

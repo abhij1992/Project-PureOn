@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 27, 2015 at 08:02 PM
+-- Generation Time: Mar 22, 2015 at 10:46 AM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -41,19 +41,21 @@ CREATE TABLE IF NOT EXISTS `customer_info` (
   `used_at` int(3) NOT NULL,
   `warrenty_date` date NOT NULL,
   `cont_details` int(2) NOT NULL,
+  `acmc_covered_parts` varchar(300) NOT NULL COMMENT 'stores the ACMC parts covered if any',
   PRIMARY KEY (`cust_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `customer_info`
 --
 
-INSERT INTO `customer_info` (`cust_id`, `customer_id`, `cust_name`, `phone_primary`, `phone_alt`, `door_no`, `street_name`, `pin_code`, `filter_model`, `date_of_installation`, `unit_slno`, `used_at`, `warrenty_date`, `cont_details`) VALUES
-(2, '1PI12MC', 'Josh', '2323', '2322', '3232', '14th cs', '48930', 'dlsm9', '2015-02-18', '8009', 1, '2015-02-18', 1),
-(3, '4324', 'Manju', '432', '432', '42', '342', '4322', 'fw2', '2015-02-18', '5432', 1, '2015-02-18', 1),
-(5, '1PI', 'Abhi', '3212', '321321', 'c321', '12a', '560072', 'dsa', '2015-02-02', '32dsa', 2, '2015-02-27', 1),
-(6, '1PI1390', 'Ashok Murthy', '9738252811', '9986286970', '1118', '14th Cross,1st stage,1st Phase', '560072', 'CRXZ01', '2015-02-03', '1290', 2, '2015-03-11', 2),
-(7, '1PI13MC', 'Abhi', '9738', '9945', '1118', '14th cross', '560072', 'CRZ12', '2015-02-18', '234', 1, '2015-03-04', 1);
+INSERT INTO `customer_info` (`cust_id`, `customer_id`, `cust_name`, `phone_primary`, `phone_alt`, `door_no`, `street_name`, `pin_code`, `filter_model`, `date_of_installation`, `unit_slno`, `used_at`, `warrenty_date`, `cont_details`, `acmc_covered_parts`) VALUES
+(11, '1PI13MC', 'Abhi J', '9738', '9945', '1118', '14th cross', '560072', 'CRZ12', '2015-02-18', '234', 1, '2015-03-04', 1, 'NULL'),
+(12, '1PI', 'Abhijith B S', '3212', '321321', 'c321', '12a', '560072', 'dsa', '2015-02-02', '32dsa', 2, '2015-02-27', 1, 'NULL'),
+(14, '1PI12MC', 'Joshua Mark', '2323', '2322', '3232', '14th cs', '48930', 'dlsm9', '2015-02-18', '8009', 3, '2015-02-18', 1, 'NULL'),
+(17, '1PI13MCA01', 'Adarsh Murthy', '9738252811', '9986756289', '#119i', '2nd Main', '560073', 'XR-1289', '2015-03-01', '9086', 1, '2015-03-20', 2, 'Sedement,Carbon,R O Membrane'),
+(18, '1PI1390', 'Ashok Murthy', '9738252811', '9986286970', '1118', '14th Cross,1st stage,1st Phase', '560072', 'CRXZ01', '2015-02-03', '1290', 2, '2015-03-11', 2, 'Sedement,Carbon,R O Membrane,Solinide valve (SV),Pump'),
+(19, '4324', 'Manju', '432', '432', '42', '342', '4322', 'fw2', '2015-02-18', '5432', 1, '2015-02-18', 2, 'R O Membrane');
 
 -- --------------------------------------------------------
 
@@ -69,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `executive` (
   `exe_address` varchar(300) NOT NULL,
   `isworking` int(3) NOT NULL,
   PRIMARY KEY (`exe_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `executive`
@@ -121,7 +123,7 @@ CREATE TABLE IF NOT EXISTS `login_info` (
   `emp_pword` varchar(20) NOT NULL,
   `emp_privlage` int(2) NOT NULL,
   PRIMARY KEY (`login_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `login_info`

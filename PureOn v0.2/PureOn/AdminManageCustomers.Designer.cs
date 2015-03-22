@@ -55,6 +55,9 @@
             // 
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(304, 12);
@@ -67,7 +70,7 @@
             this.dataGridView.ShowCellToolTips = false;
             this.dataGridView.ShowEditingIcon = false;
             this.dataGridView.ShowRowErrors = false;
-            this.dataGridView.Size = new System.Drawing.Size(606, 252);
+            this.dataGridView.Size = new System.Drawing.Size(742, 452);
             this.dataGridView.TabIndex = 36;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             this.dataGridView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dataGridView_MouseUp);
@@ -223,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 320);
+            this.ClientSize = new System.Drawing.Size(1049, 476);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.customerData);
             this.Controls.Add(this.addCustomerBtn);

@@ -47,7 +47,7 @@ namespace PureOn
         {
             DBConnection db = new DBConnection();
             MySqlConnection conDataBase = new MySqlConnection(db.getconnstring());
-            MySqlCommand cmdDataBase = new MySqlCommand("SELECT `customer_id`,`cust_name`,`phone_primary`,`door_no`,`street_name`,`pin_code` FROM `customer_info`;", conDataBase);
+            MySqlCommand cmdDataBase = new MySqlCommand("SELECT `customer_id`,`cust_name`,`phone_primary`,`door_no`,`street_name`,`pin_code`,`acmc_covered_parts` FROM `customer_info`;", conDataBase);
             //String cmdDataBase = "SELECT `customer_id`,`cust_name`,`phone_primary`,`door_no`,`street_name`,`pin_code` FROM `customer_info`;";
 
             try
@@ -60,6 +60,10 @@ namespace PureOn
 
                 bSource.DataSource = dbdataset;
                 dataGridView.DataSource = bSource;
+
+                //set the 7 column parts_covered to display full content
+                dataGridView.Columns[6].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
                 sda.Update(dbdataset);
 
             }

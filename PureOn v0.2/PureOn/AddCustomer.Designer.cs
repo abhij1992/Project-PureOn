@@ -56,16 +56,19 @@
             this.amc = new System.Windows.Forms.RadioButton();
             this.acmc = new System.Windows.Forms.RadioButton();
             this.ContractDetails = new System.Windows.Forms.GroupBox();
+            this.none = new System.Windows.Forms.RadioButton();
             this.UserAt = new System.Windows.Forms.GroupBox();
             this.customerData = new System.Windows.Forms.GroupBox();
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.none = new System.Windows.Forms.RadioButton();
+            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
+            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
             this.ContractDetails.SuspendLayout();
             this.UserAt.SuspendLayout();
             this.customerData.SuspendLayout();
             this.FilterDetails.SuspendLayout();
+            this.acmcGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // custID
@@ -169,7 +172,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(358, 130);
+            this.label12.Location = new System.Drawing.Point(387, 129);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 13);
             this.label12.TabIndex = 12;
@@ -248,7 +251,7 @@
             // 
             // warrantyDate
             // 
-            this.warrantyDate.Location = new System.Drawing.Point(457, 126);
+            this.warrantyDate.Location = new System.Drawing.Point(486, 123);
             this.warrantyDate.Name = "warrantyDate";
             this.warrantyDate.Size = new System.Drawing.Size(200, 20);
             this.warrantyDate.TabIndex = 23;
@@ -300,31 +303,44 @@
             // acmc
             // 
             this.acmc.AutoSize = true;
-            this.acmc.Location = new System.Drawing.Point(121, 23);
+            this.acmc.Location = new System.Drawing.Point(116, 23);
             this.acmc.Name = "acmc";
             this.acmc.Size = new System.Drawing.Size(55, 17);
             this.acmc.TabIndex = 28;
             this.acmc.Text = "ACMC";
             this.acmc.UseVisualStyleBackColor = true;
+            this.acmc.CheckedChanged += new System.EventHandler(this.acmc_CheckedChanged);
             // 
             // ContractDetails
             // 
+            this.ContractDetails.Controls.Add(this.acmcGroupBox);
             this.ContractDetails.Controls.Add(this.none);
             this.ContractDetails.Controls.Add(this.amc);
             this.ContractDetails.Controls.Add(this.acmc);
-            this.ContractDetails.Location = new System.Drawing.Point(361, 167);
+            this.ContractDetails.Location = new System.Drawing.Point(390, 167);
             this.ContractDetails.Name = "ContractDetails";
-            this.ContractDetails.Size = new System.Drawing.Size(296, 56);
+            this.ContractDetails.Size = new System.Drawing.Size(296, 200);
             this.ContractDetails.TabIndex = 29;
             this.ContractDetails.TabStop = false;
             this.ContractDetails.Text = "Contract Details";
+            // 
+            // none
+            // 
+            this.none.AutoSize = true;
+            this.none.Location = new System.Drawing.Point(201, 23);
+            this.none.Name = "none";
+            this.none.Size = new System.Drawing.Size(51, 17);
+            this.none.TabIndex = 29;
+            this.none.TabStop = true;
+            this.none.Text = "None";
+            this.none.UseVisualStyleBackColor = true;
             // 
             // UserAt
             // 
             this.UserAt.Controls.Add(this.office);
             this.UserAt.Controls.Add(this.residence);
             this.UserAt.Controls.Add(this.both);
-            this.UserAt.Location = new System.Drawing.Point(361, 12);
+            this.UserAt.Location = new System.Drawing.Point(390, 12);
             this.UserAt.Name = "UserAt";
             this.UserAt.Size = new System.Drawing.Size(296, 93);
             this.UserAt.TabIndex = 30;
@@ -389,16 +405,39 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // none
+            // acmcGroupBox
             // 
-            this.none.AutoSize = true;
-            this.none.Location = new System.Drawing.Point(201, 23);
-            this.none.Name = "none";
-            this.none.Size = new System.Drawing.Size(51, 17);
-            this.none.TabIndex = 29;
-            this.none.TabStop = true;
-            this.none.Text = "None";
-            this.none.UseVisualStyleBackColor = true;
+            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
+            this.acmcGroupBox.Enabled = false;
+            this.acmcGroupBox.Location = new System.Drawing.Point(28, 46);
+            this.acmcGroupBox.Name = "acmcGroupBox";
+            this.acmcGroupBox.Size = new System.Drawing.Size(239, 148);
+            this.acmcGroupBox.TabIndex = 30;
+            this.acmcGroupBox.TabStop = false;
+            this.acmcGroupBox.Text = "ACMC Insurance Covered";
+            // 
+            // acmcCheckList
+            // 
+            this.acmcCheckList.CheckOnClick = true;
+            this.acmcCheckList.FormattingEnabled = true;
+            this.acmcCheckList.Items.AddRange(new object[] {
+            "Sedement",
+            "Carbon",
+            "R O Membrane",
+            "Solinide valve (SV)",
+            "Pump",
+            "Flow rejection Tube (FRT)",
+            "Float valve",
+            "TDS valve",
+            "Choke",
+            "UV Lamp",
+            "UV chamber",
+            "Connectors L&T",
+            "Adaptor"});
+            this.acmcCheckList.Location = new System.Drawing.Point(15, 15);
+            this.acmcCheckList.Name = "acmcCheckList";
+            this.acmcCheckList.Size = new System.Drawing.Size(209, 124);
+            this.acmcCheckList.TabIndex = 0;
             // 
             // AddCustomer
             // 
@@ -423,6 +462,7 @@
             this.customerData.PerformLayout();
             this.FilterDetails.ResumeLayout(false);
             this.FilterDetails.PerformLayout();
+            this.acmcGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,5 +504,7 @@
         private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Button cancelBtn;
         private System.Windows.Forms.RadioButton none;
+        private System.Windows.Forms.GroupBox acmcGroupBox;
+        private System.Windows.Forms.CheckedListBox acmcCheckList;
     }
 }

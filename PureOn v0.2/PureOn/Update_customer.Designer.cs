@@ -58,6 +58,8 @@
             this.residence = new System.Windows.Forms.RadioButton();
             this.both = new System.Windows.Forms.RadioButton();
             this.ContractDetails = new System.Windows.Forms.GroupBox();
+            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
+            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
             this.none = new System.Windows.Forms.RadioButton();
             this.amc = new System.Windows.Forms.RadioButton();
             this.acmc = new System.Windows.Forms.RadioButton();
@@ -71,13 +73,14 @@
             this.customerData.SuspendLayout();
             this.UserAt.SuspendLayout();
             this.ContractDetails.SuspendLayout();
+            this.acmcGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(109, 511);
+            this.cancelBtn.Location = new System.Drawing.Point(102, 646);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(75, 23);
             this.cancelBtn.TabIndex = 42;
@@ -87,7 +90,7 @@
             // 
             // updateBtn
             // 
-            this.updateBtn.Location = new System.Drawing.Point(12, 469);
+            this.updateBtn.Location = new System.Drawing.Point(24, 605);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(125, 23);
             this.updateBtn.TabIndex = 41;
@@ -348,15 +351,49 @@
             // 
             // ContractDetails
             // 
+            this.ContractDetails.Controls.Add(this.acmcGroupBox);
             this.ContractDetails.Controls.Add(this.none);
             this.ContractDetails.Controls.Add(this.amc);
             this.ContractDetails.Controls.Add(this.acmc);
             this.ContractDetails.Location = new System.Drawing.Point(12, 412);
             this.ContractDetails.Name = "ContractDetails";
-            this.ContractDetails.Size = new System.Drawing.Size(296, 43);
+            this.ContractDetails.Size = new System.Drawing.Size(296, 187);
             this.ContractDetails.TabIndex = 37;
             this.ContractDetails.TabStop = false;
             this.ContractDetails.Text = "Contract Details";
+            // 
+            // acmcGroupBox
+            // 
+            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
+            this.acmcGroupBox.Location = new System.Drawing.Point(16, 42);
+            this.acmcGroupBox.Name = "acmcGroupBox";
+            this.acmcGroupBox.Size = new System.Drawing.Size(260, 139);
+            this.acmcGroupBox.TabIndex = 30;
+            this.acmcGroupBox.TabStop = false;
+            this.acmcGroupBox.Text = "ACMC Insurance covered";
+            // 
+            // acmcCheckList
+            // 
+            this.acmcCheckList.CheckOnClick = true;
+            this.acmcCheckList.FormattingEnabled = true;
+            this.acmcCheckList.Items.AddRange(new object[] {
+            "Sedement",
+            "Carbon",
+            "R O Membrane",
+            "Solinide valve (SV)",
+            "Pump",
+            "Flow rejection Tube (FRT)",
+            "Float valve",
+            "TDS valve",
+            "Choke",
+            "UV Lamp",
+            "UV chamber",
+            "Connectors L&T",
+            "Adaptor"});
+            this.acmcCheckList.Location = new System.Drawing.Point(13, 21);
+            this.acmcCheckList.Name = "acmcCheckList";
+            this.acmcCheckList.Size = new System.Drawing.Size(241, 109);
+            this.acmcCheckList.TabIndex = 0;
             // 
             // none
             // 
@@ -390,6 +427,7 @@
             this.acmc.TabIndex = 28;
             this.acmc.Text = "ACMC";
             this.acmc.UseVisualStyleBackColor = true;
+            this.acmc.CheckedChanged += new System.EventHandler(this.acmc_CheckedChanged);
             // 
             // warrantyDate
             // 
@@ -411,6 +449,9 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
@@ -427,14 +468,14 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(636, 514);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 640);
             this.dataGridView1.TabIndex = 43;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dataGridView1_MouseUp);
             // 
             // addHistBtn
             // 
-            this.addHistBtn.Location = new System.Drawing.Point(173, 469);
+            this.addHistBtn.Location = new System.Drawing.Point(173, 605);
             this.addHistBtn.Name = "addHistBtn";
             this.addHistBtn.Size = new System.Drawing.Size(132, 23);
             this.addHistBtn.TabIndex = 44;
@@ -460,7 +501,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 546);
+            this.ClientSize = new System.Drawing.Size(993, 696);
             this.Controls.Add(this.addHistBtn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.cancelBtn);
@@ -483,6 +524,7 @@
             this.UserAt.PerformLayout();
             this.ContractDetails.ResumeLayout(false);
             this.ContractDetails.PerformLayout();
+            this.acmcGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -530,5 +572,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem DeleteRow;
         private System.Windows.Forms.RadioButton none;
+        private System.Windows.Forms.GroupBox acmcGroupBox;
+        private System.Windows.Forms.CheckedListBox acmcCheckList;
     }
 }

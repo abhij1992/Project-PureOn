@@ -134,6 +134,16 @@ namespace PureOn
             else if (acmc.Checked) cr.cont_details = 2;
             else if (none.Checked) cr.cont_details = 0;
 
+            var parts = new List<string>();
+            foreach (Object c in acmcCheckList.CheckedItems)
+            {
+                 //parts.Add(acmcCheckList.Items.IndexOf(c).ToString());//For index value
+                   parts.Add(c.ToString());
+            }
+            if (parts.Count > 0)cr.acmc_covered_parts = string.Join(",", parts.ToArray());
+            else cr.acmc_covered_parts = "NULL";
+            MessageBox.Show(cr.acmc_covered_parts);
+
             return cr;
         }
         private void addBtn_Click(object sender, EventArgs e)
@@ -142,9 +152,7 @@ namespace PureOn
             {
                 return;
             }
-
             Customer cr = loadCustomerObject();
-
             try
             {
                 DBConnection db = new DBConnection();
@@ -164,6 +172,19 @@ namespace PureOn
         private void cancelBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void acmc_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.acmc.Checked == true) this.acmcGroupBox.Enabled = true;
+            else
+            {
+                foreach (int i in acmcCheckList.CheckedIndices)
+                {
+                    acmcCheckList.SetItemCheckState(i, CheckState.Unchecked);
+                }
+                this.acmcGroupBox.Enabled = false;
+            }
         }
     }
 }

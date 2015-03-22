@@ -23,6 +23,7 @@ namespace PureOn
        public int used_at { get; set; }
        public string warranty_date { get; set; }
        public int cont_details { get; set; }
+       public string acmc_covered_parts { get; set; }
    }
    public class HistoryCard
     {
@@ -149,8 +150,8 @@ namespace PureOn
        {
            try
            {
-               string Query = "INSERT into customer_info VALUES (DEFAULT,'" + c.customer_id + "','" + c.cust_name + "','" + c.phone_primary + "','" + c.phone_alt + "','" + c.door_no + "','" + c.street_name + "','" + c.pin_code + "','" + c.filter_model+"','"+c.date_of_installation+"','"+c.unit_slno+"','"+c.used_at+"','"+c.warranty_date+"','"+c.cont_details+"');";
-               Console.WriteLine(Query);
+               string Query = "INSERT into customer_info VALUES (DEFAULT,'" + c.customer_id + "','" + c.cust_name + "','" + c.phone_primary + "','" + c.phone_alt + "','" + c.door_no + "','" + c.street_name + "','" + c.pin_code + "','" + c.filter_model+"','"+c.date_of_installation+"','"+c.unit_slno+"','"+c.used_at+"','"+c.warranty_date+"','"+c.cont_details+"','"+c.acmc_covered_parts+"');";
+               //Console.WriteLine(Query);
                if (ExecuteQuery(Query)) return true;
                else return false;
            }
