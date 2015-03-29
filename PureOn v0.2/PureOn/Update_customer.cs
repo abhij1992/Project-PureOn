@@ -170,9 +170,9 @@ namespace PureOn
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
             DBConnection db = new DBConnection();
-            string strSQL = "SELECT `vist_date`,`work_details`,`parts_replaced`,`icr_bill_no`,`iccr_no`,`iccr_date`,`amount`, `e`.`exe_name`,`hist_id` FROM `history_card`,`executive` `e` WHERE e.exe_id = exec_attend and `history_card`.`customer_id` = '" + custID.Text + "';";
+            string strSQL = "SELECT `vist_date`,`work_details`,`parts_replaced`,`icr_bill_no`,`iccr_no`,`iccr_date`,`amount`, `e`.`exe_name`,`hist_id`,`acmc_part_used` FROM `history_card`,`executive` `e` WHERE e.exe_id = exec_attend and `history_card`.`customer_id` = '" + custID.Text + "';";
             MySqlDataReader resultSet = db.ExecuteReader(strSQL);
-            dataGridView1.ColumnCount = 9;
+            dataGridView1.ColumnCount = 10;
             dataGridView1.Columns[0].Name = "Visit Date";
             dataGridView1.Columns[1].Name = "Work Detail";
             dataGridView1.Columns[2].Name = "Parts Replaced";
@@ -190,6 +190,7 @@ namespace PureOn
             dataGridView1.Columns[6].HeaderText = "Amount";
             dataGridView1.Columns[7].HeaderText = "Executive";
             dataGridView1.Columns[8].HeaderText = "History ID";
+            dataGridView1.Columns[9].HeaderText = "Part already covered";
             dataGridView1.Columns[2].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             while (resultSet.Read())
@@ -205,7 +206,7 @@ namespace PureOn
                 string[] words = resultSet.GetString(0).Split(' ');
                 string[] words2 = resultSet.GetString(5).Split(' ');
                 string rps = "Rs. " + resultSet.GetString(6).ToString();
-                dataGridView1.Rows.Add(words[0], str, output, resultSet.GetString(3).ToString(), resultSet.GetString(4).ToString(), words2[0], rps, resultSet.GetString(7).ToString(), resultSet.GetString(8).ToString());
+                dataGridView1.Rows.Add(words[0], str, output, resultSet.GetString(3).ToString(), resultSet.GetString(4).ToString(), words2[0], rps, resultSet.GetString(7).ToString(), resultSet.GetString(8).ToString(), resultSet.GetString(9).ToString());
                
              
             }

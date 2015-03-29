@@ -51,9 +51,12 @@
             this.partsFlow = new System.Windows.Forms.FlowLayoutPanel();
             this.addHCard = new System.Windows.Forms.Button();
             this.cancel = new System.Windows.Forms.Button();
+            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
+            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
             this.HistoryGroup.SuspendLayout();
             this.wrkDetails.SuspendLayout();
             this.partsRepalcedGroup.SuspendLayout();
+            this.acmcGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // custID
@@ -262,7 +265,7 @@
             // 
             // addHCard
             // 
-            this.addHCard.Location = new System.Drawing.Point(325, 364);
+            this.addHCard.Location = new System.Drawing.Point(641, 294);
             this.addHCard.Name = "addHCard";
             this.addHCard.Size = new System.Drawing.Size(101, 23);
             this.addHCard.TabIndex = 12;
@@ -272,7 +275,7 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(449, 364);
+            this.cancel.Location = new System.Drawing.Point(796, 294);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 13;
@@ -280,11 +283,31 @@
             this.cancel.UseVisualStyleBackColor = true;
             this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
+            // acmcGroupBox
+            // 
+            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
+            this.acmcGroupBox.Location = new System.Drawing.Point(618, 12);
+            this.acmcGroupBox.Name = "acmcGroupBox";
+            this.acmcGroupBox.Size = new System.Drawing.Size(305, 222);
+            this.acmcGroupBox.TabIndex = 31;
+            this.acmcGroupBox.TabStop = false;
+            this.acmcGroupBox.Text = "ACMC Insurance covered";
+            // 
+            // acmcCheckList
+            // 
+            this.acmcCheckList.CheckOnClick = true;
+            this.acmcCheckList.FormattingEnabled = true;
+            this.acmcCheckList.Location = new System.Drawing.Point(13, 21);
+            this.acmcCheckList.Name = "acmcCheckList";
+            this.acmcCheckList.Size = new System.Drawing.Size(286, 184);
+            this.acmcCheckList.TabIndex = 0;
+            // 
             // AddHistoryCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(637, 396);
+            this.ClientSize = new System.Drawing.Size(935, 415);
+            this.Controls.Add(this.acmcGroupBox);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.addHCard);
             this.Controls.Add(this.partsRepalcedGroup);
@@ -296,6 +319,7 @@
             this.wrkDetails.ResumeLayout(false);
             this.wrkDetails.PerformLayout();
             this.partsRepalcedGroup.ResumeLayout(false);
+            this.acmcGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,5 +349,7 @@
         private System.Windows.Forms.FlowLayoutPanel partsFlow;
         private System.Windows.Forms.DateTimePicker icrdate;
         private System.Windows.Forms.ComboBox serviceEng;
+        private System.Windows.Forms.GroupBox acmcGroupBox;
+        private System.Windows.Forms.CheckedListBox acmcCheckList;
     }
 }
