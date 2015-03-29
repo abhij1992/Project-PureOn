@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Revenue));
             this.exeCombo = new System.Windows.Forms.ComboBox();
             this.fromDate = new System.Windows.Forms.DateTimePicker();
             this.toDate = new System.Windows.Forms.DateTimePicker();
@@ -159,6 +160,7 @@
             this.Controls.Add(this.toDate);
             this.Controls.Add(this.fromDate);
             this.Controls.Add(this.exeCombo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Revenue";
             this.Text = "Revenue";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

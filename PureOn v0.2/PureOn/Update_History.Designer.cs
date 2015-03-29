@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_History));
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.unitSlNo = new System.Windows.Forms.TextBox();
@@ -437,6 +438,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(286, 20);
             this.textBox2.TabIndex = 42;
+            this.textBox2.Visible = false;
             // 
             // textBox3
             // 
@@ -444,6 +446,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(286, 20);
             this.textBox3.TabIndex = 43;
+            this.textBox3.Visible = false;
             // 
             // Update_History
             // 
@@ -459,6 +462,9 @@
             this.Controls.Add(this.HistoryGroup);
             this.Controls.Add(this.FilterDetails);
             this.Controls.Add(this.customerData);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Update_History";
             this.Text = "Update_History";
             this.Load += new System.EventHandler(this.Update_History_Load);

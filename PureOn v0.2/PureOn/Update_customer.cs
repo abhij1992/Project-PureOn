@@ -191,6 +191,8 @@ namespace PureOn
             dataGridView1.Columns[7].HeaderText = "Executive";
             dataGridView1.Columns[8].HeaderText = "History ID";
             dataGridView1.Columns[9].HeaderText = "Part already covered";
+            dataGridView1.Columns[9].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
             dataGridView1.Columns[2].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             while (resultSet.Read())

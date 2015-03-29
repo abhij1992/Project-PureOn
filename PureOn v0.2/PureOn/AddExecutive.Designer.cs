@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddExecutive));
             this.addExeGrp = new System.Windows.Forms.GroupBox();
             this.addExeBtn = new System.Windows.Forms.Button();
             this.exeAdd = new System.Windows.Forms.TextBox();
@@ -39,8 +40,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.delExe = new System.Windows.Forms.GroupBox();
-            this.delExeCombo = new System.Windows.Forms.ComboBox();
             this.delExeBtn = new System.Windows.Forms.Button();
+            this.delExeCombo = new System.Windows.Forms.ComboBox();
             this.addExeGrp.SuspendLayout();
             this.delExe.SuspendLayout();
             this.SuspendLayout();
@@ -148,14 +149,6 @@
             this.delExe.TabStop = false;
             this.delExe.Text = "Delete Executive";
             // 
-            // delExeCombo
-            // 
-            this.delExeCombo.FormattingEnabled = true;
-            this.delExeCombo.Location = new System.Drawing.Point(16, 21);
-            this.delExeCombo.Name = "delExeCombo";
-            this.delExeCombo.Size = new System.Drawing.Size(178, 21);
-            this.delExeCombo.TabIndex = 0;
-            // 
             // delExeBtn
             // 
             this.delExeBtn.Location = new System.Drawing.Point(66, 61);
@@ -166,6 +159,14 @@
             this.delExeBtn.UseVisualStyleBackColor = true;
             this.delExeBtn.Click += new System.EventHandler(this.delExeBtn_Click);
             // 
+            // delExeCombo
+            // 
+            this.delExeCombo.FormattingEnabled = true;
+            this.delExeCombo.Location = new System.Drawing.Point(16, 21);
+            this.delExeCombo.Name = "delExeCombo";
+            this.delExeCombo.Size = new System.Drawing.Size(178, 21);
+            this.delExeCombo.TabIndex = 0;
+            // 
             // AddExecutive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,6 +174,9 @@
             this.ClientSize = new System.Drawing.Size(544, 263);
             this.Controls.Add(this.delExe);
             this.Controls.Add(this.addExeGrp);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddExecutive";
             this.Text = "Add Executive";
             this.addExeGrp.ResumeLayout(false);

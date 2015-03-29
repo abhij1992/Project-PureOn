@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminPage));
             this.button1 = new System.Windows.Forms.Button();
             this.mngExe = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -95,6 +96,9 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.mngExe);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AdminPage";
             this.Text = "Administrator";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);

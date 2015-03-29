@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(History));
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.unitSlNo = new System.Windows.Forms.TextBox();
@@ -224,6 +225,7 @@
             this.Controls.Add(this.addHistory);
             this.Controls.Add(this.FilterDetails);
             this.Controls.Add(this.customerData);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "History";
             this.Text = "History";
             this.Activated += new System.EventHandler(this.History_Activated);

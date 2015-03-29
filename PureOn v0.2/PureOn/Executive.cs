@@ -29,7 +29,7 @@ namespace PureOn
             AddCustomer a = new AddCustomer();
             a.ShowDialog();
             if (a.newRecord) loadTable();//MessageBox.Show("New record added");
-            else MessageBox.Show("No record was added");
+            else { /*MessageBox.Show("No record was added"); */}
           
         }
 
@@ -140,6 +140,12 @@ namespace PureOn
                 frmUCustomer.ShowDialog();
                 if (frmUCustomer.newRecord) { loadTable(); }
             }
+        }
+
+        private void report_Click(object sender, EventArgs e)
+        {
+            Report r = new Report();
+            r.ShowDialog();
         }
     }
 }

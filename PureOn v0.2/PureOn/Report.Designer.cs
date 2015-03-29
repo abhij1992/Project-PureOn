@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,7 @@
             this.toDate = new System.Windows.Forms.DateTimePicker();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.generate = new System.Windows.Forms.Button();
+            this.genpast6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(363, 58);
+            this.label3.Location = new System.Drawing.Point(292, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 2;
@@ -67,14 +69,14 @@
             // 
             // fromDate
             // 
-            this.fromDate.Location = new System.Drawing.Point(89, 52);
+            this.fromDate.Location = new System.Drawing.Point(69, 51);
             this.fromDate.Name = "fromDate";
             this.fromDate.Size = new System.Drawing.Size(200, 20);
             this.fromDate.TabIndex = 3;
             // 
             // toDate
             // 
-            this.toDate.Location = new System.Drawing.Point(416, 52);
+            this.toDate.Location = new System.Drawing.Point(331, 51);
             this.toDate.Name = "toDate";
             this.toDate.Size = new System.Drawing.Size(200, 20);
             this.toDate.TabIndex = 4;
@@ -97,7 +99,7 @@
             // 
             // generate
             // 
-            this.generate.Location = new System.Drawing.Point(89, 89);
+            this.generate.Location = new System.Drawing.Point(571, 47);
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(75, 23);
             this.generate.TabIndex = 6;
@@ -105,11 +107,22 @@
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
+            // genpast6
+            // 
+            this.genpast6.Location = new System.Drawing.Point(571, 89);
+            this.genpast6.Name = "genpast6";
+            this.genpast6.Size = new System.Drawing.Size(120, 23);
+            this.genpast6.TabIndex = 7;
+            this.genpast6.Text = "Generate for past 6 Months";
+            this.genpast6.UseVisualStyleBackColor = true;
+            this.genpast6.Click += new System.EventHandler(this.genpast6_Click);
+            // 
             // Report
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(703, 453);
+            this.Controls.Add(this.genpast6);
             this.Controls.Add(this.generate);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.toDate);
@@ -117,6 +130,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report";
             this.Text = "Report";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -134,5 +148,6 @@
         private System.Windows.Forms.DateTimePicker toDate;
         private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button generate;
+        private System.Windows.Forms.Button genpast6;
     }
 }

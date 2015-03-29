@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Update_customer));
             this.cancelBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
             this.FilterDetails = new System.Windows.Forms.GroupBox();
@@ -512,8 +513,10 @@
             this.Controls.Add(this.ContractDetails);
             this.Controls.Add(this.warrantyDate);
             this.Controls.Add(this.label12);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Update_customer";
             this.Text = "Update Customer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Update_customer_Activated);
             this.Load += new System.EventHandler(this.Update_customer_Load);
             this.FilterDetails.ResumeLayout(false);

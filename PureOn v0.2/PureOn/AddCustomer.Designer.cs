@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddCustomer));
             this.custID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,19 +57,19 @@
             this.amc = new System.Windows.Forms.RadioButton();
             this.acmc = new System.Windows.Forms.RadioButton();
             this.ContractDetails = new System.Windows.Forms.GroupBox();
+            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
+            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
             this.none = new System.Windows.Forms.RadioButton();
             this.UserAt = new System.Windows.Forms.GroupBox();
             this.customerData = new System.Windows.Forms.GroupBox();
             this.FilterDetails = new System.Windows.Forms.GroupBox();
             this.addBtn = new System.Windows.Forms.Button();
             this.cancelBtn = new System.Windows.Forms.Button();
-            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
-            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
             this.ContractDetails.SuspendLayout();
+            this.acmcGroupBox.SuspendLayout();
             this.UserAt.SuspendLayout();
             this.customerData.SuspendLayout();
             this.FilterDetails.SuspendLayout();
-            this.acmcGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // custID
@@ -324,6 +325,40 @@
             this.ContractDetails.TabStop = false;
             this.ContractDetails.Text = "Contract Details";
             // 
+            // acmcGroupBox
+            // 
+            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
+            this.acmcGroupBox.Enabled = false;
+            this.acmcGroupBox.Location = new System.Drawing.Point(28, 46);
+            this.acmcGroupBox.Name = "acmcGroupBox";
+            this.acmcGroupBox.Size = new System.Drawing.Size(239, 148);
+            this.acmcGroupBox.TabIndex = 30;
+            this.acmcGroupBox.TabStop = false;
+            this.acmcGroupBox.Text = "ACMC Insurance Covered";
+            // 
+            // acmcCheckList
+            // 
+            this.acmcCheckList.CheckOnClick = true;
+            this.acmcCheckList.FormattingEnabled = true;
+            this.acmcCheckList.Items.AddRange(new object[] {
+            "Sedement",
+            "Carbon",
+            "R O Membrane",
+            "Solinide valve (SV)",
+            "Pump",
+            "Flow rejection Tube (FRT)",
+            "Float valve",
+            "TDS valve",
+            "Choke",
+            "UV Lamp",
+            "UV chamber",
+            "Connectors L&T",
+            "Adaptor"});
+            this.acmcCheckList.Location = new System.Drawing.Point(15, 15);
+            this.acmcCheckList.Name = "acmcCheckList";
+            this.acmcCheckList.Size = new System.Drawing.Size(209, 124);
+            this.acmcCheckList.TabIndex = 0;
+            // 
             // none
             // 
             this.none.AutoSize = true;
@@ -405,40 +440,6 @@
             this.cancelBtn.UseVisualStyleBackColor = true;
             this.cancelBtn.Click += new System.EventHandler(this.cancelBtn_Click);
             // 
-            // acmcGroupBox
-            // 
-            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
-            this.acmcGroupBox.Enabled = false;
-            this.acmcGroupBox.Location = new System.Drawing.Point(28, 46);
-            this.acmcGroupBox.Name = "acmcGroupBox";
-            this.acmcGroupBox.Size = new System.Drawing.Size(239, 148);
-            this.acmcGroupBox.TabIndex = 30;
-            this.acmcGroupBox.TabStop = false;
-            this.acmcGroupBox.Text = "ACMC Insurance Covered";
-            // 
-            // acmcCheckList
-            // 
-            this.acmcCheckList.CheckOnClick = true;
-            this.acmcCheckList.FormattingEnabled = true;
-            this.acmcCheckList.Items.AddRange(new object[] {
-            "Sedement",
-            "Carbon",
-            "R O Membrane",
-            "Solinide valve (SV)",
-            "Pump",
-            "Flow rejection Tube (FRT)",
-            "Float valve",
-            "TDS valve",
-            "Choke",
-            "UV Lamp",
-            "UV chamber",
-            "Connectors L&T",
-            "Adaptor"});
-            this.acmcCheckList.Location = new System.Drawing.Point(15, 15);
-            this.acmcCheckList.Name = "acmcCheckList";
-            this.acmcCheckList.Size = new System.Drawing.Size(209, 124);
-            this.acmcCheckList.TabIndex = 0;
-            // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,17 +453,20 @@
             this.Controls.Add(this.ContractDetails);
             this.Controls.Add(this.warrantyDate);
             this.Controls.Add(this.label12);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "AddCustomer";
             this.Text = "AddCustomer";
             this.ContractDetails.ResumeLayout(false);
             this.ContractDetails.PerformLayout();
+            this.acmcGroupBox.ResumeLayout(false);
             this.UserAt.ResumeLayout(false);
             this.UserAt.PerformLayout();
             this.customerData.ResumeLayout(false);
             this.customerData.PerformLayout();
             this.FilterDetails.ResumeLayout(false);
             this.FilterDetails.PerformLayout();
-            this.acmcGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

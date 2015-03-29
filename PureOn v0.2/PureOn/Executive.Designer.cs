@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Executive));
             this.addCustomerBtn = new System.Windows.Forms.Button();
             this.customerData = new System.Windows.Forms.GroupBox();
             this.pinCode = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.custID = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.report = new System.Windows.Forms.Button();
             this.customerData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -203,16 +205,29 @@
             this.dataGridView.TabIndex = 33;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
+            // report
+            // 
+            this.report.Location = new System.Drawing.Point(93, 320);
+            this.report.Name = "report";
+            this.report.Size = new System.Drawing.Size(75, 23);
+            this.report.TabIndex = 34;
+            this.report.Text = "Report";
+            this.report.UseVisualStyleBackColor = true;
+            this.report.Click += new System.EventHandler(this.report_Click);
+            // 
             // Executive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 590);
+            this.Controls.Add(this.report);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.customerData);
             this.Controls.Add(this.addCustomerBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Executive";
             this.Text = "Executive";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Executive_FormClosing);
             this.Load += new System.EventHandler(this.Executive_Load);
             this.customerData.ResumeLayout(false);
@@ -239,5 +254,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox custID;
         private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button report;
     }
 }

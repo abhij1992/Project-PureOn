@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace PureOn
 {
@@ -74,31 +75,37 @@ namespace PureOn
        
         private void street_TextChanged_1(object sender, EventArgs e)
         {
+            street.Text = Regex.Replace(street.Text, @"[*]+", " ");
             textChanged();
         }
 
         private void custID_TextChanged(object sender, EventArgs e)
         {
+            custID.Text = Regex.Replace(custID.Text, @"[^0-9a-zA-Z]+", " ");
             textChanged();
         }
 
         private void custName_TextChanged(object sender, EventArgs e)
         {
+            custName.Text = Regex.Replace(custName.Text, @"[^0-9a-zA-Z]+", " ");
             textChanged();
         }
 
         private void phonePrime_TextChanged(object sender, EventArgs e)
         {
+            phonePrime.Text = Regex.Replace(phonePrime.Text, @"[^0-9a-zA-Z]+", " ");
             textChanged();
         }
 
         private void doorNo_TextChanged(object sender, EventArgs e)
         {
+            doorNo.Text = Regex.Replace(doorNo.Text, @"[^0-9a-zA-Z#]+", " ");
             textChanged();
         }
 
         private void pinCode_TextChanged(object sender, EventArgs e)
         {
+            pinCode.Text = Regex.Replace(pinCode.Text, @"[^0-9a-zA-Z]+", " ");
             textChanged();
         }
 
@@ -115,6 +122,10 @@ namespace PureOn
                 Update_customer frmUCustomer = new Update_customer();
                 frmUCustomer.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
                 frmUCustomer.ShowDialog();
+                if(frmUCustomer.newRecord)
+                {
+                    loadTable();//load table if customer data updated
+                }
 
                  }
         }

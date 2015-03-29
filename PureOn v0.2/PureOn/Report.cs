@@ -59,5 +59,20 @@ namespace PureOn
                 MessageBox.Show("There was some error while generating Report\n" + ex.Message, "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void genpast6_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                toDate.Value= DateTime.Now.Date;
+                fromDate.Value = DateTime.Now.Date.AddMonths(-6);
+                MessageBox.Show("Generating Report From :"+fromDate.Value.Date+" to "+toDate.Value.Date,"Previous 6 Months Report",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                generate_Click(null, null);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("There was some error while generating Report\n" + ex.Message, "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
     }
 }

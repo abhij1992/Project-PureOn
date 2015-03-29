@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageUsers));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -44,13 +45,13 @@
             this.cbDelete = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.cbupdate = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.cbupdate = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -225,33 +226,6 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reset Password";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(86, 150);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Reset Password";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // cbupdate
-            // 
-            this.cbupdate.FormattingEnabled = true;
-            this.cbupdate.Location = new System.Drawing.Point(119, 27);
-            this.cbupdate.Name = "cbupdate";
-            this.cbupdate.Size = new System.Drawing.Size(182, 21);
-            this.cbupdate.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 30);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(58, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "User name";
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(118, 109);
@@ -288,6 +262,33 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "Password";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(86, 150);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Reset Password";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // cbupdate
+            // 
+            this.cbupdate.FormattingEnabled = true;
+            this.cbupdate.Location = new System.Drawing.Point(119, 27);
+            this.cbupdate.Name = "cbupdate";
+            this.cbupdate.Size = new System.Drawing.Size(182, 21);
+            this.cbupdate.TabIndex = 7;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(45, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(58, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "User name";
+            // 
             // ManageUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +297,9 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ManageUsers";
             this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.ManageUsers_Load);

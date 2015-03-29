@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Manage_Users));
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.customerData = new System.Windows.Forms.GroupBox();
             this.pinCode = new System.Windows.Forms.TextBox();
@@ -230,8 +231,10 @@
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.customerData);
             this.Controls.Add(this.addCustomerBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Admin_Manage_Users";
             this.Text = "Manage Customers";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Admin_Manage_Users_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.customerData.ResumeLayout(false);
