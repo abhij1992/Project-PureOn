@@ -63,11 +63,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.acmcGroupBox = new System.Windows.Forms.GroupBox();
+            this.acmcCheckList = new System.Windows.Forms.CheckedListBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.FilterDetails.SuspendLayout();
             this.customerData.SuspendLayout();
             this.partsRepalcedGroup.SuspendLayout();
             this.HistoryGroup.SuspendLayout();
             this.wrkDetails.SuspendLayout();
+            this.acmcGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // FilterDetails
@@ -204,7 +209,7 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(798, 369);
+            this.cancel.Location = new System.Drawing.Point(798, 273);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 40;
@@ -214,7 +219,7 @@
             // 
             // addHCard
             // 
-            this.addHCard.Location = new System.Drawing.Point(619, 369);
+            this.addHCard.Location = new System.Drawing.Point(632, 273);
             this.addHCard.Name = "addHCard";
             this.addHCard.Size = new System.Drawing.Size(146, 23);
             this.addHCard.TabIndex = 39;
@@ -226,7 +231,7 @@
             // 
             this.partsRepalcedGroup.Controls.Add(this.addPartsReplaced);
             this.partsRepalcedGroup.Controls.Add(this.partsFlow);
-            this.partsRepalcedGroup.Location = new System.Drawing.Point(598, 17);
+            this.partsRepalcedGroup.Location = new System.Drawing.Point(306, 12);
             this.partsRepalcedGroup.Name = "partsRepalcedGroup";
             this.partsRepalcedGroup.Size = new System.Drawing.Size(308, 342);
             this.partsRepalcedGroup.TabIndex = 38;
@@ -265,7 +270,7 @@
             this.HistoryGroup.Controls.Add(this.label6);
             this.HistoryGroup.Controls.Add(this.label11);
             this.HistoryGroup.Controls.Add(this.label12);
-            this.HistoryGroup.Location = new System.Drawing.Point(303, 12);
+            this.HistoryGroup.Location = new System.Drawing.Point(7, 273);
             this.HistoryGroup.Name = "HistoryGroup";
             this.HistoryGroup.Size = new System.Drawing.Size(279, 347);
             this.HistoryGroup.TabIndex = 37;
@@ -407,11 +412,47 @@
             this.label12.TabIndex = 2;
             this.label12.Text = "Visit Date:";
             // 
+            // acmcGroupBox
+            // 
+            this.acmcGroupBox.Controls.Add(this.acmcCheckList);
+            this.acmcGroupBox.Location = new System.Drawing.Point(619, 12);
+            this.acmcGroupBox.Name = "acmcGroupBox";
+            this.acmcGroupBox.Size = new System.Drawing.Size(305, 222);
+            this.acmcGroupBox.TabIndex = 41;
+            this.acmcGroupBox.TabStop = false;
+            this.acmcGroupBox.Text = "ACMC Insurance covered";
+            // 
+            // acmcCheckList
+            // 
+            this.acmcCheckList.CheckOnClick = true;
+            this.acmcCheckList.FormattingEnabled = true;
+            this.acmcCheckList.Location = new System.Drawing.Point(13, 21);
+            this.acmcCheckList.Name = "acmcCheckList";
+            this.acmcCheckList.Size = new System.Drawing.Size(286, 184);
+            this.acmcCheckList.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(632, 333);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(286, 20);
+            this.textBox2.TabIndex = 42;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(632, 384);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(286, 20);
+            this.textBox3.TabIndex = 43;
+            // 
             // Update_History
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 406);
+            this.ClientSize = new System.Drawing.Size(932, 637);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.acmcGroupBox);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.addHCard);
             this.Controls.Add(this.partsRepalcedGroup);
@@ -430,7 +471,9 @@
             this.HistoryGroup.PerformLayout();
             this.wrkDetails.ResumeLayout(false);
             this.wrkDetails.PerformLayout();
+            this.acmcGroupBox.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -471,5 +514,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox acmcGroupBox;
+        private System.Windows.Forms.CheckedListBox acmcCheckList;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

@@ -21,12 +21,13 @@ namespace PureOn
             loadServiceEngineers();
             cID = custId;
             this.custID.Text = cID;
-
+            
             TextBox temp = new TextBox();
             Label tempL = new Label();
             tempL.Text = "Part:";
             partsFlow.Controls.Add(tempL);
             partsFlow.Controls.Add(temp);
+            getAcmcParts();
         }
         private bool addHistoryValid()
         {
@@ -82,6 +83,59 @@ namespace PureOn
             }
             return true;
         }
+        private  void getAcmcParts(){
+            acmcCheckList.Items.Clear();
+            String covered_parts = "NULL";
+            String parts_removed = "NULL";
+            String[] parts_removed_patt;
+            String[] covered_parts_left;
+            DBConnection db = new DBConnection();
+            string cmd = "SELECT `acmc_covered_parts` FROM `customer_info` WHERE `customer_id`='" + custID.Text + "';";
+            MySqlDataReader r = db.ExecuteReader(cmd);
+            while (r.Read())
+            {
+                if (!(r.GetString(0).Equals("NULL")))
+                    covered_parts += r.GetString(0);
+                //acmcCheckList.Items.Add(r.GetString(0));
+            }
+
+            if (covered_parts.Equals("NULL"))
+                acmcCheckList.Enabled = false;
+            else {
+                covered_parts= covered_parts.Replace("NULL", "");
+                cmd = "SELECT `acmc_part_used` FROM `history_card` WHERE `customer_id`='"+custID.Text+"';";
+                r = db.ExecuteReader(cmd);
+                while (r.Read())
+                {
+                    if (!(r.GetString(0).Equals("NULL")))
+                    {
+                        string temp = "," + r.GetString(0);
+                        parts_removed += temp;
+                        
+                        //acmcCheckList.Items.Add(r.GetString(0));
+                    }
+                }
+                if (!parts_removed.Equals("NULL"))
+                {
+                    parts_removed = parts_removed.Replace("NULL", "");
+                    parts_removed_patt = parts_removed.Split(',');
+                    foreach (string part in parts_removed_patt)
+                    {
+                        if(part.Length>2)
+                            covered_parts = covered_parts.Replace(part,"");
+                    }
+                    //covered_parts = covered_parts.Replace(",,", "");
+                }
+
+                covered_parts_left = covered_parts.Split(',');
+                foreach (string part in covered_parts_left)
+                {
+                    if(part.Length > 2)
+                        acmcCheckList.Items.Add(part);
+                }
+            }
+            db.Close();
+        }
         private HistoryCard loadHistoryObject()
         {
             HistoryCard hc = new HistoryCard();
@@ -102,6 +156,7 @@ namespace PureOn
             hc.iccr_date = d.Date.ToString("yyyy-MM-dd");
             hc.amount = amount.Text;
             hc.exec_attend = getExeId(serviceEng.Text);
+            
 
             return hc;
         }
@@ -117,9 +172,19 @@ namespace PureOn
         {
             DBConnection db;
             try
-            { 
+            {
+                String acmc_covered_parts;
+                var parts = new List<string>();
+                foreach (Object c in acmcCheckList.CheckedItems)
+                {
+                    //parts.Add(acmcCheckList.Items.IndexOf(c).ToString());//For index value
+                    parts.Add(c.ToString());
+                }
+                if (parts.Count > 0) acmc_covered_parts = string.Join(",", parts.ToArray());
+                else acmc_covered_parts = "NULL";
+
             HistoryCard h = loadHistoryObject();
-            string cmdDb = "INSERT INTO history_card values (DEFAULT,'"+h.customer_id+"','"+h.visitDate+"','"+h.work_details+"','"+h.part_replaced+"','"+h.icr_bill_no+"','"+h.iccr_no+"','"+h.iccr_date+"','"+h.amount+"','"+h.exec_attend+"');";
+            string cmdDb = "INSERT INTO history_card values (DEFAULT,'" + h.customer_id + "','" + h.visitDate + "','" + h.work_details + "','" + h.part_replaced + "','" + h.icr_bill_no + "','" + h.iccr_no + "','" + h.iccr_date + "','" + h.amount + "','" + h.exec_attend + "','" + acmc_covered_parts + "');";
             //MessageBox.Show(cmdDb);
             
             db = new DBConnection();
