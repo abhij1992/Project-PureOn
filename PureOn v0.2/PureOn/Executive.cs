@@ -77,6 +77,8 @@ namespace PureOn
         private void Executive_Load(object sender, EventArgs e)
         {
             loadTable();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(400, 200);
         }
 
         private void textChanged()

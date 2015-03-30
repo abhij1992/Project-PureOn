@@ -67,7 +67,7 @@
             // 
             // queryBtn
             // 
-            this.queryBtn.Location = new System.Drawing.Point(610, 90);
+            this.queryBtn.Location = new System.Drawing.Point(598, 90);
             this.queryBtn.Name = "queryBtn";
             this.queryBtn.Size = new System.Drawing.Size(75, 23);
             this.queryBtn.TabIndex = 3;
@@ -88,7 +88,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.ShowEditingIcon = false;
-            this.dataGridView.Size = new System.Drawing.Size(681, 224);
+            this.dataGridView.Size = new System.Drawing.Size(668, 180);
             this.dataGridView.TabIndex = 4;
             // 
             // totRev
@@ -148,7 +148,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 355);
+            this.ClientSize = new System.Drawing.Size(684, 311);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -163,6 +163,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Revenue";
             this.Text = "Revenue";
+            this.Load += new System.EventHandler(this.Revenue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -57,5 +57,11 @@ namespace PureOn
             Report r = new Report();
             r.ShowDialog();
         }
+
+        private void AdminPage_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 200);
+        }
     }
 }

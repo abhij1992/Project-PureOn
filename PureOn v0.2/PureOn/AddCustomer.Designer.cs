@@ -457,7 +457,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "AddCustomer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCustomer";
+            this.Load += new System.EventHandler(this.AddCustomer_Load);
             this.ContractDetails.ResumeLayout(false);
             this.ContractDetails.PerformLayout();
             this.acmcGroupBox.ResumeLayout(false);

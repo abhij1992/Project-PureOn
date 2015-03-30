@@ -59,16 +59,17 @@
             this.addExeGrp.Controls.Add(this.label1);
             this.addExeGrp.Location = new System.Drawing.Point(12, 12);
             this.addExeGrp.Name = "addExeGrp";
-            this.addExeGrp.Size = new System.Drawing.Size(284, 249);
+            this.addExeGrp.Size = new System.Drawing.Size(284, 287);
             this.addExeGrp.TabIndex = 0;
             this.addExeGrp.TabStop = false;
             this.addExeGrp.Text = "Add Executive";
             // 
             // addExeBtn
             // 
-            this.addExeBtn.Location = new System.Drawing.Point(157, 208);
+            this.addExeBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.addExeBtn.Location = new System.Drawing.Point(27, 260);
             this.addExeBtn.Name = "addExeBtn";
-            this.addExeBtn.Size = new System.Drawing.Size(96, 23);
+            this.addExeBtn.Size = new System.Drawing.Size(226, 23);
             this.addExeBtn.TabIndex = 8;
             this.addExeBtn.Text = "Add Executive";
             this.addExeBtn.UseVisualStyleBackColor = true;
@@ -76,28 +77,28 @@
             // 
             // exeAdd
             // 
-            this.exeAdd.Location = new System.Drawing.Point(135, 173);
+            this.exeAdd.Location = new System.Drawing.Point(135, 215);
             this.exeAdd.Name = "exeAdd";
             this.exeAdd.Size = new System.Drawing.Size(143, 20);
             this.exeAdd.TabIndex = 7;
             // 
             // exePhone
             // 
-            this.exePhone.Location = new System.Drawing.Point(135, 125);
+            this.exePhone.Location = new System.Drawing.Point(135, 155);
             this.exePhone.Name = "exePhone";
             this.exePhone.Size = new System.Drawing.Size(143, 20);
             this.exePhone.TabIndex = 6;
             // 
             // exeID
             // 
-            this.exeID.Location = new System.Drawing.Point(135, 72);
+            this.exeID.Location = new System.Drawing.Point(135, 95);
             this.exeID.Name = "exeID";
             this.exeID.Size = new System.Drawing.Size(143, 20);
             this.exeID.TabIndex = 5;
             // 
             // exeName
             // 
-            this.exeName.Location = new System.Drawing.Point(135, 26);
+            this.exeName.Location = new System.Drawing.Point(135, 35);
             this.exeName.Name = "exeName";
             this.exeName.Size = new System.Drawing.Size(143, 20);
             this.exeName.TabIndex = 4;
@@ -105,7 +106,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 176);
+            this.label4.Location = new System.Drawing.Point(6, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 3;
@@ -114,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 128);
+            this.label3.Location = new System.Drawing.Point(6, 155);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 2;
@@ -123,7 +124,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 79);
+            this.label2.Location = new System.Drawing.Point(6, 95);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 1;
@@ -132,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Location = new System.Drawing.Point(6, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
@@ -144,7 +145,7 @@
             this.delExe.Controls.Add(this.delExeCombo);
             this.delExe.Location = new System.Drawing.Point(313, 20);
             this.delExe.Name = "delExe";
-            this.delExe.Size = new System.Drawing.Size(200, 103);
+            this.delExe.Size = new System.Drawing.Size(219, 103);
             this.delExe.TabIndex = 1;
             this.delExe.TabStop = false;
             this.delExe.Text = "Delete Executive";
@@ -162,16 +163,16 @@
             // delExeCombo
             // 
             this.delExeCombo.FormattingEnabled = true;
-            this.delExeCombo.Location = new System.Drawing.Point(16, 21);
+            this.delExeCombo.Location = new System.Drawing.Point(16, 27);
             this.delExeCombo.Name = "delExeCombo";
-            this.delExeCombo.Size = new System.Drawing.Size(178, 21);
+            this.delExeCombo.Size = new System.Drawing.Size(185, 21);
             this.delExeCombo.TabIndex = 0;
             // 
             // AddExecutive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 263);
+            this.ClientSize = new System.Drawing.Size(544, 311);
             this.Controls.Add(this.delExe);
             this.Controls.Add(this.addExeGrp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -179,6 +180,7 @@
             this.MaximizeBox = false;
             this.Name = "AddExecutive";
             this.Text = "Add Executive";
+            this.Load += new System.EventHandler(this.AddExecutive_Load);
             this.addExeGrp.ResumeLayout(false);
             this.addExeGrp.PerformLayout();
             this.delExe.ResumeLayout(false);

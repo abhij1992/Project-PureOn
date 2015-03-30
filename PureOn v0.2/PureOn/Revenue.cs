@@ -101,5 +101,11 @@ namespace PureOn
                 MessageBox.Show("There was some error while generating Report\n"+ex.Message,"Report Error",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }
         }
+
+        private void Revenue_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(400, 200);
+        }
     }
 }
