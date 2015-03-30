@@ -74,5 +74,21 @@ namespace PureOn
                 MessageBox.Show("There was some error while generating Report\n" + ex.Message, "Report Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                /* History frmHistory = new History();
+                 //textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                 frmHistory.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                 frmHistory.ShowDialog();*/
+
+                Update_customer frmUCustomer = new Update_customer(true);
+                frmUCustomer.custID.Text = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                frmUCustomer.ShowDialog();
+           
+            }
+        }
     }
 }
