@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2015 at 10:46 AM
+-- Generation Time: Mar 29, 2015 at 01:23 PM
 -- Server version: 5.6.17
 -- PHP Version: 5.5.12
 
@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS `customer_info` (
   `cont_details` int(2) NOT NULL,
   `acmc_covered_parts` varchar(300) NOT NULL COMMENT 'stores the ACMC parts covered if any',
   PRIMARY KEY (`cust_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `customer_info`
@@ -53,9 +53,9 @@ INSERT INTO `customer_info` (`cust_id`, `customer_id`, `cust_name`, `phone_prima
 (11, '1PI13MC', 'Abhi J', '9738', '9945', '1118', '14th cross', '560072', 'CRZ12', '2015-02-18', '234', 1, '2015-03-04', 1, 'NULL'),
 (12, '1PI', 'Abhijith B S', '3212', '321321', 'c321', '12a', '560072', 'dsa', '2015-02-02', '32dsa', 2, '2015-02-27', 1, 'NULL'),
 (14, '1PI12MC', 'Joshua Mark', '2323', '2322', '3232', '14th cs', '48930', 'dlsm9', '2015-02-18', '8009', 3, '2015-02-18', 1, 'NULL'),
-(17, '1PI13MCA01', 'Adarsh Murthy', '9738252811', '9986756289', '#119i', '2nd Main', '560073', 'XR-1289', '2015-03-01', '9086', 1, '2015-03-20', 2, 'Sedement,Carbon,R O Membrane'),
-(18, '1PI1390', 'Ashok Murthy', '9738252811', '9986286970', '1118', '14th Cross,1st stage,1st Phase', '560072', 'CRXZ01', '2015-02-03', '1290', 2, '2015-03-11', 2, 'Sedement,Carbon,R O Membrane,Solinide valve (SV),Pump'),
-(19, '4324', 'Manju', '432', '432', '42', '342', '4322', 'fw2', '2015-02-18', '5432', 1, '2015-02-18', 2, 'R O Membrane');
+(19, '4324', 'Manju', '432', '432', '42', '342', '4322', 'fw2', '2015-02-18', '5432', 1, '2015-02-18', 2, 'R O Membrane'),
+(22, '1PI13MCA01', 'Adarsh Murthy', '9738252812', '9986756289', '#119i', '2nd Main', '560073', 'XR-1289', '2015-03-01', '9086', 1, '2015-03-20', 2, 'Sedement,Carbon,R O Membrane'),
+(24, '1PI1390', 'Ashok Murthy', '9738252820', '9986286970', '1118', '14th Cross,1st stage,1st Phase', '560072', 'CRXZ01', '2015-02-03', '1290', 2, '2015-03-11', 2, 'Sedement,Carbon,R O Membrane,Solinide valve (SV),Pump');
 
 -- --------------------------------------------------------
 
@@ -100,16 +100,23 @@ CREATE TABLE IF NOT EXISTS `history_card` (
   `iccr_date` date NOT NULL,
   `amount` varchar(15) NOT NULL,
   `exec_attend` int(15) NOT NULL,
+  `acmc_part_used` varchar(50) NOT NULL,
   PRIMARY KEY (`hist_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `history_card`
 --
 
-INSERT INTO `history_card` (`hist_id`, `customer_id`, `vist_date`, `work_details`, `parts_replaced`, `icr_bill_no`, `iccr_no`, `iccr_date`, `amount`, `exec_attend`) VALUES
-(1, '1PI13MC', '2015-02-11', 1, '$-$Filter$-$Gasket$-$Cap$-$Airfoil$-$', '4321', '1234', '2015-02-22', '2500', 1),
-(2, '1PI12MC', '2015-02-25', 1, '$-$dsad$-$', '21', '21', '2015-02-25', '231', 4);
+INSERT INTO `history_card` (`hist_id`, `customer_id`, `vist_date`, `work_details`, `parts_replaced`, `icr_bill_no`, `iccr_no`, `iccr_date`, `amount`, `exec_attend`, `acmc_part_used`) VALUES
+(1, '1PI13MC', '2015-02-11', 1, '$-$Filter$-$Gasket$-$Cap$-$Airfoil$-$', '4321', '1234', '2015-02-22', '2500', 1, 'NULL'),
+(2, '1PI12MC', '2015-02-25', 1, '$-$dsad$-$', '21', '21', '2015-02-25', '231', 4, 'NULL'),
+(3, '4324', '2015-03-22', 2, '$-$asdasd$-$asdcvs$-$qwddv$-$', '123', '123', '2015-03-22', '1234', -1, 'NULL'),
+(4, '4324', '2015-03-22', 1, '$-$sadaf$-$asfg$-$', '134', '123', '2015-03-22', '1234', 5, 'NULL'),
+(6, '1PI1390', '2015-03-27', 1, '$-$234$-$', '124', '213', '2015-03-27', '2342', 4, 'R O Membrane,Solinide valve (SV)'),
+(9, '1PI13MCA01', '2015-03-29', 1, '$-$345345$-$', '564', '14345', '2015-03-29', '34534', 4, 'R O Membrane'),
+(10, '1PI1390', '2015-03-29', 1, '$-$456$-$', '456', '3456', '2015-06-29', '456', 3, 'Sedement,Pump'),
+(11, '1PI13MCA01', '2015-03-27', 1, '$-$rets$-$sdfsdf$-$', '2345', '1234', '2015-03-27', '450', 5, 'NULL');
 
 -- --------------------------------------------------------
 
