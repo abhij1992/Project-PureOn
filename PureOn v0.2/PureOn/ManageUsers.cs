@@ -68,6 +68,8 @@ namespace PureOn
         private void ManageUsers_Load(object sender, EventArgs e)
         {
             reload();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(400, 200);
         }
         private void reload()
         {

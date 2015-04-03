@@ -186,5 +186,11 @@ namespace PureOn
                 this.acmcGroupBox.Enabled = false;
             }
         }
+
+        private void AddCustomer_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+
+        }
     }
 }

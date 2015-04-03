@@ -90,5 +90,11 @@ namespace PureOn
            
             }
         }
+
+        private void Report_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(400, 200);
+        }
     }
 }

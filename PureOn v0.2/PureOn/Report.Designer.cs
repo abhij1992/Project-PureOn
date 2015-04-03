@@ -94,7 +94,7 @@
             this.dataGridView.Location = new System.Drawing.Point(12, 118);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(679, 323);
+            this.dataGridView.Size = new System.Drawing.Size(660, 181);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
@@ -110,7 +110,7 @@
             // 
             // genpast6
             // 
-            this.genpast6.Location = new System.Drawing.Point(571, 89);
+            this.genpast6.Location = new System.Drawing.Point(552, 89);
             this.genpast6.Name = "genpast6";
             this.genpast6.Size = new System.Drawing.Size(120, 23);
             this.genpast6.TabIndex = 7;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 453);
+            this.ClientSize = new System.Drawing.Size(684, 311);
             this.Controls.Add(this.genpast6);
             this.Controls.Add(this.generate);
             this.Controls.Add(this.dataGridView);
@@ -134,6 +134,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report";
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
