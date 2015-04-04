@@ -80,7 +80,6 @@
             this.exeAdd.Name = "exeAdd";
             this.exeAdd.Size = new System.Drawing.Size(150, 20);
             this.exeAdd.TabIndex = 7;
-            this.exeAdd.TextChanged += new System.EventHandler(this.exeAdd_TextChanged);
             // 
             // exePhone
             // 
@@ -88,7 +87,6 @@
             this.exePhone.Name = "exePhone";
             this.exePhone.Size = new System.Drawing.Size(150, 20);
             this.exePhone.TabIndex = 6;
-            this.exePhone.TextChanged += new System.EventHandler(this.exePhone_TextChanged);
             // 
             // exeID
             // 
@@ -96,7 +94,6 @@
             this.exeID.Name = "exeID";
             this.exeID.Size = new System.Drawing.Size(150, 20);
             this.exeID.TabIndex = 5;
-            this.exeID.TextChanged += new System.EventHandler(this.exeID_TextChanged);
             // 
             // exeName
             // 
@@ -104,7 +101,6 @@
             this.exeName.Name = "exeName";
             this.exeName.Size = new System.Drawing.Size(150, 20);
             this.exeName.TabIndex = 4;
-            this.exeName.TextChanged += new System.EventHandler(this.exeName_TextChanged);
             // 
             // label4
             // 
@@ -114,7 +110,6 @@
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Executive Address";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -124,7 +119,6 @@
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Executive Phone";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -134,7 +128,6 @@
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Executive Emp ID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -144,7 +137,6 @@
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Executive Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // delExe
             // 

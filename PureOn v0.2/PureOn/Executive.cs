@@ -148,10 +148,5 @@ namespace PureOn
             Report r = new Report();
             r.ShowDialog();
         }
-
-        private void customerData_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

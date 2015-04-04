@@ -88,7 +88,6 @@
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Customer ID";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -98,7 +97,6 @@
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Customer Name";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -108,7 +106,6 @@
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Phone (primary)";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -118,7 +115,6 @@
             this.label4.Size = new System.Drawing.Size(88, 13);
             this.label4.TabIndex = 4;
             this.label4.Text = "Phone (alternate)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -128,7 +124,6 @@
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 5;
             this.label5.Text = "Door No";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -138,7 +133,6 @@
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "Street";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -148,7 +142,6 @@
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 7;
             this.label7.Text = "Pin code";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 

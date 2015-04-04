@@ -62,3 +62,4 @@ J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn
 J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Update_customer.resources
 J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Update_History.resources
 J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csproj.GenerateResource.Cache
+C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csprojResolveAssemblyReference.cache

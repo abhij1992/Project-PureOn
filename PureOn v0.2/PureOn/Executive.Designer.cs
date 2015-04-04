@@ -79,7 +79,6 @@
             this.customerData.TabIndex = 32;
             this.customerData.TabStop = false;
             this.customerData.Text = "Search Customer Data";
-            this.customerData.Enter += new System.EventHandler(this.customerData_Enter);
             // 
             // pinCode
             // 

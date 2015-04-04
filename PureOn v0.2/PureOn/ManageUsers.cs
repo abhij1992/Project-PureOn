@@ -100,23 +100,24 @@ namespace PureOn
             {
                 DBConnection db = new DBConnection();
                 string deluser = cbDelete.SelectedValue.ToString();
-                string delusername = cbDelete.Text;
+                string deluserName = cbDelete.Text;
                 string strSQL = "DELETE FROM login_info where login_id=" + deluser + ";";
-                db.ExecuteQuery(strSQL);
-                MessageBox.Show(delusername+" was successfully deleted.");
-                reload();
+                if (db.ExecuteQuery(strSQL))
+                {
+                    MessageBox.Show(deluserName + " was successfully deleted.");
+                    reload();
+                }else
+                {
+                    MessageBox.Show("Error in deleting user "+deluserName);
+                }
                 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error in deleting user");
             }
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {

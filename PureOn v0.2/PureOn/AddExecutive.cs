@@ -161,45 +161,5 @@ namespace PureOn
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(400, 180);
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exeName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exeID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exePhone_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void exeAdd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
