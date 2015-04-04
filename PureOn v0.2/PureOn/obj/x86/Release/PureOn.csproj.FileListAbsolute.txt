@@ -40,3 +40,4 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csproj.GenerateResource.Cache
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.exe
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.pdb
+C:\Users\Joshua\Desktop\pureon\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.SplashScreen.resources

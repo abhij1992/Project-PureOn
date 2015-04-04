@@ -73,6 +73,12 @@ namespace PureOn
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+            //Splash Screen
+            
+            SplashScreen Splash = new SplashScreen();
+            Splash.Show();
+
             try
             {
                 DBConnection db = new DBConnection();
