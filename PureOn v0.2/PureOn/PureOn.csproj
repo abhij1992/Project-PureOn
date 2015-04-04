@@ -155,6 +155,12 @@
     <Compile Include="Revenue.Designer.cs">
       <DependentUpon>Revenue.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpashScreen.Designer.cs">
+      <DependentUpon>SpashScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Update_customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,6 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Revenue.resx">
       <DependentUpon>Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpashScreen.resx">
+      <DependentUpon>SpashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Update_customer.resx">
       <DependentUpon>Update_customer.cs</DependentUpon>
