@@ -63,15 +63,15 @@
             // custID
             // 
             this.custID.Enabled = false;
-            this.custID.Location = new System.Drawing.Point(114, 29);
+            this.custID.Location = new System.Drawing.Point(90, 30);
             this.custID.Name = "custID";
-            this.custID.Size = new System.Drawing.Size(100, 20);
+            this.custID.Size = new System.Drawing.Size(180, 20);
             this.custID.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 32);
+            this.label1.Location = new System.Drawing.Point(5, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 1;
@@ -80,7 +80,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 70);
+            this.label2.Location = new System.Drawing.Point(5, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 2;
@@ -89,7 +89,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 218);
+            this.label5.Location = new System.Drawing.Point(1, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 5;
@@ -98,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 178);
+            this.label6.Location = new System.Drawing.Point(1, 178);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 6;
@@ -107,7 +107,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 258);
+            this.label7.Location = new System.Drawing.Point(1, 263);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 7;
@@ -116,16 +116,16 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 297);
+            this.label8.Location = new System.Drawing.Point(1, 303);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 13);
+            this.label8.Size = new System.Drawing.Size(89, 13);
             this.label8.TabIndex = 8;
-            this.label8.Text = "Amount Charged";
+            this.label8.Text = "Amount Charged:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(14, 334);
+            this.label9.Location = new System.Drawing.Point(1, 343);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 9;
@@ -150,7 +150,7 @@
             this.HistoryGroup.Controls.Add(this.custID);
             this.HistoryGroup.Location = new System.Drawing.Point(9, 7);
             this.HistoryGroup.Name = "HistoryGroup";
-            this.HistoryGroup.Size = new System.Drawing.Size(279, 371);
+            this.HistoryGroup.Size = new System.Drawing.Size(279, 383);
             this.HistoryGroup.TabIndex = 10;
             this.HistoryGroup.TabStop = false;
             this.HistoryGroup.Text = "History Card Details";
@@ -158,41 +158,41 @@
             // serviceEng
             // 
             this.serviceEng.FormattingEnabled = true;
-            this.serviceEng.Location = new System.Drawing.Point(111, 331);
+            this.serviceEng.Location = new System.Drawing.Point(90, 340);
             this.serviceEng.Name = "serviceEng";
-            this.serviceEng.Size = new System.Drawing.Size(121, 21);
+            this.serviceEng.Size = new System.Drawing.Size(180, 21);
             this.serviceEng.Sorted = true;
             this.serviceEng.TabIndex = 18;
             // 
             // icrdate
             // 
-            this.icrdate.Location = new System.Drawing.Point(73, 258);
+            this.icrdate.Location = new System.Drawing.Point(73, 260);
             this.icrdate.Name = "icrdate";
             this.icrdate.Size = new System.Drawing.Size(200, 20);
             this.icrdate.TabIndex = 17;
             // 
             // amount
             // 
-            this.amount.Location = new System.Drawing.Point(114, 294);
+            this.amount.Location = new System.Drawing.Point(90, 300);
             this.amount.MaxLength = 15;
             this.amount.Name = "amount";
-            this.amount.Size = new System.Drawing.Size(100, 20);
+            this.amount.Size = new System.Drawing.Size(180, 20);
             this.amount.TabIndex = 15;
             // 
             // icr
             // 
-            this.icr.Location = new System.Drawing.Point(114, 215);
+            this.icr.Location = new System.Drawing.Point(90, 220);
             this.icr.MaxLength = 15;
             this.icr.Name = "icr";
-            this.icr.Size = new System.Drawing.Size(100, 20);
+            this.icr.Size = new System.Drawing.Size(180, 20);
             this.icr.TabIndex = 13;
             // 
             // iccr
             // 
-            this.iccr.Location = new System.Drawing.Point(114, 175);
+            this.iccr.Location = new System.Drawing.Point(90, 180);
             this.iccr.MaxLength = 15;
             this.iccr.Name = "iccr";
-            this.iccr.Size = new System.Drawing.Size(100, 20);
+            this.iccr.Size = new System.Drawing.Size(180, 20);
             this.iccr.TabIndex = 12;
             // 
             // wrkDetails
@@ -209,7 +209,7 @@
             // serviceRdBtn
             // 
             this.serviceRdBtn.AutoSize = true;
-            this.serviceRdBtn.Location = new System.Drawing.Point(122, 26);
+            this.serviceRdBtn.Location = new System.Drawing.Point(154, 25);
             this.serviceRdBtn.Name = "serviceRdBtn";
             this.serviceRdBtn.Size = new System.Drawing.Size(61, 17);
             this.serviceRdBtn.TabIndex = 1;
@@ -221,7 +221,7 @@
             // 
             this.installRdBtn.AutoSize = true;
             this.installRdBtn.Checked = true;
-            this.installRdBtn.Location = new System.Drawing.Point(26, 25);
+            this.installRdBtn.Location = new System.Drawing.Point(32, 25);
             this.installRdBtn.Name = "installRdBtn";
             this.installRdBtn.Size = new System.Drawing.Size(75, 17);
             this.installRdBtn.TabIndex = 0;
@@ -231,7 +231,7 @@
             // 
             // visitDt
             // 
-            this.visitDt.Location = new System.Drawing.Point(73, 64);
+            this.visitDt.Location = new System.Drawing.Point(73, 70);
             this.visitDt.Name = "visitDt";
             this.visitDt.Size = new System.Drawing.Size(200, 20);
             this.visitDt.TabIndex = 10;
@@ -249,9 +249,9 @@
             // 
             // addPartsReplaced
             // 
-            this.addPartsReplaced.Location = new System.Drawing.Point(21, 27);
+            this.addPartsReplaced.Location = new System.Drawing.Point(26, 26);
             this.addPartsReplaced.Name = "addPartsReplaced";
-            this.addPartsReplaced.Size = new System.Drawing.Size(75, 23);
+            this.addPartsReplaced.Size = new System.Drawing.Size(260, 25);
             this.addPartsReplaced.TabIndex = 1;
             this.addPartsReplaced.Text = "Add";
             this.addPartsReplaced.UseVisualStyleBackColor = true;
@@ -268,7 +268,7 @@
             // 
             this.addHCard.Location = new System.Drawing.Point(641, 294);
             this.addHCard.Name = "addHCard";
-            this.addHCard.Size = new System.Drawing.Size(101, 23);
+            this.addHCard.Size = new System.Drawing.Size(260, 25);
             this.addHCard.TabIndex = 12;
             this.addHCard.Text = "Add History Card";
             this.addHCard.UseVisualStyleBackColor = true;
@@ -276,9 +276,9 @@
             // 
             // cancel
             // 
-            this.cancel.Location = new System.Drawing.Point(796, 294);
+            this.cancel.Location = new System.Drawing.Point(641, 350);
             this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(75, 23);
+            this.cancel.Size = new System.Drawing.Size(260, 25);
             this.cancel.TabIndex = 13;
             this.cancel.Text = "Cancel";
             this.cancel.UseVisualStyleBackColor = true;
@@ -289,7 +289,7 @@
             this.acmcGroupBox.Controls.Add(this.acmcCheckList);
             this.acmcGroupBox.Location = new System.Drawing.Point(618, 12);
             this.acmcGroupBox.Name = "acmcGroupBox";
-            this.acmcGroupBox.Size = new System.Drawing.Size(305, 222);
+            this.acmcGroupBox.Size = new System.Drawing.Size(305, 246);
             this.acmcGroupBox.TabIndex = 31;
             this.acmcGroupBox.TabStop = false;
             this.acmcGroupBox.Text = "ACMC Insurance covered";
@@ -300,14 +300,14 @@
             this.acmcCheckList.FormattingEnabled = true;
             this.acmcCheckList.Location = new System.Drawing.Point(13, 21);
             this.acmcCheckList.Name = "acmcCheckList";
-            this.acmcCheckList.Size = new System.Drawing.Size(286, 184);
+            this.acmcCheckList.Size = new System.Drawing.Size(286, 214);
             this.acmcCheckList.TabIndex = 0;
             // 
             // AddHistoryCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 415);
+            this.ClientSize = new System.Drawing.Size(934, 411);
             this.Controls.Add(this.acmcGroupBox);
             this.Controls.Add(this.cancel);
             this.Controls.Add(this.addHCard);
@@ -318,6 +318,7 @@
             this.MaximizeBox = false;
             this.Name = "AddHistoryCard";
             this.Text = "AddHistoryCard";
+            this.Load += new System.EventHandler(this.AddHistoryCard_Load);
             this.HistoryGroup.ResumeLayout(false);
             this.HistoryGroup.PerformLayout();
             this.wrkDetails.ResumeLayout(false);

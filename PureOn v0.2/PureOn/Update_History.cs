@@ -261,6 +261,8 @@ namespace PureOn
             {
                 MessageBox.Show(e5.Message );
             }
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(200, 50);
         }
 
         private bool insertHistoryCard()

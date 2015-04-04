@@ -59,16 +59,16 @@
             this.addExeGrp.Controls.Add(this.label1);
             this.addExeGrp.Location = new System.Drawing.Point(12, 12);
             this.addExeGrp.Name = "addExeGrp";
-            this.addExeGrp.Size = new System.Drawing.Size(284, 249);
+            this.addExeGrp.Size = new System.Drawing.Size(310, 294);
             this.addExeGrp.TabIndex = 0;
             this.addExeGrp.TabStop = false;
             this.addExeGrp.Text = "Add Executive";
             // 
             // addExeBtn
             // 
-            this.addExeBtn.Location = new System.Drawing.Point(157, 208);
+            this.addExeBtn.Location = new System.Drawing.Point(130, 256);
             this.addExeBtn.Name = "addExeBtn";
-            this.addExeBtn.Size = new System.Drawing.Size(96, 23);
+            this.addExeBtn.Size = new System.Drawing.Size(150, 25);
             this.addExeBtn.TabIndex = 8;
             this.addExeBtn.Text = "Add Executive";
             this.addExeBtn.UseVisualStyleBackColor = true;
@@ -76,84 +76,92 @@
             // 
             // exeAdd
             // 
-            this.exeAdd.Location = new System.Drawing.Point(135, 173);
+            this.exeAdd.Location = new System.Drawing.Point(130, 210);
             this.exeAdd.Name = "exeAdd";
-            this.exeAdd.Size = new System.Drawing.Size(143, 20);
+            this.exeAdd.Size = new System.Drawing.Size(150, 20);
             this.exeAdd.TabIndex = 7;
+            this.exeAdd.TextChanged += new System.EventHandler(this.exeAdd_TextChanged);
             // 
             // exePhone
             // 
-            this.exePhone.Location = new System.Drawing.Point(135, 125);
+            this.exePhone.Location = new System.Drawing.Point(130, 150);
             this.exePhone.Name = "exePhone";
-            this.exePhone.Size = new System.Drawing.Size(143, 20);
+            this.exePhone.Size = new System.Drawing.Size(150, 20);
             this.exePhone.TabIndex = 6;
+            this.exePhone.TextChanged += new System.EventHandler(this.exePhone_TextChanged);
             // 
             // exeID
             // 
-            this.exeID.Location = new System.Drawing.Point(135, 72);
+            this.exeID.Location = new System.Drawing.Point(130, 90);
             this.exeID.Name = "exeID";
-            this.exeID.Size = new System.Drawing.Size(143, 20);
+            this.exeID.Size = new System.Drawing.Size(150, 20);
             this.exeID.TabIndex = 5;
+            this.exeID.TextChanged += new System.EventHandler(this.exeID_TextChanged);
             // 
             // exeName
             // 
-            this.exeName.Location = new System.Drawing.Point(135, 26);
+            this.exeName.Location = new System.Drawing.Point(130, 30);
             this.exeName.Name = "exeName";
-            this.exeName.Size = new System.Drawing.Size(143, 20);
+            this.exeName.Size = new System.Drawing.Size(150, 20);
             this.exeName.TabIndex = 4;
+            this.exeName.TextChanged += new System.EventHandler(this.exeName_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 176);
+            this.label4.Location = new System.Drawing.Point(6, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Executive Address";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 128);
+            this.label3.Location = new System.Drawing.Point(10, 152);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 2;
             this.label3.Text = "Executive Phone";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 79);
+            this.label2.Location = new System.Drawing.Point(10, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Executive Emp ID";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Location = new System.Drawing.Point(10, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Executive Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // delExe
             // 
             this.delExe.Controls.Add(this.delExeBtn);
             this.delExe.Controls.Add(this.delExeCombo);
-            this.delExe.Location = new System.Drawing.Point(313, 20);
+            this.delExe.Location = new System.Drawing.Point(341, 20);
             this.delExe.Name = "delExe";
-            this.delExe.Size = new System.Drawing.Size(200, 103);
+            this.delExe.Size = new System.Drawing.Size(231, 103);
             this.delExe.TabIndex = 1;
             this.delExe.TabStop = false;
             this.delExe.Text = "Delete Executive";
             // 
             // delExeBtn
             // 
-            this.delExeBtn.Location = new System.Drawing.Point(66, 61);
+            this.delExeBtn.Location = new System.Drawing.Point(26, 70);
             this.delExeBtn.Name = "delExeBtn";
-            this.delExeBtn.Size = new System.Drawing.Size(75, 23);
+            this.delExeBtn.Size = new System.Drawing.Size(180, 25);
             this.delExeBtn.TabIndex = 1;
             this.delExeBtn.Text = "Delete";
             this.delExeBtn.UseVisualStyleBackColor = true;
@@ -162,16 +170,16 @@
             // delExeCombo
             // 
             this.delExeCombo.FormattingEnabled = true;
-            this.delExeCombo.Location = new System.Drawing.Point(16, 21);
+            this.delExeCombo.Location = new System.Drawing.Point(26, 24);
             this.delExeCombo.Name = "delExeCombo";
-            this.delExeCombo.Size = new System.Drawing.Size(178, 21);
+            this.delExeCombo.Size = new System.Drawing.Size(180, 21);
             this.delExeCombo.TabIndex = 0;
             // 
             // AddExecutive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(544, 263);
+            this.ClientSize = new System.Drawing.Size(584, 311);
             this.Controls.Add(this.delExe);
             this.Controls.Add(this.addExeGrp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -179,6 +187,7 @@
             this.MaximizeBox = false;
             this.Name = "AddExecutive";
             this.Text = "Add Executive";
+            this.Load += new System.EventHandler(this.AddExecutive_Load);
             this.addExeGrp.ResumeLayout(false);
             this.addExeGrp.PerformLayout();
             this.delExe.ResumeLayout(false);

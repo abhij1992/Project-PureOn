@@ -40,3 +40,25 @@ C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csproj.GenerateResource.Cache
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.exe
 C:\Users\Abhi\Documents\GitHub\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.pdb
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\bin\x86\Release\PureOn.exe.config
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.exe
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.pdb
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\bin\x86\Release\PureOn.exe
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\bin\x86\Release\PureOn.pdb
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\bin\x86\Release\MySql.Data.dll
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csprojResolveAssemblyReference.cache
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.AddCustomer.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.AddExecutive.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.AddHistoryCard.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Admin_Manage_Users.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.AdminPage.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Executive.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Login.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.History.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.ManageUsers.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Properties.Resources.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Report.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Revenue.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Update_customer.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.Update_History.resources
+J:\MCA\pureon tech\adhi\Project-PureOn\PureOn v0.2\PureOn\obj\x86\Release\PureOn.csproj.GenerateResource.Cache

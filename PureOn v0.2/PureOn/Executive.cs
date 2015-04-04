@@ -77,6 +77,7 @@ namespace PureOn
         private void Executive_Load(object sender, EventArgs e)
         {
             loadTable();
+            this.StartPosition = FormStartPosition.Manual;
         }
 
         private void textChanged()
@@ -146,6 +147,11 @@ namespace PureOn
         {
             Report r = new Report();
             r.ShowDialog();
+        }
+
+        private void customerData_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
