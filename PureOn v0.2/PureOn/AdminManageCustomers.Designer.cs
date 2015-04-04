@@ -92,55 +92,55 @@
             this.customerData.Controls.Add(this.custID);
             this.customerData.Location = new System.Drawing.Point(8, 12);
             this.customerData.Name = "customerData";
-            this.customerData.Size = new System.Drawing.Size(275, 252);
+            this.customerData.Size = new System.Drawing.Size(275, 384);
             this.customerData.TabIndex = 35;
             this.customerData.TabStop = false;
             this.customerData.Text = "Search Customer Data";
             // 
             // pinCode
             // 
-            this.pinCode.Location = new System.Drawing.Point(143, 181);
+            this.pinCode.Location = new System.Drawing.Point(100, 330);
             this.pinCode.Name = "pinCode";
-            this.pinCode.Size = new System.Drawing.Size(100, 20);
+            this.pinCode.Size = new System.Drawing.Size(150, 20);
             this.pinCode.TabIndex = 19;
             this.pinCode.TextChanged += new System.EventHandler(this.pinCode_TextChanged);
             // 
             // street
             // 
-            this.street.Location = new System.Drawing.Point(143, 148);
+            this.street.Location = new System.Drawing.Point(100, 270);
             this.street.Name = "street";
-            this.street.Size = new System.Drawing.Size(100, 20);
+            this.street.Size = new System.Drawing.Size(150, 20);
             this.street.TabIndex = 18;
             this.street.TextChanged += new System.EventHandler(this.street_TextChanged_1);
             // 
             // doorNo
             // 
-            this.doorNo.Location = new System.Drawing.Point(143, 115);
+            this.doorNo.Location = new System.Drawing.Point(100, 210);
             this.doorNo.Name = "doorNo";
-            this.doorNo.Size = new System.Drawing.Size(100, 20);
+            this.doorNo.Size = new System.Drawing.Size(150, 20);
             this.doorNo.TabIndex = 17;
             this.doorNo.TextChanged += new System.EventHandler(this.doorNo_TextChanged);
             // 
             // phonePrime
             // 
-            this.phonePrime.Location = new System.Drawing.Point(143, 82);
+            this.phonePrime.Location = new System.Drawing.Point(100, 150);
             this.phonePrime.Name = "phonePrime";
-            this.phonePrime.Size = new System.Drawing.Size(100, 20);
+            this.phonePrime.Size = new System.Drawing.Size(150, 20);
             this.phonePrime.TabIndex = 15;
             this.phonePrime.TextChanged += new System.EventHandler(this.phonePrime_TextChanged);
             // 
             // custName
             // 
-            this.custName.Location = new System.Drawing.Point(143, 49);
+            this.custName.Location = new System.Drawing.Point(100, 90);
             this.custName.Name = "custName";
-            this.custName.Size = new System.Drawing.Size(100, 20);
+            this.custName.Size = new System.Drawing.Size(150, 20);
             this.custName.TabIndex = 14;
             this.custName.TextChanged += new System.EventHandler(this.custName_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 151);
+            this.label6.Location = new System.Drawing.Point(13, 273);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(35, 13);
             this.label6.TabIndex = 6;
@@ -149,7 +149,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 118);
+            this.label5.Location = new System.Drawing.Point(13, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 13);
             this.label5.TabIndex = 5;
@@ -158,7 +158,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 85);
+            this.label3.Location = new System.Drawing.Point(13, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 3;
@@ -167,7 +167,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 52);
+            this.label2.Location = new System.Drawing.Point(13, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 2;
@@ -176,7 +176,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 184);
+            this.label7.Location = new System.Drawing.Point(13, 333);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 7;
@@ -185,7 +185,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 19);
+            this.label1.Location = new System.Drawing.Point(13, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
@@ -193,17 +193,17 @@
             // 
             // custID
             // 
-            this.custID.Location = new System.Drawing.Point(143, 16);
+            this.custID.Location = new System.Drawing.Point(100, 30);
             this.custID.Name = "custID";
-            this.custID.Size = new System.Drawing.Size(100, 20);
+            this.custID.Size = new System.Drawing.Size(150, 20);
             this.custID.TabIndex = 0;
             this.custID.TextChanged += new System.EventHandler(this.custID_TextChanged);
             // 
             // addCustomerBtn
             // 
-            this.addCustomerBtn.Location = new System.Drawing.Point(49, 275);
+            this.addCustomerBtn.Location = new System.Drawing.Point(8, 420);
             this.addCustomerBtn.Name = "addCustomerBtn";
-            this.addCustomerBtn.Size = new System.Drawing.Size(176, 23);
+            this.addCustomerBtn.Size = new System.Drawing.Size(275, 23);
             this.addCustomerBtn.TabIndex = 34;
             this.addCustomerBtn.Text = "Add New Customer";
             this.addCustomerBtn.UseVisualStyleBackColor = true;

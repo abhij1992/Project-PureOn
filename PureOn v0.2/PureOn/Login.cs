@@ -94,6 +94,8 @@ namespace PureOn
                 lConnected.Text = "Database not connected";
 
             }
+            this.StartPosition = FormStartPosition.Manual;
+ 
         }
 
     }

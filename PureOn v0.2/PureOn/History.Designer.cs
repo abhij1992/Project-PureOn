@@ -58,41 +58,41 @@
             this.FilterDetails.Controls.Add(this.label10);
             this.FilterDetails.Controls.Add(this.label9);
             this.FilterDetails.Controls.Add(this.label8);
-            this.FilterDetails.Location = new System.Drawing.Point(12, 129);
+            this.FilterDetails.Location = new System.Drawing.Point(12, 208);
             this.FilterDetails.Name = "FilterDetails";
-            this.FilterDetails.Size = new System.Drawing.Size(274, 129);
+            this.FilterDetails.Size = new System.Drawing.Size(270, 180);
             this.FilterDetails.TabIndex = 34;
             this.FilterDetails.TabStop = false;
             this.FilterDetails.Text = "Filter Details";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 51);
+            this.textBox1.Location = new System.Drawing.Point(114, 83);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(150, 20);
             this.textBox1.TabIndex = 23;
             // 
             // unitSlNo
             // 
-            this.unitSlNo.Location = new System.Drawing.Point(143, 82);
+            this.unitSlNo.Location = new System.Drawing.Point(114, 128);
             this.unitSlNo.Name = "unitSlNo";
             this.unitSlNo.ReadOnly = true;
-            this.unitSlNo.Size = new System.Drawing.Size(100, 20);
+            this.unitSlNo.Size = new System.Drawing.Size(150, 20);
             this.unitSlNo.TabIndex = 22;
             // 
             // filterModel
             // 
-            this.filterModel.Location = new System.Drawing.Point(143, 13);
+            this.filterModel.Location = new System.Drawing.Point(114, 37);
             this.filterModel.Name = "filterModel";
             this.filterModel.ReadOnly = true;
-            this.filterModel.Size = new System.Drawing.Size(100, 20);
+            this.filterModel.Size = new System.Drawing.Size(150, 20);
             this.filterModel.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 89);
+            this.label10.Location = new System.Drawing.Point(13, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(50, 13);
             this.label10.TabIndex = 10;
@@ -101,7 +101,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 54);
+            this.label9.Location = new System.Drawing.Point(13, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 13);
             this.label9.TabIndex = 9;
@@ -110,7 +110,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 20);
+            this.label8.Location = new System.Drawing.Point(13, 40);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 13);
             this.label8.TabIndex = 8;
@@ -126,31 +126,31 @@
             this.customerData.Controls.Add(this.custID);
             this.customerData.Location = new System.Drawing.Point(12, 12);
             this.customerData.Name = "customerData";
-            this.customerData.Size = new System.Drawing.Size(274, 111);
+            this.customerData.Size = new System.Drawing.Size(270, 190);
             this.customerData.TabIndex = 33;
             this.customerData.TabStop = false;
             this.customerData.Text = "Customer Data";
             // 
             // phonePrime
             // 
-            this.phonePrime.Location = new System.Drawing.Point(143, 78);
+            this.phonePrime.Location = new System.Drawing.Point(114, 137);
             this.phonePrime.Name = "phonePrime";
             this.phonePrime.ReadOnly = true;
-            this.phonePrime.Size = new System.Drawing.Size(100, 20);
+            this.phonePrime.Size = new System.Drawing.Size(150, 20);
             this.phonePrime.TabIndex = 15;
             // 
             // custName
             // 
-            this.custName.Location = new System.Drawing.Point(143, 46);
+            this.custName.Location = new System.Drawing.Point(114, 87);
             this.custName.Name = "custName";
             this.custName.ReadOnly = true;
-            this.custName.Size = new System.Drawing.Size(100, 20);
+            this.custName.Size = new System.Drawing.Size(150, 20);
             this.custName.TabIndex = 14;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 81);
+            this.label3.Location = new System.Drawing.Point(13, 140);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 13);
             this.label3.TabIndex = 3;
@@ -159,7 +159,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 49);
+            this.label2.Location = new System.Drawing.Point(13, 90);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 13);
             this.label2.TabIndex = 2;
@@ -168,7 +168,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 19);
+            this.label1.Location = new System.Drawing.Point(13, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
@@ -176,17 +176,17 @@
             // 
             // custID
             // 
-            this.custID.Location = new System.Drawing.Point(143, 16);
+            this.custID.Location = new System.Drawing.Point(114, 37);
             this.custID.Name = "custID";
             this.custID.ReadOnly = true;
-            this.custID.Size = new System.Drawing.Size(100, 20);
+            this.custID.Size = new System.Drawing.Size(150, 20);
             this.custID.TabIndex = 0;
             // 
             // addHistory
             // 
-            this.addHistory.Location = new System.Drawing.Point(21, 275);
+            this.addHistory.Location = new System.Drawing.Point(12, 402);
             this.addHistory.Name = "addHistory";
-            this.addHistory.Size = new System.Drawing.Size(102, 23);
+            this.addHistory.Size = new System.Drawing.Size(274, 23);
             this.addHistory.TabIndex = 35;
             this.addHistory.Text = "Add History Card";
             this.addHistory.UseVisualStyleBackColor = true;

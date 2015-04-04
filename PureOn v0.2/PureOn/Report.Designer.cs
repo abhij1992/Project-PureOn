@@ -42,8 +42,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 9);
+            this.label1.Location = new System.Drawing.Point(334, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 0;
@@ -52,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 52);
+            this.label2.Location = new System.Drawing.Point(21, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 1;
@@ -61,7 +62,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 52);
+            this.label3.Location = new System.Drawing.Point(277, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 2;
@@ -69,14 +70,14 @@
             // 
             // fromDate
             // 
-            this.fromDate.Location = new System.Drawing.Point(69, 51);
+            this.fromDate.Location = new System.Drawing.Point(60, 53);
             this.fromDate.Name = "fromDate";
             this.fromDate.Size = new System.Drawing.Size(200, 20);
             this.fromDate.TabIndex = 3;
             // 
             // toDate
             // 
-            this.toDate.Location = new System.Drawing.Point(331, 51);
+            this.toDate.Location = new System.Drawing.Point(306, 53);
             this.toDate.Name = "toDate";
             this.toDate.Size = new System.Drawing.Size(200, 20);
             this.toDate.TabIndex = 4;
@@ -94,15 +95,15 @@
             this.dataGridView.Location = new System.Drawing.Point(12, 118);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(679, 323);
+            this.dataGridView.Size = new System.Drawing.Size(710, 280);
             this.dataGridView.TabIndex = 5;
             this.dataGridView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellDoubleClick);
             // 
             // generate
             // 
-            this.generate.Location = new System.Drawing.Point(571, 47);
+            this.generate.Location = new System.Drawing.Point(522, 53);
             this.generate.Name = "generate";
-            this.generate.Size = new System.Drawing.Size(75, 23);
+            this.generate.Size = new System.Drawing.Size(200, 23);
             this.generate.TabIndex = 6;
             this.generate.Text = "Generate";
             this.generate.UseVisualStyleBackColor = true;
@@ -110,9 +111,9 @@
             // 
             // genpast6
             // 
-            this.genpast6.Location = new System.Drawing.Point(571, 89);
+            this.genpast6.Location = new System.Drawing.Point(522, 89);
             this.genpast6.Name = "genpast6";
-            this.genpast6.Size = new System.Drawing.Size(120, 23);
+            this.genpast6.Size = new System.Drawing.Size(200, 23);
             this.genpast6.TabIndex = 7;
             this.genpast6.Text = "Generate for past 6 Months";
             this.genpast6.UseVisualStyleBackColor = true;
@@ -122,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 453);
+            this.ClientSize = new System.Drawing.Size(734, 411);
             this.Controls.Add(this.genpast6);
             this.Controls.Add(this.generate);
             this.Controls.Add(this.dataGridView);
@@ -134,6 +135,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Report";
             this.Text = "Report";
+            this.Load += new System.EventHandler(this.Report_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

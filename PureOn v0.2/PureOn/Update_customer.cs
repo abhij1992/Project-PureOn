@@ -265,6 +265,8 @@ namespace PureOn
             {
                 MessageBox.Show(e5.Message);
             }
+            this.StartPosition = FormStartPosition.Manual;
+ 
         }
 
         private void button1_Click(object sender, EventArgs e)

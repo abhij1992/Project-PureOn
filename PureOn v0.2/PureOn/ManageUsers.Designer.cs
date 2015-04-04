@@ -71,7 +71,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 296);
+            this.groupBox1.Size = new System.Drawing.Size(335, 287);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add new user";
@@ -109,9 +109,9 @@
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(106, 252);
+            this.addBtn.Location = new System.Drawing.Point(100, 255);
             this.addBtn.Name = "addBtn";
-            this.addBtn.Size = new System.Drawing.Size(75, 23);
+            this.addBtn.Size = new System.Drawing.Size(180, 25);
             this.addBtn.TabIndex = 6;
             this.addBtn.Text = "Add";
             this.addBtn.UseVisualStyleBackColor = true;
@@ -119,26 +119,26 @@
             // 
             // repass
             // 
-            this.repass.Location = new System.Drawing.Point(106, 137);
+            this.repass.Location = new System.Drawing.Point(100, 140);
             this.repass.MaxLength = 15;
             this.repass.Name = "repass";
             this.repass.PasswordChar = '*';
-            this.repass.Size = new System.Drawing.Size(183, 20);
+            this.repass.Size = new System.Drawing.Size(180, 20);
             this.repass.TabIndex = 5;
             // 
             // pass
             // 
-            this.pass.Location = new System.Drawing.Point(106, 88);
+            this.pass.Location = new System.Drawing.Point(100, 90);
             this.pass.MaxLength = 15;
             this.pass.Name = "pass";
             this.pass.PasswordChar = '*';
-            this.pass.Size = new System.Drawing.Size(183, 20);
+            this.pass.Size = new System.Drawing.Size(180, 20);
             this.pass.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 137);
+            this.label3.Location = new System.Drawing.Point(5, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 3;
@@ -147,7 +147,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 88);
+            this.label2.Location = new System.Drawing.Point(5, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 2;
@@ -155,16 +155,16 @@
             // 
             // uname
             // 
-            this.uname.Location = new System.Drawing.Point(106, 39);
+            this.uname.Location = new System.Drawing.Point(100, 40);
             this.uname.MaxLength = 15;
             this.uname.Name = "uname";
-            this.uname.Size = new System.Drawing.Size(183, 20);
+            this.uname.Size = new System.Drawing.Size(180, 20);
             this.uname.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 39);
+            this.label1.Location = new System.Drawing.Point(5, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
@@ -184,9 +184,9 @@
             // 
             // btDelete
             // 
-            this.btDelete.Location = new System.Drawing.Point(97, 66);
+            this.btDelete.Location = new System.Drawing.Point(119, 70);
             this.btDelete.Name = "btDelete";
-            this.btDelete.Size = new System.Drawing.Size(75, 23);
+            this.btDelete.Size = new System.Drawing.Size(180, 25);
             this.btDelete.TabIndex = 7;
             this.btDelete.Text = "Delete";
             this.btDelete.UseVisualStyleBackColor = true;
@@ -195,15 +195,15 @@
             // cbDelete
             // 
             this.cbDelete.FormattingEnabled = true;
-            this.cbDelete.Location = new System.Drawing.Point(119, 27);
+            this.cbDelete.Location = new System.Drawing.Point(119, 30);
             this.cbDelete.Name = "cbDelete";
-            this.cbDelete.Size = new System.Drawing.Size(182, 21);
+            this.cbDelete.Size = new System.Drawing.Size(180, 21);
             this.cbDelete.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(45, 30);
+            this.label4.Location = new System.Drawing.Point(45, 32);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 6;
@@ -221,33 +221,33 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(353, 119);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(323, 189);
+            this.groupBox3.Size = new System.Drawing.Size(323, 180);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Reset Password";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 109);
+            this.textBox1.Location = new System.Drawing.Point(120, 110);
             this.textBox1.MaxLength = 15;
             this.textBox1.Name = "textBox1";
             this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
+            this.textBox1.Size = new System.Drawing.Size(180, 20);
             this.textBox1.TabIndex = 11;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 66);
+            this.textBox2.Location = new System.Drawing.Point(120, 70);
             this.textBox2.MaxLength = 15;
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
+            this.textBox2.Size = new System.Drawing.Size(180, 20);
             this.textBox2.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 112);
+            this.label7.Location = new System.Drawing.Point(10, 112);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(91, 13);
             this.label7.TabIndex = 9;
@@ -256,7 +256,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(50, 69);
+            this.label8.Location = new System.Drawing.Point(10, 72);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 8;
@@ -264,9 +264,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(86, 150);
+            this.button1.Location = new System.Drawing.Point(118, 150);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
+            this.button1.Size = new System.Drawing.Size(180, 25);
             this.button1.TabIndex = 7;
             this.button1.Text = "Reset Password";
             this.button1.UseVisualStyleBackColor = true;
@@ -275,15 +275,15 @@
             // cbupdate
             // 
             this.cbupdate.FormattingEnabled = true;
-            this.cbupdate.Location = new System.Drawing.Point(119, 27);
+            this.cbupdate.Location = new System.Drawing.Point(120, 30);
             this.cbupdate.Name = "cbupdate";
-            this.cbupdate.Size = new System.Drawing.Size(182, 21);
+            this.cbupdate.Size = new System.Drawing.Size(180, 21);
             this.cbupdate.TabIndex = 7;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(45, 30);
+            this.label6.Location = new System.Drawing.Point(10, 32);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 13);
             this.label6.TabIndex = 6;
@@ -293,7 +293,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(763, 320);
+            this.ClientSize = new System.Drawing.Size(684, 311);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

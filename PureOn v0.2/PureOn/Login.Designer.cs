@@ -62,7 +62,7 @@
             this.userText.Location = new System.Drawing.Point(167, 40);
             this.userText.MaxLength = 15;
             this.userText.Name = "userText";
-            this.userText.Size = new System.Drawing.Size(100, 20);
+            this.userText.Size = new System.Drawing.Size(150, 20);
             this.userText.TabIndex = 2;
             // 
             // passText
@@ -71,15 +71,15 @@
             this.passText.MaxLength = 15;
             this.passText.Name = "passText";
             this.passText.PasswordChar = '*';
-            this.passText.Size = new System.Drawing.Size(100, 20);
+            this.passText.Size = new System.Drawing.Size(150, 20);
             this.passText.TabIndex = 3;
             this.passText.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.passText_KeyPress);
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(176, 111);
+            this.loginBtn.Location = new System.Drawing.Point(167, 111);
             this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(75, 23);
+            this.loginBtn.Size = new System.Drawing.Size(150, 23);
             this.loginBtn.TabIndex = 4;
             this.loginBtn.Text = "Login";
             this.loginBtn.UseVisualStyleBackColor = true;
@@ -109,6 +109,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);

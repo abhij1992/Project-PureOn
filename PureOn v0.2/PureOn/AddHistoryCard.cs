@@ -248,5 +248,11 @@ namespace PureOn
         {
             this.Close();
         }
+
+        private void AddHistoryCard_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(400, 150);
+        }
     }
 }

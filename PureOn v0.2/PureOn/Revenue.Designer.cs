@@ -46,30 +46,30 @@
             // exeCombo
             // 
             this.exeCombo.FormattingEnabled = true;
-            this.exeCombo.Location = new System.Drawing.Point(65, 48);
+            this.exeCombo.Location = new System.Drawing.Point(70, 50);
             this.exeCombo.Name = "exeCombo";
-            this.exeCombo.Size = new System.Drawing.Size(121, 21);
+            this.exeCombo.Size = new System.Drawing.Size(120, 21);
             this.exeCombo.TabIndex = 0;
             // 
             // fromDate
             // 
-            this.fromDate.Location = new System.Drawing.Point(236, 49);
+            this.fromDate.Location = new System.Drawing.Point(270, 50);
             this.fromDate.Name = "fromDate";
             this.fromDate.Size = new System.Drawing.Size(200, 20);
             this.fromDate.TabIndex = 1;
             // 
             // toDate
             // 
-            this.toDate.Location = new System.Drawing.Point(471, 49);
+            this.toDate.Location = new System.Drawing.Point(508, 50);
             this.toDate.Name = "toDate";
             this.toDate.Size = new System.Drawing.Size(200, 20);
             this.toDate.TabIndex = 2;
             // 
             // queryBtn
             // 
-            this.queryBtn.Location = new System.Drawing.Point(610, 90);
+            this.queryBtn.Location = new System.Drawing.Point(470, 90);
             this.queryBtn.Name = "queryBtn";
-            this.queryBtn.Size = new System.Drawing.Size(75, 23);
+            this.queryBtn.Size = new System.Drawing.Size(181, 25);
             this.queryBtn.TabIndex = 3;
             this.queryBtn.Text = "Generate";
             this.queryBtn.UseVisualStyleBackColor = true;
@@ -88,21 +88,21 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.ShowEditingIcon = false;
-            this.dataGridView.Size = new System.Drawing.Size(681, 224);
+            this.dataGridView.Size = new System.Drawing.Size(718, 280);
             this.dataGridView.TabIndex = 4;
             // 
             // totRev
             // 
-            this.totRev.Location = new System.Drawing.Point(295, 93);
+            this.totRev.Location = new System.Drawing.Point(224, 93);
             this.totRev.Name = "totRev";
-            this.totRev.Size = new System.Drawing.Size(100, 20);
+            this.totRev.Size = new System.Drawing.Size(200, 20);
             this.totRev.TabIndex = 5;
             this.totRev.Text = "Click Generate";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 51);
+            this.label1.Location = new System.Drawing.Point(8, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 6;
@@ -111,7 +111,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(200, 51);
+            this.label2.Location = new System.Drawing.Point(231, 53);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 13);
             this.label2.TabIndex = 7;
@@ -120,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(442, 51);
+            this.label3.Location = new System.Drawing.Point(479, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(23, 13);
             this.label3.TabIndex = 8;
@@ -129,7 +129,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(125, 95);
+            this.label4.Location = new System.Drawing.Point(54, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(164, 13);
             this.label4.TabIndex = 9;
@@ -137,6 +137,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(221, 9);
             this.label5.Name = "label5";
@@ -148,7 +150,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(697, 355);
+            this.ClientSize = new System.Drawing.Size(734, 411);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -163,6 +165,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Revenue";
             this.Text = "Revenue";
+            this.Load += new System.EventHandler(this.Revenue_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
